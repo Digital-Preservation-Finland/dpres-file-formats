@@ -1,0 +1,10 @@
+.coverage
+.idea/
+*.pyc
+*.swp
+__pycache__
+htmlcov/
+venv*/
+.venv*/
+rpmbuild
+.cache
