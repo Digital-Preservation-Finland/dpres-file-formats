@@ -1,8 +1,8 @@
 """Functions that output the file formats list."""
 
 import json
-from dpres_file_formats.data.av_container_grading import CONTAINER_GRADES
-from dpres_file_formats.defaults import (FILE_FORMATS_JSON,
+from dpres_file_formats.defaults import (CONTAINERS_STREAMS,
+                                         FILE_FORMATS,
                                          Grades)
 from dpres_file_formats.json_handler import FileFormatsJson
 
@@ -18,7 +18,7 @@ def supported_file_formats(active=True, dps_spec_formats=True):
     :returns: A list of dicts
     """
     file_formats = FileFormatsJson().read_file_formats(
-        path=FILE_FORMATS_JSON)
+        path=FILE_FORMATS)
 
     formats = []
 
@@ -66,7 +66,7 @@ def supported_file_formats_versions(active=True,
     :returns: A list of dicts
     """
     file_formats = FileFormatsJson().read_file_formats(
-        path=FILE_FORMATS_JSON)
+        path=FILE_FORMATS)
 
     format_versions = []
 
@@ -115,7 +115,7 @@ def mimetypes_grading(text_formats=False):
     :return: A dictionary of mimetypes with their graded versions
     """
     file_formats = FileFormatsJson().read_file_formats(
-        path=FILE_FORMATS_JSON)
+        path=FILE_FORMATS)
     mimetypes = {}
 
     for file_format in file_formats:
@@ -187,7 +187,7 @@ def find_mimetypes(mimetype):
     :returns: The file formats as a list
     """
     file_formats = FileFormatsJson().read_file_formats(
-        path=FILE_FORMATS_JSON)
+        path=FILE_FORMATS)
     formats = []
     for format_dict in file_formats:
         if format_dict['mimetype'] == mimetype:
@@ -202,7 +202,7 @@ def mimetypes_format_registry_keys():
     :returns: A dictionary of mimetypes with their format registry keys
     """
     file_formats = FileFormatsJson().read_file_formats(
-        path=FILE_FORMATS_JSON)
+        path=FILE_FORMATS)
     mimetypes = {}
 
     for file_format in file_formats:
@@ -239,9 +239,12 @@ def containers_streams_grading(grade=None):
     if grade:
         grade = Grades[grade].value
 
-    containers = {}
+    containers = FileFormatsJson().read_file_formats(
+        path=CONTAINERS_STREAMS)
 
-    for container_dict in CONTAINER_GRADES:
+    selected_containers = {}
+
+    for container_dict in containers:
 
         # Construct stream tuples
         streams = set()
@@ -255,9 +258,9 @@ def containers_streams_grading(grade=None):
 
             # The mimetype is not a unique key when returning all
             # containers regardless of grade
-            if container_dict['mimetype'] in containers:
+            if container_dict['mimetype'] in selected_containers:
                 containers[container_dict['mimetype']].update(streams)
             else:
-                containers[container_dict['mimetype']] = streams
+                selected_containers[container_dict['mimetype']] = streams
 
-    return containers
+    return selected_containers

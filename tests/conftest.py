@@ -111,59 +111,67 @@ def file_format_json_mock(tmp_path, monkeypatch):
     import dpres_file_formats.update_file_formats
     monkeypatch.setattr(
         dpres_file_formats.update_file_formats,
-        'FILE_FORMATS_JSON_UPDATE',
+        'FILE_FORMATS_UPDATE',
         dst)
     import dpres_file_formats.read_file_formats
     monkeypatch.setattr(
         dpres_file_formats.read_file_formats,
-        'FILE_FORMATS_JSON',
+        'FILE_FORMATS',
         dst)
 
 
 @pytest.fixture(scope='function', autouse=True)
-def file_containers_json_mock(monkeypatch):
+def file_containers_json_mock(tmp_path, monkeypatch):
     """Fixture to use test data for file containers JSON."""
 
-    container_grades_mock = [
-        {
-            "_id": "TEST_MIMETYPE_4_1",
-            "mimetype": "aaa/bbb",
-            "version": "5",
-            "grade": "fi-dpres-recommended-file-format",
-            "audio_streams": [
-                {
-                    "_id": "TEST_MIMETYPE_1_1",
-                    "mimetype": "aaa/bbb",
-                    "version": "1"
-                }
-            ],
-            "video_streams": [
-                {
-                    "_id": "TEST_MIMETYPE_2_1",
-                    "mimetype": "bbb/ccc",
-                    "version": "1"
-                }
-            ]
-        },
-        {
-            "_id": "TEST_MIMETYPE_2_1",
-            "mimetype": "bbb/ccc",
-            "version": "5",
-            "grade": "fi-dpres-acceptable-file-format",
-            "audio_streams": [
-                {
-                    "_id": "TEST_MIMETYPE_1_3",
-                    "mimetype": "aaa/bbb",
-                    "version": "1"
-                }
-            ],
-            "video_streams": []
-        }
-    ]
+    data = {
+        "file_formats": [
+            {
+                "_id": "TEST_MIMETYPE_4_1",
+                "mimetype": "aaa/bbb",
+                "version": "5",
+                "grade": "fi-dpres-recommended-file-format",
+                "audio_streams": [
+                    {
+                        "_id": "TEST_MIMETYPE_1_1",
+                        "mimetype": "aaa/bbb",
+                        "version": "1"
+                    }
+                ],
+                "video_streams": [
+                    {
+                        "_id": "TEST_MIMETYPE_2_1",
+                        "mimetype": "bbb/ccc",
+                        "version": "1"
+                    }
+                ]
+            },
+            {
+                "_id": "TEST_MIMETYPE_2_1",
+                "mimetype": "bbb/ccc",
+                "version": "5",
+                "grade": "fi-dpres-acceptable-file-format",
+                "audio_streams": [
+                    {
+                        "_id": "TEST_MIMETYPE_1_3",
+                        "mimetype": "aaa/bbb",
+                        "version": "1"
+                    }
+                ],
+                "video_streams": []
+            }
+        ]
+    }
+
+    # pylint: disable=import-outside-toplevel
+    dst = tmp_path / "av_container_grading.json"
+
+    with open(dst, "w", encoding="UTF-8") as outfile:
+        json.dump(data, outfile)
 
     # pylint: disable=import-outside-toplevel
     import dpres_file_formats.read_file_formats
     monkeypatch.setattr(
         dpres_file_formats.read_file_formats,
-        'CONTAINER_GRADES',
-        container_grades_mock)
+        'CONTAINERS_STREAMS',
+        dst)

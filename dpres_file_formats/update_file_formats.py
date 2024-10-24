@@ -3,7 +3,7 @@
 from dpres_file_formats.defaults import (
     ALLOWED_CHARSETS,
     ContentTypes,
-    FILE_FORMATS_JSON_UPDATE,
+    FILE_FORMATS_UPDATE,
     DpsSpecVersions,
     Grades,
     RelationshipTypes,
@@ -52,7 +52,7 @@ def add_format(
 
     file_formats_json = FileFormatsJson()
     file_formats = FileFormatsJson().read_file_formats(
-        path=FILE_FORMATS_JSON_UPDATE)
+        path=FILE_FORMATS_UPDATE)
 
     # Count format_name_short for the format_id
     name_count = 1
@@ -80,7 +80,7 @@ def add_format(
     file_formats.append(format_dict)
 
     file_formats_json.update_file_formats(
-        path=FILE_FORMATS_JSON_UPDATE,
+        path=FILE_FORMATS_UPDATE,
         file_formats=file_formats)
 
     return format_id
@@ -151,7 +151,7 @@ def add_version_to_format(
 
     file_formats_json = FileFormatsJson()
     file_formats = FileFormatsJson().read_file_formats(
-        path=FILE_FORMATS_JSON_UPDATE)
+        path=FILE_FORMATS_UPDATE)
     format_dict = None
     for file_format in file_formats:
         if file_format['_id'] == format_id:
@@ -183,7 +183,7 @@ def add_version_to_format(
     format_dict['versions'].append(version_dict)
 
     file_formats_json.update_file_formats(
-        path=FILE_FORMATS_JSON_UPDATE,
+        path=FILE_FORMATS_UPDATE,
         file_formats=file_formats)
 
 
@@ -204,7 +204,7 @@ def replace_format(superseded_format,
 
     file_formats_json = FileFormatsJson()
     file_formats = FileFormatsJson().read_file_formats(
-        path=FILE_FORMATS_JSON_UPDATE)
+        path=FILE_FORMATS_UPDATE)
 
     superseded_format_id = ''
     superseded_format_mimetype = ''
@@ -251,7 +251,7 @@ def replace_format(superseded_format,
             format_dict['relations'].append(superseding_relation)
 
     file_formats_json.update_file_formats(
-        path=FILE_FORMATS_JSON_UPDATE,
+        path=FILE_FORMATS_UPDATE,
         file_formats=file_formats)
 
 
@@ -270,7 +270,7 @@ def add_source_to_format(version_id,
     """
     file_formats_json = FileFormatsJson()
     file_formats = FileFormatsJson().read_file_formats(
-        path=FILE_FORMATS_JSON_UPDATE)
+        path=FILE_FORMATS_UPDATE)
 
     format_source = {
         'pid': format_source_pid,
@@ -285,5 +285,5 @@ def add_source_to_format(version_id,
                 break
 
     file_formats_json.update_file_formats(
-        path=FILE_FORMATS_JSON_UPDATE,
+        path=FILE_FORMATS_UPDATE,
         file_formats=file_formats)

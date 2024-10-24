@@ -2,9 +2,11 @@
 import enum
 
 # Installed version under /usr/share, for accessing data
-FILE_FORMATS_JSON = "/usr/share/dpres-file-formats/file_formats.json"
+FILE_FORMATS = "/usr/share/dpres-file-formats/file_formats.json"
 # Local version in project folder, for updating data
-FILE_FORMATS_JSON_UPDATE = "dpres_file_formats/file_formats.json"
+FILE_FORMATS_UPDATE = "dpres_file_formats/file_formats.json"
+# Installed version under /usr/share, for accessing data
+CONTAINERS_STREAMS = "/usr/share/dpres-file-formats/file_formats.json"
 
 # Allowed charsets
 ALLOWED_CHARSETS = ["ISO-8859-15", "UTF-8", "UTF-16", "UTF-32"]
