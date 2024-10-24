@@ -1,3 +1,557 @@
 {
-    "file_formats": []
+    "file_formats": [
+        {
+            "version_id": "FI_DPRES_MXF_1_UNAP",
+            "mimetype": "application/mxf",
+            "version": "(:unap)",
+            "grade": "fi-dpres-recommended-file-format",
+            "audio_streams": [
+                {
+                    "version_id": "FI_DPRES_AAC_1_UNAP",
+                    "mimetype": "audio/aac",
+                    "version": "(:unap)"
+                },
+                {
+                    "version_id": "FI_DPRES_LPCM_1_UNAP",
+                    "mimetype": "audio/L8",
+                    "version": "(:unap)"
+                },
+                {
+                    "version_id": "FI_DPRES_LPCM_2_UNAP",
+                    "mimetype": "audio/L16",
+                    "version": "(:unap)"
+                },
+                {
+                    "version_id": "FI_DPRES_LPCM_3_UNAP",
+                    "mimetype": "audio/L20",
+                    "version": "(:unap)"
+                },
+                {
+                    "version_id": "FI_DPRES_LPCM_4_UNAP",
+                    "mimetype": "audio/L24",
+                    "version": "(:unap)"
+                }
+            ],
+            "video_streams": [
+                {
+                    "version_id": "FI_DPRES_AVC_1_UNAP",
+                    "mimetype": "video/h264",
+                    "version": "(:unap)"
+                },
+                {
+                    "version_id": "FI_DPRES_JPEG2000_1_UNAP",
+                    "mimetype": "video/jpeg2000",
+                    "version": "(:unap)"
+                }
+            ]
+        },
+        {
+            "version_id": "FI_DPRES_MPEG-4_2_UNAP",
+            "mimetype": "audio/mp4",
+            "version": "(:unap)",
+            "grade": "fi-dpres-recommended-file-format",
+            "audio_streams": [
+                {
+                    "version_id": "FI_DPRES_AAC_1_UNAP",
+                    "mimetype": "audio/aac",
+                    "version": "(:unap)"
+                }
+            ],
+            "video_streams": []
+        },
+        {
+            "version_id": "FI_DPRES_MJPEG2000_2_UNAP",
+            "mimetype": "video/mj2",
+            "version": "(:unap)",
+            "grade": "fi-dpres-recommended-file-format",
+            "audio_streams": [
+                {
+                    "version_id": "FI_DPRES_LPCM_1_UNAP",
+                    "mimetype": "audio/L8",
+                    "version": "(:unap)"
+                },
+                {
+                    "version_id": "FI_DPRES_LPCM_2_UNAP",
+                    "mimetype": "audio/L16",
+                    "version": "(:unap)"
+                },
+                {
+                    "version_id": "FI_DPRES_LPCM_3_UNAP",
+                    "mimetype": "audio/L20",
+                    "version": "(:unap)"
+                },
+                {
+                    "version_id": "FI_DPRES_LPCM_4_UNAP",
+                    "mimetype": "audio/L24",
+                    "version": "(:unap)"
+                }
+            ],
+            "video_streams": [
+                {
+                    "version_id": "FI_DPRES_JPEG2000_1_UNAP",
+                    "mimetype": "video/jpeg2000",
+                    "version": "(:unap)"
+                }
+            ]
+        },
+        {
+            "version_id": "FI_DPRES_MPEG-2_TS_1_UNAP",
+            "mimetype": "video/MP2T",
+            "version": "(:unap)",
+            "grade": "fi-dpres-recommended-file-format",
+            "audio_streams": [
+                {
+                    "version_id": "FI_DPRES_AAC_1_UNAP",
+                    "mimetype": "audio/aac",
+                    "version": "(:unap)"
+                }
+            ],
+            "video_streams": [
+                {
+                    "version_id": "FI_DPRES_AVC_1_UNAP",
+                    "mimetype": "video/h264",
+                    "version": "(:unap)"
+                },
+                {
+                    "version_id": "FI_DPRES_HEVC_1_UNAP",
+                    "mimetype": "video/h265",
+                    "version": "(:unap)"
+                }
+            ]
+        },
+        {
+            "version_id": "FI_DPRES_MPEG-4_1_UNAP",
+            "mimetype": "video/mp4",
+            "version": "(:unap)",
+            "grade": "fi-dpres-recommended-file-format",
+            "audio_streams": [
+                {
+                    "version_id": "FI_DPRES_AAC_1_UNAP",
+                    "mimetype": "audio/aac",
+                    "version": "(:unap)"
+                }
+            ],
+            "video_streams": [
+                {
+                    "version_id": "FI_DPRES_AVC_1_UNAP",
+                    "mimetype": "video/h264",
+                    "version": "(:unap)"
+                },
+                {
+                    "version_id": "FI_DPRES_HEVC_1_UNAP",
+                    "mimetype": "video/h265",
+                    "version": "(:unap)"
+                }
+            ]
+        },
+        {
+            "version_id": "FI_DPRES_MOV_1_UNAP",
+            "mimetype": "video/quicktime",
+            "version": "(:unap)",
+            "grade": "fi-dpres-recommended-file-format",
+            "audio_streams": [
+                {
+                    "version_id": "FI_DPRES_AAC_1_UNAP",
+                    "mimetype": "audio/aac",
+                    "version": "(:unap)"
+                },
+                {
+                    "version_id": "FI_DPRES_LPCM_1_UNAP",
+                    "mimetype": "audio/L8",
+                    "version": "(:unap)"
+                },
+                {
+                    "version_id": "FI_DPRES_LPCM_2_UNAP",
+                    "mimetype": "audio/L16",
+                    "version": "(:unap)"
+                },
+                {
+                    "version_id": "FI_DPRES_LPCM_3_UNAP",
+                    "mimetype": "audio/L20",
+                    "version": "(:unap)"
+                },
+                {
+                    "version_id": "FI_DPRES_LPCM_4_UNAP",
+                    "mimetype": "audio/L24",
+                    "version": "(:unap)"
+                }
+            ],
+            "video_streams": [
+                {
+                    "version_id": "FI_DPRES_AVC_1_UNAP",
+                    "mimetype": "video/h264",
+                    "version": "(:unap)"
+                },
+                {
+                    "version_id": "FI_DPRES_HEVC_1_UNAP",
+                    "mimetype": "video/h265",
+                    "version": "(:unap)"
+                },
+                {
+                    "version_id": "FI_DPRES_JPEG2000_1_UNAP",
+                    "mimetype": "video/jpeg2000",
+                    "version": "(:unap)"
+                }
+            ]
+        },
+        {
+            "version_id": "FI_DPRES_MATROSKA_1_4",
+            "mimetype": "video/x-matroska",
+            "version": "4",
+            "grade": "fi-dpres-recommended-file-format",
+            "audio_streams": [
+                {
+                    "version_id": "FI_DPRES_FLAC_1_1.2.1",
+                    "mimetype": "audio/flac",
+                    "version": "1.2.1"
+                },
+                {
+                    "version_id": "FI_DPRES_LPCM_1_UNAP",
+                    "mimetype": "audio/L8",
+                    "version": "(:unap)"
+                },
+                {
+                    "version_id": "FI_DPRES_LPCM_2_UNAP",
+                    "mimetype": "audio/L16",
+                    "version": "(:unap)"
+                },
+                {
+                    "version_id": "FI_DPRES_LPCM_3_UNAP",
+                    "mimetype": "audio/L20",
+                    "version": "(:unap)"
+                },
+                {
+                    "version_id": "FI_DPRES_LPCM_4_UNAP",
+                    "mimetype": "audio/L24",
+                    "version": "(:unap)"
+                }
+            ],
+            "video_streams": [
+                {
+                    "version_id": "FI_DPRES_HEVC_1_UNAP",
+                    "mimetype": "video/h265",
+                    "version": "(:unap)"
+                },
+                {
+                    "version_id": "FI_DPRES_FFV1_1_3",
+                    "mimetype": "video/x-ffv",
+                    "version": "3"
+                }
+            ]
+        },
+        {
+            "version_id": "FI_DPRES_ASF_1_UNAP",
+            "mimetype": "video/x-ms-asf",
+            "version": "(:unap)",
+            "grade": "fi-dpres-acceptable-file-format",
+            "audio_streams": [
+                {
+                    "version_id": "FI_DPRES_WMA_1_9",
+                    "mimetype": "audio/x-ms-wma",
+                    "version": "9"
+                }
+            ],
+            "video_streams": [
+                {
+                    "version_id": "FI_DPRES_WMV_1_9",
+                    "mimetype": "video/x-ms-wmv",
+                    "version": "9"
+                }
+            ]
+        },
+        {
+            "version_id": "FI_DPRES_AVI_1_UNAP",
+            "mimetype": "video/avi",
+            "version": "(:unap)",
+            "grade": "fi-dpres-acceptable-file-format",
+            "audio_streams": [
+                {
+                    "version_id": "FI_DPRES_MP3_1_1",
+                    "mimetype": "audio/mpeg",
+                    "version": "1"
+                },
+                {
+                    "version_id": "FI_DPRES_MP3_2_2",
+                    "mimetype": "audio/mpeg",
+                    "version": "2"
+                },
+                {
+                    "version_id": "FI_DPRES_LPCM_1_UNAP",
+                    "mimetype": "audio/L8",
+                    "version": "(:unap)"
+                },
+                {
+                    "version_id": "FI_DPRES_LPCM_2_UNAP",
+                    "mimetype": "audio/L16",
+                    "version": "(:unap)"
+                },
+                {
+                    "version_id": "FI_DPRES_LPCM_3_UNAP",
+                    "mimetype": "audio/L20",
+                    "version": "(:unap)"
+                },
+                {
+                    "version_id": "FI_DPRES_LPCM_4_UNAP",
+                    "mimetype": "audio/L24",
+                    "version": "(:unap)"
+                }
+            ],
+            "video_streams": [
+                {
+                    "version_id": "FI_DPRES_DV_1_UNAP",
+                    "mimetype": "video/dv",
+                    "version": "(:unap)"
+                },
+                {
+                    "version_id": "FI_DPRES_MPEG_1_1",
+                    "mimetype": "video/mpeg",
+                    "version": "1"
+                },
+                {
+                    "version_id": "FI_DPRES_MPEG_1_2",
+                    "mimetype": "video/mpeg",
+                    "version": "2"
+                }
+            ]
+        },
+        {
+            "version_id": "FI_DPRES_DV_2_UNAP",
+            "mimetype": "video/dv",
+            "version": "(:unap)",
+            "grade": "fi-dpres-acceptable-file-format",
+            "audio_streams": [
+                {
+                    "version_id": "FI_DPRES_LPCM_1_UNAP",
+                    "mimetype": "audio/L8",
+                    "version": "(:unap)"
+                },
+                {
+                    "version_id": "FI_DPRES_LPCM_2_UNAP",
+                    "mimetype": "audio/L16",
+                    "version": "(:unap)"
+                },
+                {
+                    "version_id": "FI_DPRES_LPCM_3_UNAP",
+                    "mimetype": "audio/L20",
+                    "version": "(:unap)"
+                },
+                {
+                    "version_id": "FI_DPRES_LPCM_4_UNAP",
+                    "mimetype": "audio/L24",
+                    "version": "(:unap)"
+                }
+            ],
+            "video_streams": [
+                {
+                    "version_id": "FI_DPRES_DV_1_UNAP",
+                    "mimetype": "video/dv",
+                    "version": "(:unap)"
+                }
+            ]
+        },
+        {
+            "version_id": "FI_DPRES_MPEG-1_PS_1_UNAP",
+            "mimetype": "video/MP1S",
+            "version": "(:unap)",
+            "grade": "fi-dpres-acceptable-file-format",
+            "audio_streams": [
+                {
+                    "version_id": "FI_DPRES_MP3_1_1",
+                    "mimetype": "audio/mpeg",
+                    "version": "1"
+                },
+                {
+                    "version_id": "FI_DPRES_MP3_2_2",
+                    "mimetype": "audio/mpeg",
+                    "version": "2"
+                }
+            ],
+            "video_streams": [
+                {
+                    "version_id": "FI_DPRES_MPEG_1_1",
+                    "mimetype": "video/mpeg",
+                    "version": "1"
+                },
+                {
+                    "version_id": "FI_DPRES_MPEG_1_2",
+                    "mimetype": "video/mpeg",
+                    "version": "2"
+                }
+            ]
+        },
+        {
+            "version_id": "FI_DPRES_MPEG-2_PS_1_UNAP",
+            "mimetype": "video/MP2P",
+            "version": "(:unap)",
+            "grade": "fi-dpres-acceptable-file-format",
+            "audio_streams": [
+                {
+                    "version_id": "FI_DPRES_MP3_1_1",
+                    "mimetype": "audio/mpeg",
+                    "version": "1"
+                },
+                {
+                    "version_id": "FI_DPRES_MP3_2_2",
+                    "mimetype": "audio/mpeg",
+                    "version": "2"
+                }
+            ],
+            "video_streams": [
+                {
+                    "version_id": "FI_DPRES_MPEG_1_1",
+                    "mimetype": "video/mpeg",
+                    "version": "1"
+                },
+                {
+                    "version_id": "FI_DPRES_MPEG_1_2",
+                    "mimetype": "video/mpeg",
+                    "version": "2"
+                }
+            ]
+        },
+        {
+            "version_id": "FI_DPRES_MPEG-2_TS_1_UNAP",
+            "mimetype": "video/MP2T",
+            "version": "(:unap)",
+            "grade": "fi-dpres-acceptable-file-format",
+            "audio_streams": [
+                {
+                    "version_id": "FI_DPRES_MP3_1_1",
+                    "mimetype": "audio/mpeg",
+                    "version": "1"
+                },
+                {
+                    "version_id": "FI_DPRES_MP3_2_2",
+                    "mimetype": "audio/mpeg",
+                    "version": "2"
+                }
+            ],
+            "video_streams": [
+                {
+                    "version_id": "FI_DPRES_MPEG_1_1",
+                    "mimetype": "video/mpeg",
+                    "version": "1"
+                },
+                {
+                    "version_id": "FI_DPRES_MPEG_1_2",
+                    "mimetype": "video/mpeg",
+                    "version": "2"
+                }
+            ]
+        },
+        {
+            "version_id": "FI_DPRES_MPEG-4_1_UNAP",
+            "mimetype": "video/mp4",
+            "version": "(:unap)",
+            "grade": "fi-dpres-acceptable-file-format",
+            "audio_streams": [
+                {
+                    "version_id": "FI_DPRES_MP3_1_1",
+                    "mimetype": "audio/mpeg",
+                    "version": "1"
+                },
+                {
+                    "version_id": "FI_DPRES_MP3_2_2",
+                    "mimetype": "audio/mpeg",
+                    "version": "2"
+                }
+            ],
+            "video_streams": [
+                {
+                    "version_id": "FI_DPRES_MPEG_1_1",
+                    "mimetype": "video/mpeg",
+                    "version": "1"
+                },
+                {
+                    "version_id": "FI_DPRES_MPEG_1_2",
+                    "mimetype": "video/mpeg",
+                    "version": "2"
+                }
+            ]
+        },
+        {
+            "version_id": "FI_DPRES_MXF_1_UNAP",
+            "mimetype": "application/mxf",
+            "version": "(:unap)",
+            "grade": "fi-dpres-acceptable-file-format",
+            "audio_streams": [
+                {
+                    "version_id": "FI_DPRES_MP3_1_1",
+                    "mimetype": "audio/mpeg",
+                    "version": "1"
+                },
+                {
+                    "version_id": "FI_DPRES_MP3_2_2",
+                    "mimetype": "audio/mpeg",
+                    "version": "2"
+                }
+            ],
+            "video_streams": [
+                {
+                    "version_id": "FI_DPRES_DV_1_UNAP",
+                    "mimetype": "video/dv",
+                    "version": "(:unap)"
+                },
+                {
+                    "version_id": "FI_DPRES_MPEG_1_1",
+                    "mimetype": "video/mpeg",
+                    "version": "1"
+                },
+                {
+                    "version_id": "FI_DPRES_MPEG_1_2",
+                    "mimetype": "video/mpeg",
+                    "version": "2"
+                }
+            ]
+        },
+        {
+            "version_id": "FI_DPRES_MOV_1_UNAP",
+            "mimetype": "video/quicktime",
+            "version": "(:unap)",
+            "grade": "fi-dpres-acceptable-file-format",
+            "audio_streams": [
+                {
+                    "version_id": "FI_DPRES_MP3_1_1",
+                    "mimetype": "audio/mpeg",
+                    "version": "1"
+                },
+                {
+                    "version_id": "FI_DPRES_MP3_2_2",
+                    "mimetype": "audio/mpeg",
+                    "version": "2"
+                }
+            ],
+            "video_streams": [
+                {
+                    "version_id": "FI_DPRES_DV_1_UNAP",
+                    "mimetype": "video/dv",
+                    "version": "(:unap)"
+                },
+                {
+                    "version_id": "FI_DPRES_MPEG_1_1",
+                    "mimetype": "video/mpeg",
+                    "version": "1"
+                },
+                {
+                    "version_id": "FI_DPRES_MPEG_1_2",
+                    "mimetype": "video/mpeg",
+                    "version": "2"
+                }
+            ]
+        },
+        {
+            "version_id": "FI_DPRES_MOV_1_UNAP",
+            "mimetype": "video/quicktime",
+            "version": "(:unap)",
+            "grade": "fi-dpres-bit-level-file-format-with-recommended",
+            "audio_streams": [],
+            "video_streams": [
+                {
+                    "version_id": "FI_DPRES_PRORES_1_UNAP",
+                    "mimetype": "video/x.fi-dpres.prores",
+                    "version": "(:unap)"
+                }
+            ]
+        }
+    ]
 }

@@ -1,3 +1,3971 @@
 {
-    "file_formats": []
+    "file_formats": [
+        {
+            "_id": "FI_DPRES_AAC_1",
+            "mimetype": "audio/aac",
+            "content_type": "audio",
+            "format_name_long": "Advanced Audio Coding",
+            "format_name_short": "AAC",
+            "typical_extensions": [
+                ".m4a",
+                ".mp4",
+                ".aac"
+            ],
+            "required_metadata": "audioMD",
+            "charsets": [],
+            "relations": [
+                {
+                    "_id": "FI_DPRES_AAC_2",
+                    "type": "supersedes",
+                    "dps_spec_version": "1.12.0",
+                    "description": "MIME type changed from audio/aac to audio/mp4"
+                }
+            ],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_AAC_1_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/199",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.12.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_14496-3:2019",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Coding of audio-visual objects — Part 3: Audio. ISO/IEC 14496-3:2019"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_AAC_2",
+            "mimetype": "audio/mp4",
+            "content_type": "audio",
+            "format_name_long": "Advanced Audio Coding",
+            "format_name_short": "AAC",
+            "typical_extensions": [
+                ".m4a",
+                ".mp4",
+                ".aac"
+            ],
+            "required_metadata": "audioMD",
+            "charsets": [],
+            "relations": [
+                {
+                    "_id": "FI_DPRES_AAC_1",
+                    "type": "is superseded by",
+                    "dps_spec_version": "1.12.0",
+                    "description": "MIME type changed from audio/aac to audio/mp4"
+                }
+            ],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_AAC_2_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-unacceptable-file-format",
+                    "format_registry_key": "fmt/199",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "1.12.0",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_14496-3:2019",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Coding of audio-visual objects — Part 3: Audio. ISO/IEC 14496-3:2019"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_AIFF_1",
+            "mimetype": "audio/x-aiff",
+            "content_type": "audio",
+            "format_name_long": "Audio Interchange File Format",
+            "format_name_short": "AIFF",
+            "typical_extensions": [
+                ".aiff",
+                ".aif"
+            ],
+            "required_metadata": "audioMD",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_AIFF_1_1.3",
+                    "version": "1.3",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "x-fmt/135",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "AIFF",
+                            "url": "https://www.mmsp.ece.mcgill.ca/Documents/AudioFormats/AIFF/Docs/AIFF-1.3.pdf",
+                            "reference": "Audio Interchange File Format: \"AIFF\". A Standard for Sampled Sound Files. Version 1.3. Apple Computer, Inc."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_AIFF_C_1",
+            "mimetype": "audio/x-aiff",
+            "content_type": "audio",
+            "format_name_long": "Audio Interchange File Format",
+            "format_name_short": "AIFF_C",
+            "typical_extensions": [
+                ".aiff",
+                ".aif",
+                ".aifc"
+            ],
+            "required_metadata": "audioMD",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_AIFF_C_1_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "x-fmt/136",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "AIFF-C",
+                            "url": "https://www.mmsp.ece.mcgill.ca/Documents/AudioFormats/AIFF/ Docs/AIFF-C.9.26.91.pdf",
+                            "reference": "Audio Interchange File Format AIFF-C. A revision to include compressed audio data. Apple Computer, Inc. Draft 26.8.1991."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_ARC_1",
+            "mimetype": "application/x-internet-archive",
+            "content_type": "web archive",
+            "format_name_long": "Internet Archive ",
+            "format_name_short": "ARC",
+            "typical_extensions": [
+                ".arc",
+                ".ark"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_ARC_1_1.0",
+                    "version": "1.0",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "x-fmt/219",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "1.9.0",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_ARC_1_1.1",
+                    "version": "1.1",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/410",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "1.9.0",
+                    "format_sources": []
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_AVC_1",
+            "mimetype": "video/H264",
+            "content_type": "video",
+            "format_name_long": "Advanced Video Coding",
+            "format_name_short": "AVC",
+            "typical_extensions": [
+                ".mp4",
+                ".h264"
+            ],
+            "required_metadata": "videoMD",
+            "charsets": [],
+            "relations": [
+                {
+                    "_id": "FI_DPRES_AVC_2",
+                    "type": "supersedes",
+                    "dps_spec_version": "1.12.0",
+                    "description": "MIME type changed from video/mp4 to video/H264"
+                }
+            ],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_AVC_1_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/199",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.12.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_14496-10:2020",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Coding of audio-visual objects — Part 10: Advanced Video Coding. ISO/IEC 14496-10:2020"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_AVC_2",
+            "mimetype": "video/mp4",
+            "content_type": "video",
+            "format_name_long": "Advanced Video Coding",
+            "format_name_short": "AVC",
+            "typical_extensions": [
+                ".mp4",
+                ".h264"
+            ],
+            "required_metadata": "videoMD",
+            "charsets": [],
+            "relations": [
+                {
+                    "_id": "FI_DPRES_AVC_1",
+                    "type": "is superseded by",
+                    "dps_spec_version": "1.12.0",
+                    "description": "MIME type changed from video/mp4 to video/H264"
+                }
+            ],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_AVC_2_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-unacceptable-file-format",
+                    "format_registry_key": "fmt/199",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.4.0",
+                    "removed_in_dps_spec": "1.12.0",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_14496-10:2020",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Coding of audio-visual objects — Part 10: Advanced Video Coding. ISO/IEC 14496-10:2020"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_BWF_1",
+            "mimetype": "audio/x-wav",
+            "content_type": "audio",
+            "format_name_long": "Broadcast Wave Format",
+            "format_name_short": "BWF",
+            "typical_extensions": [
+                ".wav",
+                ".bwf"
+            ],
+            "required_metadata": "audioMD",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_BWF_1_2",
+                    "version": "2",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/527",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "BWF",
+                            "url": "https://tech.ebu.ch/docs/tech/tech3285.pdf",
+                            "reference": "EBU Tech 3285 - Specification of the Broadcast Wave Format (BWF) - A format for audio data files in broadcasting. Version 2.0. Geneva May 2011."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_CSV_1",
+            "mimetype": "text/csv",
+            "content_type": "text",
+            "format_name_long": "Comma Separated Values",
+            "format_name_short": "CSV",
+            "typical_extensions": [
+                ".csv"
+            ],
+            "required_metadata": "ADDML",
+            "charsets": [
+                "ISO-8859-15",
+                "UTF-8",
+                "UTF-16",
+                "UTF-32"
+            ],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_CSV_1_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "x-fmt/18",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.4.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "RFC_4180",
+                            "url": "https://datatracker.ietf.org/doc/rfc4180/",
+                            "reference": "Common Format and MIME Type for Comma-Separated Values (CSV) Files. Request for Comments: 4180. October 2005."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_DNG_1",
+            "mimetype": "image/tiff",
+            "content_type": "still image",
+            "format_name_long": "Digital Negative",
+            "format_name_short": "DNG",
+            "typical_extensions": [
+                ".dng"
+            ],
+            "required_metadata": "MIX",
+            "charsets": [],
+            "relations": [
+                {
+                    "_id": "FI_DPRES_DNG_2",
+                    "type": "is superseded by",
+                    "dps_spec_version": "1.12.0",
+                    "description": "MIME type changed from image/tiff to image/x-adobe-dng"
+                }
+            ],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_DNG_1_1.1",
+                    "version": "1.1",
+                    "grade": "fi-dpres-unacceptable-file-format",
+                    "format_registry_key": "fmt/152",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.11.0",
+                    "removed_in_dps_spec": "1.12.0",
+                    "format_sources": [
+                        {
+                            "pid": "DNG_11",
+                            "url": "https://web.archive.org/web/20051108165239/http://www.adobe.com/products/dng/pdfs/dng_spec.pdf",
+                            "reference": "Digital Negative (DNG) Specification, Version 1.1.0.0. Adobe Systems Incorporated. February 2005."
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_DNG_1_1.2",
+                    "version": "1.2",
+                    "grade": "fi-dpres-unacceptable-file-format",
+                    "format_registry_key": "fmt/437",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.11.0",
+                    "removed_in_dps_spec": "1.12.0",
+                    "format_sources": [
+                        {
+                            "pid": "DNG_12",
+                            "url": "http://web.archive.org/web/20090521113533/http://www.adobe.com/products/dng/pdfs/dng_spec_1_2_0_0.pdf",
+                            "reference": "Digital Negative (DNG) Specification, Version 1.2.0.0. Adobe Systems Incorporated. April 2008."
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_DNG_1_1.3",
+                    "version": "1.3",
+                    "grade": "fi-dpres-unacceptable-file-format",
+                    "format_registry_key": "fmt/438",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "1.12.0",
+                    "format_sources": [
+                        {
+                            "pid": "DNG_13",
+                            "url": "https://web.archive.org/web/20210803212020/https://www.adobe.com/content/dam/acom/en/products/photoshop/pdfs/dng_spec.pdf",
+                            "reference": "Digital Negative (DNG) Specification, Version 1.3.0.0. Adobe Systems Incorporated. June 2009."
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_DNG_1_1.4",
+                    "version": "1.4",
+                    "grade": "fi-dpres-unacceptable-file-format",
+                    "format_registry_key": "fmt/730",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.4.0",
+                    "removed_in_dps_spec": "1.12.0",
+                    "format_sources": [
+                        {
+                            "pid": "DNG_14",
+                            "url": "https://web.archive.org/web/20220130173101/https://www.adobe.com/content/dam/acom/en/products/photoshop/pdfs/dng_spec_1.4.0.0.pdf",
+                            "reference": "Digital Negative (DNG) Specification, Version 1.4.0.0. Adobe Systems Incorporated. June 2012."
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_DNG_1_1.5",
+                    "version": "1.5",
+                    "grade": "fi-dpres-unacceptable-file-format",
+                    "format_registry_key": "fmt/1841",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.9.0",
+                    "removed_in_dps_spec": "1.12.0",
+                    "format_sources": [
+                        {
+                            "pid": "DNG_15",
+                            "url": "https://web.archive.org/web/20220122234044/https://www.adobe.com/content/dam/acom/en/products/photoshop/pdfs/dng_spec_1.5.0.0.pdf",
+                            "reference": "Digital Negative (DNG) Specification, Version 1.5.0.0. Adobe Systems Incorporated. May 2019."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_DNG_2",
+            "mimetype": "image/x-adobe-dng",
+            "content_type": "still image",
+            "format_name_long": "Digital Negative",
+            "format_name_short": "DNG",
+            "typical_extensions": [
+                ".dng"
+            ],
+            "required_metadata": "MIX",
+            "charsets": [],
+            "relations": [
+                {
+                    "_id": "FI_DPRES_DNG_1",
+                    "type": "supersedes",
+                    "dps_spec_version": "1.12.0",
+                    "description": "MIME type changed from image/tiff to image/x-adobe-dng"
+                }
+            ],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_DNG_2_1.1",
+                    "version": "1.1",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/152",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.12.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "DNG_11",
+                            "url": "https://web.archive.org/web/20051108165239/http://www.adobe.com/products/dng/pdfs/dng_spec.pdf",
+                            "reference": "Digital Negative (DNG) Specification, Version 1.1.0.0. Adobe Systems Incorporated. February 2005."
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_DNG_2_1.2",
+                    "version": "1.2",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/437",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.12.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "DNG_12",
+                            "url": "http://web.archive.org/web/20090521113533/http://www.adobe.com/products/dng/pdfs/dng_spec_1_2_0_0.pdf",
+                            "reference": "Digital Negative (DNG) Specification, Version 1.2.0.0. Adobe Systems Incorporated. April 2008."
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_DNG_2_1.3",
+                    "version": "1.3",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/438",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.12.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "DNG_13",
+                            "url": "https://web.archive.org/web/20210803212020/https://www.adobe.com/content/dam/acom/en/products/photoshop/pdfs/dng_spec.pdf",
+                            "reference": "Digital Negative (DNG) Specification, Version 1.3.0.0. Adobe Systems Incorporated. June 2009."
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_DNG_2_1.4",
+                    "version": "1.4",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/730",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.12.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "DNG_14",
+                            "url": "https://web.archive.org/web/20220130173101/https://www.adobe.com/content/dam/acom/en/products/photoshop/pdfs/dng_spec_1.4.0.0.pdf",
+                            "reference": "Digital Negative (DNG) Specification, Version 1.4.0.0. Adobe Systems Incorporated. June 2012."
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_DNG_2_1.5",
+                    "version": "1.5",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/1841",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.12.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "DNG_15",
+                            "url": "https://web.archive.org/web/20220122234044/https://www.adobe.com/content/dam/acom/en/products/photoshop/pdfs/dng_spec_1.5.0.0.pdf",
+                            "reference": "Digital Negative (DNG) Specification, Version 1.5.0.0. Adobe Systems Incorporated. May 2019."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_DPX_1",
+            "mimetype": "image/dpx",
+            "content_type": "video",
+            "format_name_long": "Digital Picture Exchange",
+            "format_name_short": "DPX",
+            "typical_extensions": [
+                ".dpx"
+            ],
+            "required_metadata": "MIX",
+            "charsets": [],
+            "relations": [
+                {
+                    "_id": "FI_DPRES_DPX_2",
+                    "type": "is superseded by",
+                    "dps_spec_version": "1.6.0",
+                    "description": "MIME type changed from image/dpx to image/x-dpx"
+                }
+            ],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_DPX_1_2.0",
+                    "version": "2.0",
+                    "grade": "fi-dpres-unacceptable-file-format",
+                    "format_registry_key": "fmt/541",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.5.0",
+                    "removed_in_dps_spec": "1.6.0",
+                    "format_sources": []
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_DPX_2",
+            "mimetype": "image/x-dpx",
+            "content_type": "video",
+            "format_name_long": "Digital Picture Exchange",
+            "format_name_short": "DPX",
+            "typical_extensions": [
+                ".dpx"
+            ],
+            "required_metadata": "MIX",
+            "charsets": [],
+            "relations": [
+                {
+                    "_id": "FI_DPRES_DPX_1",
+                    "type": "supersedes",
+                    "dps_spec_version": "1.6.0",
+                    "description": "MIME type changed from image/dpx to image/x-dpx"
+                }
+            ],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_DPX_2_2.0",
+                    "version": "2.0",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/541",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.6.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "SMPTE_268:2014",
+                            "url": "",
+                            "reference": "Society of Motion Picture and Television Engineers. For File Format for Digital Moving-Picture Exchange (DPX), Version 2.0. SMPTE 268:2014"
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_DPX_2_1.0",
+                    "version": "1.0",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "",
+                    "removed_in_dps_spec": "",
+                    "format_sources": []
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_DV_1",
+            "mimetype": "video/dv",
+            "content_type": "video",
+            "format_name_long": "Digital Video",
+            "format_name_short": "DV",
+            "typical_extensions": [
+                ".dv"
+            ],
+            "required_metadata": "videoMD",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_DV_1_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "x-fmt/152",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "IEC_61834:1998-2008",
+                            "url": "",
+                            "reference": "International Electrotechnical Commission. Helical-scan digital video cassette recording system using 6,35 mm magnetic tape for consumer use (525-60, 625-50, 1125-60 and 1250-50 systems). IEC 61834:1998-2008"
+                        },
+                        {
+                            "pid": "SMPTE_314:2005",
+                            "url": "",
+                            "reference": "Society of Motion Pictures & Television Engineers. Standard for Television - Data Structure for DV-Based Audio, Data and Compressed Video ó25 and 50 Mb/s. SMPTE 314-2005"
+                        },
+                        {
+                            "pid": "SMPTE_370:2013",
+                            "url": "",
+                            "reference": "Society of Motion Pictures & Television Engineers. Standard for Television - ata Structure for DV-Based Audio, Data and Compressed Video at 100 Mb/s 1080/60i, 1080/50i, 720/60p, 720/50p. SMPTE 370-2013."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_EPS_1",
+            "mimetype": "application/postscript",
+            "content_type": "still image",
+            "format_name_long": "Encapsulated postscript",
+            "format_name_short": "EPS",
+            "typical_extensions": [
+                ".eps",
+                ".epsf",
+                ".epsi"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_EPS_1_3.0",
+                    "version": "3.0",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/124",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "EPS",
+                            "url": "https://web.archive.org/web/20170818010030/http://wwwimages.adobe.com/content/dam/Adobe/en/devnet/postscript/pdfs/5002.EPSF_Spec.pdf",
+                            "reference": "Encapsulated PostScript File Format Specification. Adobe Developer Support. Version 3.0. Adobe Systems Incorporated. 1.5.1992."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_EPUB_1",
+            "mimetype": "application/epub+zip",
+            "content_type": "text",
+            "format_name_long": "Electronic Publications",
+            "format_name_short": "EPUB",
+            "typical_extensions": [
+                ".epub"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_EPUB_1_2.0.1",
+                    "version": "2.0.1",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/483",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "EPUB_2.0.1",
+                            "url": "http://idpf.org/epub/201",
+                            "reference": "EPUB version 2.0.1. International Digital Publishing Forum."
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_EPUB_1_3.0.0",
+                    "version": "3.0.0",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/483",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.4.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "EPUB_3.0.0",
+                            "url": "http://idpf.org/epub/30. In November 2014, EPUB 3.0 was published by the International Standards Organization as ISO/IEC TS 30135 (parts 1-7).",
+                            "reference": "EPUB version 3.0.0. International Digital Publishing Forum."
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_EPUB_1_3.0.1",
+                    "version": "3.0.1",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/483",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.4.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "EPUB_3.0.1",
+                            "url": "http://idpf.org/epub/301. In January 2020, EPUB 3.0.1 was published by the International Standards Organization as ISO/IEC 23736 (parts 1-6).",
+                            "reference": "EPUB version 3.0.1. International Digital Publishing Forum."
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_EPUB_1_3.1",
+                    "version": "3.1",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/483",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.6.0",
+                    "removed_in_dps_spec": "1.7.0",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_EPUB_1_3.2",
+                    "version": "3.2",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/483",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.8.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "EPUB_3.2",
+                            "url": "https://www.w3.org/publishing/epub32/epub-spec.html",
+                            "reference": "EPUB 3.2. Final Community Group Specification 08 May 2019."
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_EPUB_1_3.3",
+                    "version": "3.3",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "",
+                    "removed_in_dps_spec": "",
+                    "format_sources": []
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_FFV1_1",
+            "mimetype": "video/x-ffv",
+            "content_type": "video",
+            "format_name_long": "FF Video Codec 1",
+            "format_name_short": "FFV1",
+            "typical_extensions": [
+                ".mkv"
+            ],
+            "required_metadata": "videoMD",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_FFV1_1_3",
+                    "version": "3",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.7.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "RFC_9043",
+                            "url": "https://datatracker.ietf.org/doc/rfc9043/",
+                            "reference": "FFV1 Video Coding Format Version 0, 1, and 3. Request for Comments: 9043 August 2021."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_FLAC_1",
+            "mimetype": "audio/flac",
+            "content_type": "audio",
+            "format_name_long": "Free Lossless Audio Codec",
+            "format_name_short": "FLAC",
+            "typical_extensions": [
+                ".flac"
+            ],
+            "required_metadata": "audioMD",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_FLAC_1_1.2.1",
+                    "version": "1.2.1",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/279",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "FLAC",
+                            "url": "https://xiph.org/flac/format.html",
+                            "reference": "FLAC Format Specification."
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_FLAC_1_1.3.0",
+                    "version": "1.3.0",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "1.4.0",
+                    "format_sources": []
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_GEOPACKAGE_1",
+            "mimetype": "application/geopackage+sqlite3",
+            "content_type": "geospatial",
+            "format_name_long": "Geopackage",
+            "format_name_short": "GEOPACKAGE",
+            "typical_extensions": [
+                ".gpkg"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_GEOPACKAGE_1_1.3.0",
+                    "version": "1.3.0",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/1700",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.11.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "OGC_1.3.0",
+                            "url": "http://www.geopackage.org/spec130/",
+                            "reference": "Open Geospatial Consortium. OGC GeoPackage Encoding Standard. Version 1.3.0. 2021."
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_GEOPACKAGE_1_1.3.1",
+                    "version": "1.3.1",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/1700",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.11.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "OGC_1.3.1",
+                            "url": "https://www.geopackage.org/spec131/",
+                            "reference": "Open Geospatial Consortium. OGC GeoPackage Encoding Standard. Version 1.3.1. 2021."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_GEOTIFF_1",
+            "mimetype": "image/tiff",
+            "content_type": "geospatial",
+            "format_name_long": "Geographic Tagged Image File Format",
+            "format_name_short": "GEOTIFF",
+            "typical_extensions": [
+                ".tiff",
+                ".tif"
+            ],
+            "required_metadata": "MIX",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_GEOTIFF_1_1.0",
+                    "version": "1.0",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/155",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.5.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "GEOTIFF",
+                            "url": "http://geotiff.maptools.org/spec/geotiffhome.html",
+                            "reference": "GeoTIFF Format Specification, GeoTIFF Revision 1.0, Specification Version: 1.8.2, November 1995."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_GIF_1",
+            "mimetype": "image/gif",
+            "content_type": "still image",
+            "format_name_long": "Graphics Interchange Format",
+            "format_name_short": "GIF",
+            "typical_extensions": [
+                ".gif"
+            ],
+            "required_metadata": "MIX",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_GIF_1_1987a",
+                    "version": "1987a",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/3",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "GIF_87a",
+                            "url": "https://www.w3.org/Graphics/GIF/spec-gif87.txt",
+                            "reference": "GIF(tm). GRAPHICS INTERCHANGE FORMAT(tm). A standard defining a mechanism for the storage and transmission of raster-based graphics information. CompuServe Incorporated. 15.6.1987."
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_GIF_1_1989a",
+                    "version": "1989a",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/4",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "GIF_89a",
+                            "url": "https://www.w3.org/Graphics/GIF/spec-gif89a.txt",
+                            "reference": "GRAPHICS INTERCHANGE FORMAT(tm), Version 89a. CompuServe Incorporated, Columbus, Ohio. 31.7.1990."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_GML_1",
+            "mimetype": "application/gml+xml",
+            "content_type": "geospatial",
+            "format_name_long": "Geography Markup Language",
+            "format_name_short": "GML",
+            "typical_extensions": [
+                ".gml",
+                ".xml"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_GML_1_3.2.1",
+                    "version": "3.2.1",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "x-fmt/227",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.5.0",
+                    "removed_in_dps_spec": "1.10.0",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_GML_1_3.2.2",
+                    "version": "3.2.2",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/1047",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.10.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_19136:2020",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Geographic information -- Geography Markup Language (GML). ISO 19136-1:2020"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_HDF5_1",
+            "mimetype": "application/x-hdf5",
+            "content_type": "scientific",
+            "format_name_long": "Hierarchical Data Format",
+            "format_name_short": "HDF5",
+            "typical_extensions": [
+                ".hdf5",
+                ".h5",
+                ".he5"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_HDF5_1_1.10",
+                    "version": "1.10",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/807, fmt/286, fmt/287",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.7.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "HDF5",
+                            "url": "https://docs.hdfgroup.org/hdf5/v1_10/",
+                            "reference": "The HDF Group: HDF5 file format home page."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_HEVC_1",
+            "mimetype": "video/H265",
+            "content_type": "video",
+            "format_name_long": "High Efficiency Video Coding",
+            "format_name_short": "HEVC",
+            "typical_extensions": [
+                ".mp4",
+                ".h265"
+            ],
+            "required_metadata": "videoMD",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_HEVC_1_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.12.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_23008-2:2023",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — High efficiency coding and media delivery in heterogeneous environments – Part 2: High efficiency video coding. ISO/IEC 23008-2"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_HTML_1",
+            "mimetype": "text/html",
+            "content_type": "text",
+            "format_name_long": "Hypertext Markup Language",
+            "format_name_short": "HTML",
+            "typical_extensions": [
+                ".html",
+                ".htm"
+            ],
+            "required_metadata": "",
+            "charsets": [
+                "ISO-8859-15",
+                "UTF-8",
+                "UTF-16",
+                "UTF-32"
+            ],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_HTML_1_4.01",
+                    "version": "4.01",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/100",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_15445:2000",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Document description and processing languages — HyperText Markup Language (HTML). ISO/IEC 15445:2000"
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_HTML_1_5.0",
+                    "version": "5.0",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/471",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.5.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "HTML5",
+                            "url": "https://www.w3.org/TR/html5/",
+                            "reference": "HTML5. A vocabulary and associated APIs for HTML and XHTML. W3C Recommendation 28 October 2014."
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_HTML_1_5.1",
+                    "version": "5.1",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.9.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "HTML5.1",
+                            "url": "https://www.w3.org/TR/html51/",
+                            "reference": "HTML 5.1 2nd Edition. W3C Recommendation, October 2017."
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_HTML_1_5.2",
+                    "version": "5.2",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.9.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "HTML5.2",
+                            "url": "https://www.w3.org/TR/html52/",
+                            "reference": "HTML 5.2. W3C Recommendation, December 2017."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_IFC_1",
+            "mimetype": "model/step",
+            "content_type": "text",
+            "format_name_long": "Industry Foundation Classes",
+            "format_name_short": "IFC",
+            "typical_extensions": [
+                ".ifc",
+                ".ifcxml",
+                ".ifczip"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_IFC_1_4.0.2.1",
+                    "version": "4.0.2.1",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/700",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.11.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_16739:2018",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Industry Foundation Classes (IFC) for data sharing in the construction and facility management industries — Part 1: Data schema. ISO 16739-1:2018."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_JP2_1",
+            "mimetype": "image/jp2",
+            "content_type": "still image",
+            "format_name_long": "Joint Photographic Experts Group JPEG 2000",
+            "format_name_short": "JP2",
+            "typical_extensions": [
+                ".jp2",
+                ".jpf"
+            ],
+            "required_metadata": "MIX",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_JP2_1_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "x-fmt/392",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_15444-1:2019",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — JPEG 2000 image coding system: Core coding system. ISO/IEC 15444-1:2019"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_JPEG_1",
+            "mimetype": "image/jpeg",
+            "content_type": "still image",
+            "format_name_long": "Joint Photographic Experts Group",
+            "format_name_short": "JPEG",
+            "typical_extensions": [
+                ".jpg",
+                ".jpeg",
+                ".jpe",
+                ".jif",
+                ".jfif",
+                ".jfi"
+            ],
+            "required_metadata": "MIX",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_JPEG_1_1.00",
+                    "version": "1.00",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/42",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_10918-1:1994",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Digital compression and coding of continuous-tone still images: Requirements and guidelines. ISO/IEC 10918-1:1994"
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_JPEG_1_1.01",
+                    "version": "1.01",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/43",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_10918-1:1994",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Digital compression and coding of continuous-tone still images: Requirements and guidelines. ISO/IEC 10918-1:1994"
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_JPEG_1_1.02",
+                    "version": "1.02",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/44",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_10918-1:1994",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Digital compression and coding of continuous-tone still images: Requirements and guidelines. ISO/IEC 10918-1:1994"
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_JPEG_1_2.0",
+                    "version": "2.0",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "x-fmt/398",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.6.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_JPEG_1_2.1",
+                    "version": "2.1",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "x-fmt/390",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.6.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_JPEG_1_2.2",
+                    "version": "2.2",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "x-fmt/391",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.6.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_JPEG_1_2.2.1",
+                    "version": "2.2.1",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/645",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.6.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_JPEG_1_2.3",
+                    "version": "2.3",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/1507",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.10.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_JPEG_1_2.3.1",
+                    "version": "2.3.1",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/1507",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.10.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_JPEG_1_2.3.2",
+                    "version": "2.3.2",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/1507",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.10.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": []
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_JPEG2000_1",
+            "mimetype": "video/jpeg2000",
+            "content_type": "video",
+            "format_name_long": "JPEG 2000",
+            "format_name_short": "JPEG2000",
+            "typical_extensions": [
+                ".mj2",
+                ".mjp2"
+            ],
+            "required_metadata": "videoMD",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_JPEG2000_1_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "x-fmt/392",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_15444-1:2019",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — JPEG 2000 image coding system: Core coding system. ISO/IEC 15444-1:2019"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_KML_1",
+            "mimetype": "application/vnd.google-earth.kml+xml",
+            "content_type": "geospatial",
+            "format_name_long": "Keyhole Markup Language",
+            "format_name_short": "KML",
+            "typical_extensions": [
+                ".kml",
+                ".kmz"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_KML_1_2.3",
+                    "version": "2.3",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/244",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.5.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "KML",
+                            "url": "http://www.opengis.net/doc/IS/kml/2.3",
+                            "reference": "Open Geospatial Consortium. OGC KML 2.3."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_LPCM_1",
+            "mimetype": "audio/L8",
+            "content_type": "audio",
+            "format_name_long": "Linear Pulse-Code Modulation",
+            "format_name_short": "LPCM",
+            "typical_extensions": [
+                ".wav",
+                ".aiff",
+                ".pcm"
+            ],
+            "required_metadata": "audioMD",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_LPCM_1_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.8.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "LPCM",
+                            "url": "https://www.loc.gov/preservation/digital/formats/fdd/fdd000011.shtml",
+                            "reference": "Linear Pulse Code Modulated Audio (LPCM). Library of Congress. February 19, 2008."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_MATLAB_1",
+            "mimetype": "application/matlab",
+            "content_type": "scientific",
+            "format_name_long": "Matlab",
+            "format_name_short": "MATLAB",
+            "typical_extensions": [
+                ".m",
+                ".mat"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_MATLAB_1_7",
+                    "version": "7",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/806",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.7.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_MATLAB_1_7.3",
+                    "version": "7.3",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/828",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.7.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": []
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_MJPEG2000_1",
+            "mimetype": "video/mj2",
+            "content_type": "video",
+            "format_name_long": "JPEG 2000",
+            "format_name_short": "MJPEG2000",
+            "typical_extensions": [
+                ".mj2",
+                ".mjp2"
+            ],
+            "required_metadata": "videoMD",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_MJPEG2000_1_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/337",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "1.4.0",
+                    "format_sources": []
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_MP3_1",
+            "mimetype": "audio/mpeg",
+            "content_type": "audio",
+            "format_name_long": "Moving Pictures Expert Group MPEG-1 layer-3",
+            "format_name_short": "MP3",
+            "typical_extensions": [
+                ".mp3"
+            ],
+            "required_metadata": "audioMD",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_MP3_1_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/134",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "1.7.0",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_MP3_1_1",
+                    "version": "1",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/134",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.7.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_11172-3:1993",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Coding of moving pictures and associated audio for digital storage media at up to about 1,5 Mbit/s — Part 3: Audio. ISO/IEC 11172-3:1993"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_MP3_2",
+            "mimetype": "audio/mpeg",
+            "content_type": "audio",
+            "format_name_long": "Moving Pictures Expert Group MPEG-2 layer-3",
+            "format_name_short": "MP3",
+            "typical_extensions": [
+                ".mp3"
+            ],
+            "required_metadata": "audioMD",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_MP3_2_2",
+                    "version": "2",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/134",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.7.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_13818-3:1998",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Generic coding of moving pictures and associated audio information — Part 3: Audio. ISO/IEC 13818-3:1998"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_MPEG_1",
+            "mimetype": "video/mpeg",
+            "content_type": "video",
+            "format_name_long": "Moving Pictures Expert Group",
+            "format_name_short": "MPEG",
+            "typical_extensions": [
+                ".mpeg",
+                ".mpg"
+            ],
+            "required_metadata": "videoMD",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_MPEG_1_1",
+                    "version": "1",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/649",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_11172-2:1993",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Coding of moving pictures and associated audio for digital storage media at up to about 1,5 Mbit/s — Part 2: Video. ISO/IEC 11172-2:1993"
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_MPEG_1_2",
+                    "version": "2",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/640",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_13818-2:2013",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Generic coding of moving pictures and associated audio information: Video. ISO/IEC 13818-2:2013"
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_MPEG_1_4",
+                    "version": "4",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/199",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "1.5.0",
+                    "format_sources": []
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_MS_EXCEL_1",
+            "mimetype": "application/vnd.ms-excel",
+            "content_type": "text",
+            "format_name_long": "Microsoft Office Suite",
+            "format_name_short": "MS_EXCEL",
+            "typical_extensions": [
+                ".xls"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_MS_EXCEL_1_8",
+                    "version": "8",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/61",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_MS_EXCEL_1_8X",
+                    "version": "8X",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/62",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.9.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_MS_EXCEL_1_9.0",
+                    "version": "9.0",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/62",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "1.9.0",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_MS_EXCEL_1_10.0",
+                    "version": "10.0",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/62",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "1.9.0",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_MS_EXCEL_1_11.0",
+                    "version": "11.0",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/62",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "1.9.0",
+                    "format_sources": []
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_MS_EXCEL_2",
+            "mimetype": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "content_type": "text",
+            "format_name_long": "Microsoft Office Suite",
+            "format_name_short": "MS_EXCEL",
+            "typical_extensions": [
+                ".xlsx"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_MS_EXCEL_2_12.0",
+                    "version": "12.0",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/214",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "1.9.0",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_MS_EXCEL_2_14.0",
+                    "version": "14.0",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/214",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "1.9.0",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_MS_EXCEL_2_15.0",
+                    "version": "15.0",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/214",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.4.0",
+                    "removed_in_dps_spec": "1.9.0",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_MS_EXCEL_2_16.0",
+                    "version": "16.0",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/214",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.8.0",
+                    "removed_in_dps_spec": "1.9.0",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_MS_EXCEL_2_2007_ONWARDS",
+                    "version": "2007 onwards",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/214",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.9.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_29500-1:2016",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Document description and processing languages — Office Open XML File Formats — Part 1: Fundamentals and Markup Language Reference. ISO/IEC 29500-1:2016"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_MS_POWERPOINT_1",
+            "mimetype": "application/vnd.ms-powerpoint",
+            "content_type": "text",
+            "format_name_long": "Microsoft Office Suite",
+            "format_name_short": "MS_POWERPOINT",
+            "typical_extensions": [
+                ".ppt"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_MS_POWERPOINT_1_8.0",
+                    "version": "8.0",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/126",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "1.9.0",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_MS_POWERPOINT_1_9.0",
+                    "version": "9.0",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/126",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "1.9.0",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_MS_POWERPOINT_1_10.0",
+                    "version": "10.0",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/126",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "1.9.0",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_MS_POWERPOINT_1_11.0",
+                    "version": "11.0",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/126",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "1.9.0",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_MS_POWERPOINT_1_97-2003",
+                    "version": "97-2003",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/126",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.9.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": []
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_MS_POWERPOINT_2",
+            "mimetype": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+            "content_type": "text",
+            "format_name_long": "Microsoft Office Suite",
+            "format_name_short": "MS_POWERPOINT",
+            "typical_extensions": [
+                ".pptx"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_MS_POWERPOINT_2_12.0",
+                    "version": "12.0",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/215",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "1.9.0",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_MS_POWERPOINT_2_14.0",
+                    "version": "14.0",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/215",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "1.9.0",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_MS_POWERPOINT_2_15.0",
+                    "version": "15.0",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/215",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.4.0",
+                    "removed_in_dps_spec": "1.9.0",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_MS_POWERPOINT_2_16.0",
+                    "version": "16.0",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/215",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.8.0",
+                    "removed_in_dps_spec": "1.9.0",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_MS_POWERPOINT_2_2007_ONWARDS",
+                    "version": "2007 onwards",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/215",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.9.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_29500-1:2016",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Document description and processing languages — Office Open XML File Formats — Part 1: Fundamentals and Markup Language Reference. ISO/IEC 29500-1:2016"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_MS_WORD_1",
+            "mimetype": "application/msword",
+            "content_type": "text",
+            "format_name_long": "Microsoft Office Suite",
+            "format_name_short": "MS_WORD",
+            "typical_extensions": [
+                ".doc"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_MS_WORD_1_8.0",
+                    "version": "8.0",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/40",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "1.9.0",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_MS_WORD_1_8.5",
+                    "version": "8.5",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/40",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "1.9.0",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_MS_WORD_1_9.0",
+                    "version": "9.0",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/40",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "1.9.0",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_MS_WORD_1_10.0",
+                    "version": "10.0",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/40",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "1.9.0",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_MS_WORD_1_11.0",
+                    "version": "11.0",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/40",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "1.9.0",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_MS_WORD_1_97-2003",
+                    "version": "97-2003",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/40",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.9.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": []
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_MS_WORD_2",
+            "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "content_type": "text",
+            "format_name_long": "Microsoft Office Suite",
+            "format_name_short": "MS_WORD",
+            "typical_extensions": [
+                ".docx"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_MS_WORD_2_12.0",
+                    "version": "12.0",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/412",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "1.9.0",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_MS_WORD_2_14.0",
+                    "version": "14.0",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/412",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "1.9.0",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_MS_WORD_2_15.0",
+                    "version": "15.0",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/412",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.4.0",
+                    "removed_in_dps_spec": "1.9.0",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_MS_WORD_2_16.0",
+                    "version": "16.0",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/412",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.8.0",
+                    "removed_in_dps_spec": "1.9.0",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_MS_WORD_2_2007_ONWARDS",
+                    "version": "2007 onwards",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/412",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.9.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_29500-1:2016",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Document description and processing languages — Office Open XML File Formats — Part 1: Fundamentals and Markup Language Reference. ISO/IEC 29500-1:2016"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_ODF_1",
+            "mimetype": "application/vnd.oasis.opendocument.formula",
+            "content_type": "text",
+            "format_name_long": "Open Document Format",
+            "format_name_short": "ODF",
+            "typical_extensions": [
+                ".odf"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_ODF_1_1.0",
+                    "version": "1.0",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_26300:2006",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Open Document Format for Office Applications (OpenDocument) v1.0. ISO/IEC 26300:2006"
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_ODF_1_1.2",
+                    "version": "1.2",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.6.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_26300:2015",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Open Document Format for Office Applications (OpenDocument) v1.2. ISO/IEC 26300:2015"
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_ODF_1_1.3",
+                    "version": "1.3",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.9.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ODF_1.3",
+                            "url": "https://www.oasis-open.org/news/announcements/open-document-format-for-office-applications-opendocument-v1-3-from-the-opendocum",
+                            "reference": "Open Document Format for Office Applications (OpenDocument) Version 1.3 Committee Specification 01. December 2019."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_ODG_1",
+            "mimetype": "application/vnd.oasis.opendocument.graphics",
+            "content_type": "text",
+            "format_name_long": "Open Document Format",
+            "format_name_short": "ODG",
+            "typical_extensions": [
+                ".odg",
+                ".fodg"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_ODG_1_1.0",
+                    "version": "1.0",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/139",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_26300:2006",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Open Document Format for Office Applications (OpenDocument) v1.0. ISO/IEC 26300:2006"
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_ODG_1_1.1",
+                    "version": "1.1",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/296",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.6.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_ODG_1_1.2",
+                    "version": "1.2",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/297",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.6.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_26300:2015",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Open Document Format for Office Applications (OpenDocument) v1.2. ISO/IEC 26300:2015"
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_ODG_1_1.3",
+                    "version": "1.3",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.9.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ODF_1.3",
+                            "url": "https://www.oasis-open.org/news/announcements/open-document-format-for-office-applications-opendocument-v1-3-from-the-opendocum",
+                            "reference": "Open Document Format for Office Applications (OpenDocument) Version 1.3 Committee Specification 01. December 2019."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_ODP_1",
+            "mimetype": "application/vnd.oasis.opendocument.presentation",
+            "content_type": "text",
+            "format_name_long": "Open Document Format",
+            "format_name_short": "ODP",
+            "typical_extensions": [
+                ".odp",
+                ".fodp"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_ODP_1_1.0",
+                    "version": "1.0",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/138",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_26300:2006",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Open Document Format for Office Applications (OpenDocument) v1.0. ISO/IEC 26300:2006"
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_ODP_1_1.1",
+                    "version": "1.1",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/292",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.6.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_ODP_1_1.2",
+                    "version": "1.2",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/293",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.6.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_26300:2015",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Open Document Format for Office Applications (OpenDocument) v1.2. ISO/IEC 26300:2015"
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_ODP_1_1.3",
+                    "version": "1.3",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.9.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ODF_1.3",
+                            "url": "https://www.oasis-open.org/news/announcements/open-document-format-for-office-applications-opendocument-v1-3-from-the-opendocum",
+                            "reference": "Open Document Format for Office Applications (OpenDocument) Version 1.3 Committee Specification 01. December 2019."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_ODS_1",
+            "mimetype": "application/vnd.oasis.opendocument.spreadsheet",
+            "content_type": "text",
+            "format_name_long": "Open Document Format",
+            "format_name_short": "ODS",
+            "typical_extensions": [
+                ".ods",
+                ".fods"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_ODS_1_1.0",
+                    "version": "1.0",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/137",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_26300:2006",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Open Document Format for Office Applications (OpenDocument) v1.0. ISO/IEC 26300:2006"
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_ODS_1_1.1",
+                    "version": "1.1",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/294",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.6.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_ODS_1_1.2",
+                    "version": "1.2",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/295",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.6.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_26300:2015",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Open Document Format for Office Applications (OpenDocument) v1.2. ISO/IEC 26300:2015"
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_ODS_1_1.3",
+                    "version": "1.3",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.9.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ODF_1.3",
+                            "url": "https://www.oasis-open.org/news/announcements/open-document-format-for-office-applications-opendocument-v1-3-from-the-opendocum",
+                            "reference": "Open Document Format for Office Applications (OpenDocument) Version 1.3 Committee Specification 01. December 2019."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_ODT_1",
+            "mimetype": "application/vnd.oasis.opendocument.text",
+            "content_type": "text",
+            "format_name_long": "Open Document Format",
+            "format_name_short": "ODT",
+            "typical_extensions": [
+                ".odt",
+                ".fodt"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_ODT_1_1.0",
+                    "version": "1.0",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/136",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_26300:2006",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Open Document Format for Office Applications (OpenDocument) v1.0. ISO/IEC 26300:2006"
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_ODT_1_1.1",
+                    "version": "1.1",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/290",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.6.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_ODT_1_1.2",
+                    "version": "1.2",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/291",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.6.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_26300:2015",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Open Document Format for Office Applications (OpenDocument) v1.2. ISO/IEC 26300:2015"
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_ODT_1_1.3",
+                    "version": "1.3",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.9.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ODF_1.3",
+                            "url": "https://www.oasis-open.org/news/announcements/open-document-format-for-office-applications-opendocument-v1-3-from-the-opendocum",
+                            "reference": "Open Document Format for Office Applications (OpenDocument) Version 1.3 Committee Specification 01. December 2019."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_PDF_1",
+            "mimetype": "application/pdf",
+            "content_type": "text",
+            "format_name_long": "PDF for long-term preservation: PDF-Archive",
+            "format_name_short": "PDF",
+            "typical_extensions": [
+                ".pdf"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_PDF_1_1.2",
+                    "version": "1.2",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/16",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "PDF_1.2",
+                            "url": "https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/pdfreference1.2.pdf",
+                            "reference": "Portable Document Format Reference Manual. Version 1.2. Adobe Systems Incorporated. November 12, 1996."
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_PDF_1_1.3",
+                    "version": "1.3",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/17",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "PDF_1.3",
+                            "url": "https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/pdfreference1.3.pdf",
+                            "reference": "PDF reference, second edition. Adobe Portable Document Format. Version 1.3. Adobe Systems Incorporated. July, 2000."
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_PDF_1_1.4",
+                    "version": "1.4",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/18",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "PDF_1.4",
+                            "url": "https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/pdfreference1.4.pdf",
+                            "reference": "PDF reference, third edition. Adobe Portable Document Format. Version 1.4. Adobe Systems Incorporated. December, 2001."
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_PDF_1_1.5",
+                    "version": "1.5",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/19",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "PDF_1.5",
+                            "url": "https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/pdfreference1.5_v6.pdf",
+                            "reference": "PDF reference, fourth edition. Adobe Portable Document Format. Version 1.5. Adobe Systems Incorporated. Aug, 2003."
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_PDF_1_1.6",
+                    "version": "1.6",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/20",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "PDF_1.6",
+                            "url": "https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/pdfreference1.6.pdf",
+                            "reference": "PDF reference, fifth edition. Adobe Portable Document Format. Version 1.6. Adobe Systems Incorporated. Nov, 2004."
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_PDF_1_1.7",
+                    "version": "1.7",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/276",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_32000-1:2008",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Document management — Portable document format — Part 1: PDF 1.7. ISO 32000-1:2008"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_PDF_A_1",
+            "mimetype": "application/pdf",
+            "content_type": "text",
+            "format_name_long": "Portable Document Format",
+            "format_name_short": "PDF/A",
+            "typical_extensions": [
+                ".pdf"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_PDF_A_1_A-1a",
+                    "version": "A-1a",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/95",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_19005:2005",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Document management —Electronic document file format for long-term preservation — Part 1: Use of PDF 1.4 (PDF/A-1). ISO 19005-1:2005"
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_PDF_A_1_A-1b",
+                    "version": "A-1b",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/354",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_19005:2005",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Document management —Electronic document file format for long-term preservation — Part 1: Use of PDF 1.4 (PDF/A-1). ISO 19005-1:2005"
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_PDF_A_1_A-2a",
+                    "version": "A-2a",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/476",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_19005-2:2011",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Document management — Electronic document file format for long-term preservation — Part 2: Use of ISO 32000-1 (PDF/A-2). ISO 19005-2:2011"
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_PDF_A_1_A-2b",
+                    "version": "A-2b",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/477",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_19005-2:2011",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Document management — Electronic document file format for long-term preservation — Part 2: Use of ISO 32000-1 (PDF/A-2). ISO 19005-2:2011"
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_PDF_A_1_A-2u",
+                    "version": "A-2u",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/478",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_19005-2:2011",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Document management — Electronic document file format for long-term preservation — Part 2: Use of ISO 32000-1 (PDF/A-2). ISO 19005-2:2011"
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_PDF_A_1_A-3a",
+                    "version": "A-3a",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/479",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.6.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_19005-3:2012",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Document management — Electronic document file format for long-term preservation — Part 3: Use of ISO 32000-1 with support for embedded files (PDF/A-3). ISO 19005-3:2012"
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_PDF_A_1_A-3b",
+                    "version": "A-3b",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/480",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.6.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_19005-3:2012",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Document management — Electronic document file format for long-term preservation — Part 3: Use of ISO 32000-1 with support for embedded files (PDF/A-3). ISO 19005-3:2012"
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_PDF_A_1_A-3u",
+                    "version": "A-3u",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/481",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.6.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_19005-3:2012",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Document management — Electronic document file format for long-term preservation — Part 3: Use of ISO 32000-1 with support for embedded files (PDF/A-3). ISO 19005-3:2012"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_PNG_1",
+            "mimetype": "image/png",
+            "content_type": "still image",
+            "format_name_long": "Portable network graphics",
+            "format_name_short": "PNG",
+            "typical_extensions": [
+                ".png"
+            ],
+            "required_metadata": "MIX",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_PNG_1_1.2",
+                    "version": "1.2",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/13",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_15948:2004",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Computer graphics and image processing — Portable Network Graphics (PNG): Functional specification. ISO/IEC 15948:2004"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_POR_1",
+            "mimetype": "application/x-spss-por",
+            "content_type": "research",
+            "format_name_long": "SPSS Portable",
+            "format_name_short": "POR",
+            "typical_extensions": [
+                ".por"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_POR_1_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/997",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.5.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": []
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_SIARD_1",
+            "mimetype": "application/x-siard",
+            "content_type": "database",
+            "format_name_long": "Software Independent Archiving of Relational Databases",
+            "format_name_short": "SIARD",
+            "typical_extensions": [
+                ".siard"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_SIARD_1_2.0",
+                    "version": "2.0",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/995",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.7.0",
+                    "removed_in_dps_spec": "1.10.0",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_SIARD_1_2.1",
+                    "version": "2.1",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/1196",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.7.0",
+                    "removed_in_dps_spec": "1.10.0",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_SIARD_1_2.1.1",
+                    "version": "2.1.1",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.10.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "SIARD2.1.1",
+                            "url": "https://www.bar.admin.ch/dam/bar/en/dokumente/kundeninformation/siard_formatbeschreibung.pdf.download.pdf/siard_format_description.pdf",
+                            "reference": "SIARD Format Specification 2.1.1, 2020."
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_SIARD_1_2.2",
+                    "version": "2.2",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/1777",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.10.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "SIARD2.2",
+                            "url": "https://siard.dilcis.eu/SIARD%202.2/SIARD%202.2.pdf",
+                            "reference": "SIARD Format Specification 2.2. 2021."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_SVG_1",
+            "mimetype": "image/svg+xml",
+            "content_type": "still image",
+            "format_name_long": "Scalable Vector Graphics",
+            "format_name_short": "SVG",
+            "typical_extensions": [
+                ".svg",
+                ".svgz"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_SVG_1_1.1",
+                    "version": "1.1",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/92",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.7.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "SVG",
+                            "url": "https://www.w3.org/TR/SVG11/",
+                            "reference": "W3C: Scalable Vector Graphics (SVG) 1.1 specification (Second Edition)."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_TEXT_PLAIN_1",
+            "mimetype": "text/plain",
+            "content_type": "text",
+            "format_name_long": "Tekstitiedosto",
+            "format_name_short": "TEXT_PLAIN",
+            "typical_extensions": [
+                ".txt"
+            ],
+            "required_metadata": "",
+            "charsets": [
+                "ISO-8859-15",
+                "UTF-8",
+                "UTF-16",
+                "UTF-32"
+            ],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_TEXT_PLAIN_1_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "x-fmt/111",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "RFC_2046",
+                            "url": "https://datatracker.ietf.org/doc/rfc2046/",
+                            "reference": "Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types. Request for Comments: 2046. Request for Comments: 2046 November 1996."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_TIFF_1",
+            "mimetype": "image/tiff",
+            "content_type": "still image",
+            "format_name_long": "Tagged Image File Format",
+            "format_name_short": "TIFF",
+            "typical_extensions": [
+                ".tiff",
+                ".tif"
+            ],
+            "required_metadata": "MIX",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_TIFF_1_6.0",
+                    "version": "6.0",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/353",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "TIFF",
+                            "url": "https://www.adobe.io/content/dam/udp/en/open/standards/tiff/TIFF6.pdf",
+                            "reference": "Adobe Developers Association. TIFF Revision 6.0 Final — June 3, 1992."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_WARC_1",
+            "mimetype": "application/warc",
+            "content_type": "web archive",
+            "format_name_long": "Web ARChive Format",
+            "format_name_short": "WARC",
+            "typical_extensions": [
+                ".warc"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_WARC_1_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/289",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "1.4.0",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_WARC_1_0.17",
+                    "version": "0.17",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/289",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "1.4.0",
+                    "removed_in_dps_spec": "1.9.0",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_WARC_1_1.0",
+                    "version": "1.0",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/1355",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.4.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_28500:2009",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information and documentation — WARC file format. ISO 28500:2009"
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_WARC_1_1.1",
+                    "version": "1.1",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/1281",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.11.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_28500:2017",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information and documentation — WARC file format. ISO 28500:2017"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_WAV_1",
+            "mimetype": "audio/x-wav",
+            "content_type": "audio",
+            "format_name_long": "Waveform Audio Format",
+            "format_name_short": "WAV",
+            "typical_extensions": [
+                ".wav"
+            ],
+            "required_metadata": "audioMD",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_WAV_1_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/141",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "WAV_LOC",
+                            "url": "https://www.loc.gov/preservation/digital/formats/fdd/fdd000001.shtml",
+                            "reference": "WAVE Audio File Format. Library of Congress."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_WMA_1",
+            "mimetype": "audio/x-ms-wma",
+            "content_type": "audio",
+            "format_name_long": "Windows Media Audio",
+            "format_name_short": "WMA",
+            "typical_extensions": [
+                ".wma",
+                ".asf"
+            ],
+            "required_metadata": "audioMD",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_WMA_1_9",
+                    "version": "9",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/132",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": []
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_WMV_1",
+            "mimetype": "video/x-ms-wmv",
+            "content_type": "video",
+            "format_name_long": "Windows Media Video",
+            "format_name_short": "WMV",
+            "typical_extensions": [
+                ".asf",
+                ".wmv"
+            ],
+            "required_metadata": "videoMD",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_WMV_1_9",
+                    "version": "9",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/133",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "SMPTE_421:2013",
+                            "url": "",
+                            "reference": "Society of Motion Pictures & Television Engineers. Standard for Television - VC-1 Compressed Video Bitstream Format and Decoding Process. SMPTE 0421-2013."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_XHTML_1",
+            "mimetype": "application/xhtml+xml",
+            "content_type": "text",
+            "format_name_long": "Extensible Hypertext Markup Language",
+            "format_name_short": "XHTML",
+            "typical_extensions": [
+                ".xhtml",
+                ".xht",
+                ".xml",
+                ".html",
+                ".htm"
+            ],
+            "required_metadata": "",
+            "charsets": [
+                "ISO-8859-15",
+                "UTF-8",
+                "UTF-16",
+                "UTF-32"
+            ],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_XHTML_1_1.0",
+                    "version": "1.0",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/102",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "XHTML_1.0",
+                            "url": "https://www.w3.org/TR/xhtml1/",
+                            "reference": "XHTML 1.0 — The Extensible HyperText Markup Language (Second Edition). A Reformulation of HTML 4 in XML 1.0. W3C Recommendation, January 2000, revised August 2002."
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_XHTML_1_1.1",
+                    "version": "1.1",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/103",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "XHTML_1.1",
+                            "url": "https://www.w3.org/TR/xhtml11/",
+                            "reference": "XHTML 1.1 — Module-based XHTML (Second Edition). W3C Recommendation, November 2010."
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_XHTML_1_5.0",
+                    "version": "5.0",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/471",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.8.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "HTML5",
+                            "url": "https://www.w3.org/TR/html5/",
+                            "reference": "HTML5. A vocabulary and associated APIs for HTML and XHTML. W3C Recommendation 28 October 2014."
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_XHTML_1_5.1",
+                    "version": "5.1",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.10.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "HTML5.1",
+                            "url": "https://www.w3.org/TR/html51/",
+                            "reference": "HTML 5.1 2nd Edition. W3C Recommendation, October 2017."
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_XHTML_1_5.2",
+                    "version": "5.2",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.10.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "HTML5.2",
+                            "url": "https://www.w3.org/TR/html52/",
+                            "reference": "HTML 5.2. W3C Recommendation, December 2017."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_XML_1",
+            "mimetype": "text/xml",
+            "content_type": "text",
+            "format_name_long": "Extensible Markup Language",
+            "format_name_short": "XML",
+            "typical_extensions": [
+                ".xml"
+            ],
+            "required_metadata": "",
+            "charsets": [
+                "ISO-8859-15",
+                "UTF-8",
+                "UTF-16",
+                "UTF-32"
+            ],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_XML_1_1.0",
+                    "version": "1.0",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/101",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "XML_1.0",
+                            "url": "https://www.w3.org/TR/xml/",
+                            "reference": "Extensible Markup Language (XML) 1.0 (Fifth Edition). W3C Recommendation, November 2008."
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_XML_1_1.1",
+                    "version": "1.1",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.9.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "XML_1.1",
+                            "url": "https://www.w3.org/TR/xml11/",
+                            "reference": "Extensible Markup Language (XML) 1.1 (Second Edition). W3C Recommendation, September 2006."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_MATROSKA_1",
+            "mimetype": "video/x-matroska",
+            "content_type": "videocontainer",
+            "format_name_long": "Matroska Multimedia Container",
+            "format_name_short": "MATROSKA",
+            "typical_extensions": [
+                ".mkv",
+                ".mk3d",
+                ".mka",
+                ".mks"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_MATROSKA_1_4",
+                    "version": "4",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/569",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.8.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "MATROSKA",
+                            "url": "https://datatracker.ietf.org/doc/draft-ietf-cellar-matroska/",
+                            "reference": "Matroska Specifications. IETF Draft. October 2023."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_MPEG-2_TS_1",
+            "mimetype": "video/MP2T",
+            "content_type": "videocontainer",
+            "format_name_long": "MPEG transport stream",
+            "format_name_short": "MPEG-2 (TS)",
+            "typical_extensions": [
+                ".ts",
+                ".tsv",
+                ".tsa",
+                ".m2t"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_MPEG-2_TS_1_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/585",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_13818-1:2019",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Generic coding of moving pictures and associated audio information: Systems. ISO/IEC 13818-1:2019"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_MPEG-4_1",
+            "mimetype": "video/mp4",
+            "content_type": "videocontainer",
+            "format_name_long": "MPEG-4 file format version 2",
+            "format_name_short": "MPEG-4",
+            "typical_extensions": [
+                ".mp4"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_MPEG-4_1_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/199",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_14496-14:2019",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Coding of audio-visual objects — Part 14: MP4 file format. ISO/IEC 14496-14:2020"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_MXF_1",
+            "mimetype": "application/mxf",
+            "content_type": "videocontainer",
+            "format_name_long": "Material Exchange Format",
+            "format_name_short": "MXF",
+            "typical_extensions": [
+                ".mxf"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_MXF_1_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "SMPTE_377:2019",
+                            "url": "",
+                            "reference": "Society of Motion Pictures & Television Engineers. Material Exchange Format (MXF) - File Format Specification (Revision of SMPTE 377-1-2019)."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_MJPEG2000_2",
+            "mimetype": "video/mj2",
+            "content_type": "videocontainer",
+            "format_name_long": "Motion JPEG 2000",
+            "format_name_short": "MJPEG2000",
+            "typical_extensions": [
+                ".mj2",
+                ".mjp2"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_MJPEG2000_2_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/337",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_15444-3:2007",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — JPEG 2000 image coding system: Motion JPEG 2000. ISO/IEC 15444-3:2007"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_MOV_1",
+            "mimetype": "video/quicktime",
+            "content_type": "videocontainer",
+            "format_name_long": "QuickTime",
+            "format_name_short": "MOV",
+            "typical_extensions": [
+                ".mov"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_MOV_1_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "x-fmt/384",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "MOV",
+                            "url": "https://developer.apple.com/standards/qtff-2001.pdf",
+                            "reference": "QuickTime File Format. Classic Version of the QuickTime File Format Specification. Apple Computer, Inc. 1.3.2001."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_ASF_1",
+            "mimetype": "video/x-ms-asf",
+            "content_type": "videocontainer",
+            "format_name_long": "Advanced Systems Format",
+            "format_name_short": "ASF",
+            "typical_extensions": [
+                ".asf",
+                ".wmv",
+                ".wma"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_ASF_1_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/131",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ASF",
+                            "url": "https://download.microsoft.com/download/7/9/0/790fecaa-f64a-4a5e-a430-0bccdab3f1b4/ASF_Specification.doc",
+                            "reference": "Advanced Systems Format (ASF) Specification. Revision 01.20.03. Microsoft Corporation, December 2004."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_AVI_1",
+            "mimetype": "video/avi",
+            "content_type": "videocontainer",
+            "format_name_long": "Audio Video Interleave",
+            "format_name_short": "AVI",
+            "typical_extensions": [
+                ".avi"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_AVI_1_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "fmt/5",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "AVI",
+                            "url": "https://docs.microsoft.com/en-us/windows/win32/directshow/avi-riff-file-reference",
+                            "reference": "AVI (Audio Video Interleave). Library of Congress."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_DV_2",
+            "mimetype": "video/dv",
+            "content_type": "videocontainer",
+            "format_name_long": "Digital Video",
+            "format_name_short": "DV",
+            "typical_extensions": [
+                ".dv"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_DV_2_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "SMPTE_314:2005",
+                            "url": "",
+                            "reference": "Society of Motion Pictures & Television Engineers. Standard for Television - Data Structure for DV-Based Audio, Data and Compressed Video ó25 and 50 Mb/s. SMPTE 314-2005"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_MPEG-1_PS_1",
+            "mimetype": "video/MP1S",
+            "content_type": "videocontainer",
+            "format_name_long": "MPEG program stream",
+            "format_name_short": "MPEG-1 (PS)",
+            "typical_extensions": [
+                ".mpg",
+                ".mpeg",
+                ".m2p",
+                ".ps"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_MPEG-1_PS_1_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "x-fmt/385",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_11172-1:1993",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Coding of moving pictures and associated audio for digital storage media at up to about 1,5 Mbit/s — Part 1: Systems. ISO/IEC 11172-1:1993"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_MPEG-2_PS_1",
+            "mimetype": "video/MP2P",
+            "content_type": "videocontainer",
+            "format_name_long": "MPEG program stream",
+            "format_name_short": "MPEG-2 (PS)",
+            "typical_extensions": [
+                ".mpg",
+                ".mpeg",
+                ".m2p",
+                ".ps"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_MPEG-2_PS_1_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-acceptable-file-format",
+                    "format_registry_key": "x-fmt/386",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_11172-1:1993",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Coding of moving pictures and associated audio for digital storage media at up to about 1,5 Mbit/s — Part 1: Systems. ISO/IEC 11172-1:1993"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_SEG-Y_1",
+            "mimetype": "application/x.fi-dpres.segy",
+            "content_type": "research data",
+            "format_name_long": "SEG-Y Seismic Data Exchange Format",
+            "format_name_short": "SEG-Y",
+            "typical_extensions": [
+                ".sgy",
+                ".segy"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_SEG-Y_1_1.0",
+                    "version": "1.0",
+                    "grade": "fi-dpres-bit-level-file-format",
+                    "format_registry_key": "",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "",
+                    "removed_in_dps_spec": "",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_SEG-Y_1_2.0",
+                    "version": "2.0",
+                    "grade": "fi-dpres-bit-level-file-format",
+                    "format_registry_key": "",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "",
+                    "removed_in_dps_spec": "",
+                    "format_sources": []
+                },
+                {
+                    "_id": "FI_DPRES_SEG-Y_1_UNKN",
+                    "version": "(:unkn)",
+                    "grade": "fi-dpres-bit-level-file-format",
+                    "format_registry_key": "",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "",
+                    "removed_in_dps_spec": "",
+                    "format_sources": []
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_PRORES_1",
+            "mimetype": "video/x.fi-dpres.prores",
+            "content_type": "video",
+            "format_name_long": "Apple ProRes",
+            "format_name_short": "PRORES",
+            "typical_extensions": [
+                ".mov"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_PRORES_1_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-bit-level-file-format-with-recommended",
+                    "format_registry_key": "",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "",
+                    "removed_in_dps_spec": "",
+                    "format_sources": []
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_MPEG-4_2",
+            "mimetype": "audio/mp4",
+            "content_type": "audiocontainer",
+            "format_name_long": "MPEG-4 file format version 2",
+            "format_name_short": "MPEG-4",
+            "typical_extensions": [
+                ".mp4"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_MPEG-4_2_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/199",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.3.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_14496-14:2019",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Coding of audio-visual objects — Part 14: MP4 file format. ISO/IEC 14496-14:2020"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_LPCM_2",
+            "mimetype": "audio/l16",
+            "content_type": "audio",
+            "format_name_long": "Linear Pulse-Code Modulation",
+            "format_name_short": "LPCM",
+            "typical_extensions": [
+                ".wav",
+                ".aiff",
+                ".pcm",
+                ".l16"
+            ],
+            "required_metadata": "audioMD",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_LPCM_2_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.8.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "LPCM",
+                            "url": "https://www.loc.gov/preservation/digital/formats/fdd/fdd000011.shtml",
+                            "reference": "Linear Pulse Code Modulated Audio (LPCM). Library of Congress. February 19, 2008."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_LPCM_3",
+            "mimetype": "audio/l20",
+            "content_type": "audio",
+            "format_name_long": "Linear Pulse-Code Modulation",
+            "format_name_short": "LPCM",
+            "typical_extensions": [
+                ".wav",
+                ".aiff",
+                ".pcm"
+            ],
+            "required_metadata": "audioMD",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_LPCM_3_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.8.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "LPCM",
+                            "url": "https://www.loc.gov/preservation/digital/formats/fdd/fdd000011.shtml",
+                            "reference": "Linear Pulse Code Modulated Audio (LPCM). Library of Congress. February 19, 2008."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_LPCM_4",
+            "mimetype": "audio/l24",
+            "content_type": "audio",
+            "format_name_long": "Linear Pulse-Code Modulation",
+            "format_name_short": "LPCM",
+            "typical_extensions": [
+                ".wav",
+                ".aiff",
+                ".pcm"
+            ],
+            "required_metadata": "audioMD",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_LPCM_4_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.8.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "LPCM",
+                            "url": "https://www.loc.gov/preservation/digital/formats/fdd/fdd000011.shtml",
+                            "reference": "Linear Pulse Code Modulated Audio (LPCM). Library of Congress. February 19, 2008."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }
