@@ -10,7 +10,7 @@ clean-rpm:
 install-json:
 	# Install file formats JSON
 	mkdir -p "${SHAREDIR}"
-	cp dpres_file_formats/file_formats.json "${SHAREDIR}"
+	cp dpres_file_formats/data/file_formats.json "${SHAREDIR}"
 
 	chmod -R 755 "${SHAREDIR}"
 	chmod 644 "${SHAREDIR}/file_formats.json"
