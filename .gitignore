@@ -3,6 +3,9 @@
 *.pyc
 *.swp
 __pycache__
+INSTALLED_FILES*
+build/
+*.egg-info
 htmlcov/
 venv*/
 .venv*/
