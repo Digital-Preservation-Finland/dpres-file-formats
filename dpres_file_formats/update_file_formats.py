@@ -58,7 +58,7 @@ def add_format(
     name_count = 1
 
     for file_format in file_formats:
-        if file_format['format_name_short'] == format_name_short:
+        if file_format.get('format_name_short', '') == format_name_short:
             name_count += 1
 
     # Use format_name_short and a running number as base for format_id
@@ -160,7 +160,7 @@ def add_version_to_format(
     if not format_dict:
         raise ValueError(f"File format {format_id} doesn't exist")
 
-    for versions_dict in format_dict['versions']:
+    for versions_dict in format_dict.get('versions', []):
         if version in versions_dict['version']:
             raise ValueError(
                 f"Version {version} for file format {format_id} "
@@ -180,7 +180,10 @@ def add_version_to_format(
         'removed_in_dps_spec': removed_in_dps_spec,
         'format_sources': format_sources
     }
-    format_dict['versions'].append(version_dict)
+    try:
+        format_dict['versions'].append(version_dict)
+    except KeyError:
+        format_dict['versions'] = [version_dict]
 
     file_formats_json.update_file_formats(
         path=FILE_FORMATS_UPDATE,
@@ -234,7 +237,10 @@ def replace_format(superseded_format,
             superseded_relation = relation.copy()
             superseded_relation['_id'] = superseding_format_id
             superseded_relation['type'] = RelationshipTypes.SUPERSEDED
-            format_dict['relations'].append(superseded_relation)
+            try:
+                format_dict['relations'].append(superseded_relation)
+            except KeyError:
+                format_dict['relations'] = [superseded_relation]
 
             # Set all versions as inactive and unacceptable for digital
             # preservation for the deprecated format
@@ -248,7 +254,10 @@ def replace_format(superseded_format,
             superseding_relation = relation.copy()
             superseding_relation['_id'] = superseded_format_id
             superseding_relation['type'] = RelationshipTypes.SUPERSEDES
-            format_dict['relations'].append(superseding_relation)
+            try:
+                format_dict['relations'].append(superseding_relation)
+            except KeyError:
+                format_dict['relations'] = [superseding_relation]
 
     file_formats_json.update_file_formats(
         path=FILE_FORMATS_UPDATE,
@@ -279,9 +288,12 @@ def add_source_to_format(version_id,
     }
 
     for format_dict in file_formats:
-        for version_dict in format_dict['versions']:
+        for version_dict in format_dict.get('versions', []):
             if version_dict['_id'] == version_id:
-                version_dict['format_sources'].append(format_source)
+                try:
+                    version_dict['format_sources'].append(format_source)
+                except KeyError:
+                    version_dict['format_sources'] = [format_source]
                 break
 
     file_formats_json.update_file_formats(
