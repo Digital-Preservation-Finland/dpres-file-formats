@@ -12,18 +12,18 @@ from dpres_file_formats.read_file_formats import (
 
 
 @pytest.mark.parametrize(
-    ("active", "dps_spec_formats", "found_formats", "found_versions"),
+    ("deprecated", "unofficial", "found_formats", "found_versions"),
     [
-        (True, True, 3, 1),
-        (False, True, 4, 2),
-        (True, False, 3, 2),
-        (False, False, 4, 3)
+        (False, False, 3, 1),
+        (True, False, 4, 2),
+        (False, True, 3, 2),
+        (True, True, 4, 3)
     ]
 )
 def test_supported_file_formats(
-        active, dps_spec_formats, found_formats, found_versions):
+        deprecated, unofficial, found_formats, found_versions):
     """Test supported_file_formats."""
-    file_formats = supported_file_formats(active, dps_spec_formats)
+    file_formats = supported_file_formats(deprecated, unofficial)
 
     assert len(file_formats) == found_formats
     assert file_formats[0]["mimetype"]
@@ -32,21 +32,21 @@ def test_supported_file_formats(
 
 
 @pytest.mark.parametrize(
-    ("active", "dps_spec_formats", "basic_info", "found_formats"),
+    ("deprecated", "unofficial", "basic_info", "found_formats"),
     [
-        (True, True, False, 3),
-        (False, True, False, 5),
-        (True, False, False, 4),
-        (False, False, False, 6),
-        (True, True, True, 3)
+        (False, False, False, 3),
+        (True, False, False, 5),
+        (False, True, False, 4),
+        (True, True, False, 6),
+        (False, False, True, 3)
     ]
 )
 def test_supported_file_formats_versions(
-        active, dps_spec_formats, basic_info, found_formats):
-    """test supported_file_formats_versions."""
+        deprecated, unofficial, basic_info, found_formats):
+    """Test supported_file_formats_versions."""
     file_formats_versions = supported_file_formats_versions(
-            active=active,
-            dps_spec_formats=dps_spec_formats,
+            deprecated=deprecated,
+            unofficial=unofficial,
             basic_info=basic_info)
 
     assert len(file_formats_versions) == found_formats

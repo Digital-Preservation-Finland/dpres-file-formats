@@ -34,16 +34,17 @@ Read the format registry in the following ways, either as with each file format
 version nested inside the formats, or as a flattened list of each file format
 version displayed separately::
 
-    supported_file_formats(active=True, dps_spec_formats=True)
-    supported_file_formats_versions(active=True, dps_spec_formats=True, basic_info=False)
+    supported_file_formats(decprecated=False, unofficial=False)
+    supported_file_formats_versions(decprecated=False, unofficial=False, basic_info=False)
 
 The following arguments exist:
-    * Active formats:  ``active`` . When set to ``False``, the functions will
-      also include deprecated, inactive file formats in the output.
-    * DPS formats: ``dps_spec_formats``. When set to ``False``, the functions
-      will also include file formats not offically in the DPS spec in the output.
-      This includes bit level file formats and formats with technical level
-      support in the DPS ingest.
+    * Include decprecated formats:  ``decprecated`` . When set to ``True``, the
+      functions will also include deprecated, inactive file formats in the
+      output.
+    * Include unofficial formats: ``unofficial``. When set to ``True``, the
+      functions will also include file formats not offically in the DPS spec in
+      the output. This includes bit level file formats and formats with
+      technical level support in the DPS ingest.
     * Basic info: ``basic_info``. When set to ``True``, the function
       ``supported_file_formats_versions`` outputs only basic level info, such
       as the MIME type and the file format version.

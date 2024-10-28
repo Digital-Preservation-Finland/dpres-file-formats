@@ -1,20 +1,19 @@
 """Functions that output the file formats list."""
 
-import json
 from dpres_file_formats.defaults import (CONTAINERS_STREAMS,
                                          FILE_FORMATS,
                                          Grades)
 from dpres_file_formats.json_handler import FileFormatsJson
 
 
-def supported_file_formats(active=True, dps_spec_formats=True):
+def supported_file_formats(deprecated=False, unofficial=False):
     """Return supported file formats as a list of dicts.
 
-    :active: Returns only active formats and versions or not,
-        defaults to True
-    :dps_spec_formats: Returns only formats offically in the DPS
-        spec, discarding bit level and unoffically supported file
-        formats, defaults to True
+    :deprecated: Include deprecated (not active) formats and versions
+        or not, defaults to False
+    :unofficial: Include formats not offically in the DPS spec,
+        such as bit level and unoffically supported file formats,
+        defaults to False
     :returns: A list of dicts
     """
     file_formats = FileFormatsJson().read_file_formats(
@@ -22,27 +21,27 @@ def supported_file_formats(active=True, dps_spec_formats=True):
 
     formats = []
 
-    if active or dps_spec_formats:
+    if not deprecated or not unofficial:
         for file_format in file_formats:
 
-            format_active = False
-            active_versions = []
+            include_format = False
+            included_versions = []
 
             # Set file format as active if any version is active or if
-            # the format is a DPS format
+            # the format should be included in the output
             for version in file_format.get('versions', []):
-                dps_format = any((
-                    dps_spec_formats and version.get('added_in_dps_spec', ''),
-                    not dps_spec_formats))
-                version_active = any((active and version.get('active', False),
-                                      not active))
-                if version_active and dps_format:
-                    format_active = True
-                    active_versions.append(version)
+                official = any((
+                    not unofficial and version.get('added_in_dps_spec', ''),
+                    unofficial))
+                active = any((not deprecated and version.get('active', False),
+                              deprecated))
+                if active and official:
+                    include_format = True
+                    included_versions.append(version)
 
             # Include only active versions in the output
-            file_format['versions'] = active_versions
-            if format_active:
+            file_format['versions'] = included_versions
+            if include_format:
                 formats.append(file_format)
 
     else:
@@ -51,17 +50,17 @@ def supported_file_formats(active=True, dps_spec_formats=True):
     return formats
 
 
-def supported_file_formats_versions(active=True,
-                                    dps_spec_formats=True,
+def supported_file_formats_versions(deprecated=False,
+                                    unofficial=False,
                                     basic_info=False):
     """Return a list of flattened dicts of supported file format
     with each version separately.
 
-    :active: Returns only active formats and versions or not,
-        defaults to True
-    :dps_spec_formats: Returns only formats offically in the DPS
-        spec, discarding bit level and unoffically supported file
-        formats, defaults to True
+    :deprecated: Include deprecated (not active) formats and versions
+        or not, defaults to False
+    :unofficial: Include formats not offically in the DPS spec,
+        such as bit level and unoffically supported file formats,
+        defaults to False
     :basic_info: Returns only the mimetype and the version keys
     :returns: A list of dicts
     """
@@ -91,15 +90,15 @@ def supported_file_formats_versions(active=True,
             format_dict.update(version_dict)
 
             # Set file format version as active if it is active or if
-            # it is a DPS format
-            dps_format = any((
-                dps_spec_formats and version.get('added_in_dps_spec', ''),
-                not dps_spec_formats))
-            version_active = any((active and version.get('active', False),
-                                  not active))
+            # the format should be included in the output
+            official = any((
+                not unofficial and version.get('added_in_dps_spec', ''),
+                unofficial))
+            active = any((not deprecated and version.get('active', False),
+                          deprecated))
 
             # Add only active format to the output when active is True
-            if version_active and dps_format:
+            if active and official:
                 format_versions.append(format_dict)
 
     return format_versions
