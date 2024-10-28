@@ -146,42 +146,6 @@ def mimetypes_grading(text_formats=False):
     return mimetypes
 
 
-def serialize_supported_file_formats(active=True, dps_spec_formats=True):
-    """Serialize supported file formats to a string.
-
-    :active: Returns only active formats and versions or not,
-        defaults to True
-    :dps_spec_formats: Returns only formats offically in the DPS
-        spec, discarding bit level and unoffically supported file
-        formats, defaults to True
-    :returns: A string of serialized JSON data with indentations
-    """
-    file_formats = {'file_formats': supported_file_formats(
-        active=active, dps_spec_formats=dps_spec_formats)}
-    return json.dumps(file_formats, indent=4, ensure_ascii=False)
-
-
-def serialize_supported_file_formats_versions(active=True,
-                                              dps_spec_formats=True,
-                                              basic_info=False):
-    """Serialize supported file format versions to a string.
-
-    :active: Returns only active formats and versions or not,
-        defaults to True
-    :dps_spec_formats: Returns only formats offically in the DPS
-        spec, discarding bit level and unoffically supported file
-        formats, defaults to True
-    :basic_info: Returns only the mimetype and the version keys
-    :returns: A string of serialized JSON data with indentations
-    """
-    file_formats = {
-        'file_formats': supported_file_formats_versions(
-            active=active,
-            dps_spec_formats=dps_spec_formats,
-            basic_info=basic_info)}
-    return json.dumps(file_formats, indent=4, ensure_ascii=False)
-
-
 def find_mimetypes(mimetype):
     """Returns file formats from the file formats list based on
     a given MIME type.

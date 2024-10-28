@@ -48,11 +48,6 @@ The following arguments exist:
       ``supported_file_formats_versions`` outputs only basic level info, such
       as the MIME type and the file format version.
 
-Both structures can also be output as a serialized string::
-
-    serialize_supported_file_formats(active=True, dps_spec_formats=True)
-    serialize_supported_file_formats_versions(active=True, dps_spec_formats=True, basic_info=False)
-
 Output MIME types and their versions with a grading, which indicates their
 level of support in the DPS::
 

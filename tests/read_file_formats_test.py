@@ -6,8 +6,6 @@ from dpres_file_formats.read_file_formats import (
     find_mimetypes,
     mimetypes_format_registry_keys,
     mimetypes_grading,
-    serialize_supported_file_formats,
-    serialize_supported_file_formats_versions,
     supported_file_formats,
     supported_file_formats_versions
 )
@@ -56,16 +54,6 @@ def test_supported_file_formats_versions(
     assert file_formats_versions[0]["version"]
     if basic_info:
         assert len(file_formats_versions[0]) == 2
-
-
-def test_serialize_supported_file_formats():
-    """Test serialize_supported_file_formats."""
-    assert isinstance(serialize_supported_file_formats(), str)
-
-
-def test_serialize_supported_file_formats_versions():
-    """Test serialize_supported_file_formats_versions."""
-    assert isinstance(serialize_supported_file_formats_versions(), str)
 
 
 @pytest.mark.parametrize(("text_formats", "found_mimetypes"), [
