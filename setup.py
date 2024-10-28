@@ -14,6 +14,8 @@ setup(
     version=version,
     description='File formats supported by the DPS in Finland',
     packages=find_packages(exclude=['tests', 'tests.*']),
+    include_package_data=True,
+    package_data={'': ['*.json']},
     install_requires=[],
     python_requires='>=3.6'
 )

@@ -45,11 +45,7 @@ Summary: %{summary}
 %pyproject_install
 %pyproject_save_files dpres_file_formats
 
-make install-json SHAREDIR=%{buildroot}/usr/share/dpres-file-formats
-
 %files -n python3-dpres-file-formats -f %{pyproject_files}
 %doc README.rst
-/usr/share/dpres-file-formats/file_formats.json
-/usr/share/dpres-file-formats/av_container_grading.json
 
 %changelog

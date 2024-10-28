@@ -111,7 +111,7 @@ def file_format_json_mock(tmp_path, monkeypatch):
     import dpres_file_formats.update_file_formats
     monkeypatch.setattr(
         dpres_file_formats.update_file_formats,
-        'FILE_FORMATS_UPDATE',
+        'FILE_FORMATS',
         dst)
     import dpres_file_formats.read_file_formats
     monkeypatch.setattr(

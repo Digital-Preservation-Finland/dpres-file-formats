@@ -1,12 +1,13 @@
 """Default values and controlled vocabularies."""
 import enum
+import pkg_resources
 
-# Installed version under /usr/share, for accessing data
-FILE_FORMATS = "/usr/share/dpres-file-formats/file_formats.json"
-# Local version in project folder, for updating data
-FILE_FORMATS_UPDATE = "dpres_file_formats/file_formats.json"
-# Installed version under /usr/share, for accessing data
-CONTAINERS_STREAMS = "/usr/share/dpres-file-formats/av_container_grading.json"
+# Path to the file formats json file
+FILE_FORMATS = pkg_resources.resource_filename(
+    "dpres_file_formats", "data/file_formats.json")
+# Path to the file formats json file
+CONTAINERS_STREAMS = pkg_resources.resource_filename(
+    "dpres_file_formats", "data/av_container_grading.json")
 
 # Allowed charsets
 ALLOWED_CHARSETS = ["ISO-8859-15", "UTF-8", "UTF-16", "UTF-32"]
