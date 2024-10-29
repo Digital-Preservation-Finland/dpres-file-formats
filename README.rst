@@ -30,24 +30,22 @@ See:
 Read the file formats
 ---------------------
 
-Read the format registry in the following ways, either as with each file format
-version nested inside the formats, or as a flattened list of each file format
-version displayed separately::
+Read and output the format registry in the following way::
 
-    supported_file_formats(decprecated=False, unofficial=False)
-    supported_file_formats_versions(decprecated=False, unofficial=False, basic_info=False)
+    from dpres_file_formats.read_file_formats import file_formats
+    file_formats(deprecated=False, unofficial=False, versions_separately=False)
 
 The following arguments exist:
-    * Include decprecated formats:  ``decprecated`` . When set to ``True``, the
+    * Include decprecated formats:  ``deprecated`` . When set to ``True``, the
       functions will also include deprecated, inactive file formats in the
       output.
     * Include unofficial formats: ``unofficial``. When set to ``True``, the
       functions will also include file formats not offically in the DPS spec in
       the output. This includes bit level file formats and formats with
       technical level support in the DPS ingest.
-    * Basic info: ``basic_info``. When set to ``True``, the function
-      ``supported_file_formats_versions`` outputs only basic level info, such
-      as the MIME type and the file format version.
+    * Output each version separately: ``versions_separately``. When set to
+      ``True``, outputs a flattened list of each file format version displayed
+      separately.
 
 Output MIME types and their versions with a grading, which indicates their
 level of support in the DPS::
