@@ -3,8 +3,20 @@ import json
 import pytest
 
 
+@pytest.fixture(scope='function')
+def file_formats_path_fx(tmp_path):
+    """Fixture to return tmp path to file format json."""
+    return tmp_path / "file_formats.json"
+
+
+@pytest.fixture(scope='function')
+def av_container_grading_path_fx(tmp_path):
+    """Fixture to return tmp path to file format json."""
+    return tmp_path / "av_container_grading.json"
+
+
 @pytest.fixture(scope='function', autouse=True)
-def file_format_json_mock(tmp_path, monkeypatch):
+def file_format_json_mock(file_formats_path_fx, monkeypatch):
     """Fixture to use test data for file formats JSON."""
 
     data = {
@@ -102,9 +114,7 @@ def file_format_json_mock(tmp_path, monkeypatch):
         ]
     }
 
-    dst = tmp_path / "file_formats.json"
-
-    with open(dst, "w", encoding="UTF-8") as outfile:
+    with open(file_formats_path_fx, "w", encoding="UTF-8") as outfile:
         json.dump(data, outfile)
 
     # pylint: disable=import-outside-toplevel
@@ -112,17 +122,17 @@ def file_format_json_mock(tmp_path, monkeypatch):
     monkeypatch.setattr(
         dpres_file_formats.update_file_formats,
         'FILE_FORMATS',
-        dst)
+        file_formats_path_fx)
     import dpres_file_formats.read_file_formats
     monkeypatch.setattr(
         dpres_file_formats.read_file_formats,
         'FILE_FORMATS',
-        dst)
+        file_formats_path_fx)
 
 
 @pytest.fixture(scope='function', autouse=True)
-def file_containers_json_mock(tmp_path, monkeypatch):
-    """Fixture to use test data for file containers JSON."""
+def av_containers_json_mock(av_container_grading_path_fx, monkeypatch):
+    """Fixture to use test data for av containers JSON."""
 
     data = {
         "file_formats": [
@@ -164,9 +174,8 @@ def file_containers_json_mock(tmp_path, monkeypatch):
     }
 
     # pylint: disable=import-outside-toplevel
-    dst = tmp_path / "av_container_grading.json"
 
-    with open(dst, "w", encoding="UTF-8") as outfile:
+    with open(av_container_grading_path_fx, "w", encoding="UTF-8") as outfile:
         json.dump(data, outfile)
 
     # pylint: disable=import-outside-toplevel
@@ -174,4 +183,4 @@ def file_containers_json_mock(tmp_path, monkeypatch):
     monkeypatch.setattr(
         dpres_file_formats.read_file_formats,
         'CONTAINERS_STREAMS',
-        dst)
+        av_container_grading_path_fx)

@@ -3,8 +3,6 @@
 import pytest
 from dpres_file_formats.read_file_formats import (
     containers_streams_grading,
-    find_mimetypes,
-    mimetypes_format_registry_keys,
     mimetypes_grading,
     supported_file_formats,
     supported_file_formats_versions
@@ -32,28 +30,24 @@ def test_supported_file_formats(
 
 
 @pytest.mark.parametrize(
-    ("deprecated", "unofficial", "basic_info", "found_formats"),
+    ("deprecated", "unofficial", "found_formats"),
     [
-        (False, False, False, 3),
-        (True, False, False, 5),
-        (False, True, False, 4),
-        (True, True, False, 6),
-        (False, False, True, 3)
+        (False, False, 3),
+        (True, False, 5),
+        (False, True, 4),
+        (True, True, 6)
     ]
 )
 def test_supported_file_formats_versions(
-        deprecated, unofficial, basic_info, found_formats):
+        deprecated, unofficial, found_formats):
     """Test supported_file_formats_versions."""
     file_formats_versions = supported_file_formats_versions(
             deprecated=deprecated,
-            unofficial=unofficial,
-            basic_info=basic_info)
+            unofficial=unofficial)
 
     assert len(file_formats_versions) == found_formats
     assert file_formats_versions[0]["mimetype"]
     assert file_formats_versions[0]["version"]
-    if basic_info:
-        assert len(file_formats_versions[0]) == 2
 
 
 @pytest.mark.parametrize(("text_formats", "found_mimetypes"), [
@@ -74,32 +68,6 @@ def test_mimetypes_grading(text_formats, found_mimetypes):
         assert len(mimetypes["aaa/bbb"]) == 3
         assert ["2", "3", "5"] == list(mimetypes["aaa/bbb"].keys())
         assert "1" not in mimetypes["aaa/bbb"]
-
-
-@pytest.mark.parametrize(("mimetype", "found"), [
-    ("aaa/bbb", 2),
-    ("unknown", 0)
-])
-def test_find_mimetypes(mimetype, found):
-    """Test find_mimetypes."""
-    formats = find_mimetypes(mimetype)
-    assert len(formats) == found
-
-
-def test_mimetypes_format_registry_keys():
-    """Test mimetypes_format_registry_keys."""
-    mimetypes = mimetypes_format_registry_keys()
-
-    # Two formats with the same mimetypes should have been combined
-    # and only the active versions' registry keys should have been added
-    assert len(mimetypes) == 2
-    assert len(mimetypes["aaa/bbb"]) == 2
-    for registry_keys in mimetypes["aaa/bbb"]:
-        assert registry_keys in ['key_002', 'key_004']
-
-    # Empty format registry keys should have been added
-    assert len(mimetypes["bbb/ccc"]) == 1
-    assert next(iter(mimetypes["bbb/ccc"])) == ''
 
 
 @pytest.mark.parametrize(("grade", "expected_mimetype", "found_count"), [

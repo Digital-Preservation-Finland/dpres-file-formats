@@ -51,8 +51,7 @@ def supported_file_formats(deprecated=False, unofficial=False):
 
 
 def supported_file_formats_versions(deprecated=False,
-                                    unofficial=False,
-                                    basic_info=False):
+                                    unofficial=False):
     """Return a list of flattened dicts of supported file format
     with each version separately.
 
@@ -61,7 +60,6 @@ def supported_file_formats_versions(deprecated=False,
     :unofficial: Include formats not offically in the DPS spec,
         such as bit level and unoffically supported file formats,
         defaults to False
-    :basic_info: Returns only the mimetype and the version keys
     :returns: A list of dicts
     """
     file_formats = FileFormatsJson().read_file_formats(
@@ -71,22 +69,17 @@ def supported_file_formats_versions(deprecated=False,
 
     for file_format in file_formats:
 
-        if not basic_info:
-            format_dict = file_format.copy()
-            # Exclude some file format keys from the output
-            for key in ['versions', '_id']:
-                try:
-                    del format_dict[key]
-                except KeyError:
-                    pass
-        else:
-            format_dict = {'mimetype': file_format['mimetype']}
+        format_dict = file_format.copy()
+        # Exclude some file format keys from the output
+        for key in ['versions', '_id']:
+            try:
+                del format_dict[key]
+            except KeyError:
+                pass
 
         # Merge file format and version dicts
         for version in file_format.get('versions', []):
             version_dict = version.copy()
-            if basic_info:
-                version_dict = {'version': version['version']}
             format_dict.update(version_dict)
 
             # Set file format version as active if it is active or if
@@ -141,57 +134,6 @@ def mimetypes_grading(text_formats=False):
                     mimetypes[file_format['mimetype']].update(format_versions)
                 else:
                     mimetypes[file_format['mimetype']] = format_versions
-
-    return mimetypes
-
-
-def find_mimetypes(mimetype):
-    """Returns file formats from the file formats list based on
-    a given MIME type.
-
-    :mimetype: The MIME type as a string
-    :returns: The file formats as a list
-    """
-    file_formats = FileFormatsJson().read_file_formats(
-        path=FILE_FORMATS)
-    formats = []
-    for format_dict in file_formats:
-        if format_dict['mimetype'] == mimetype:
-            formats.append(format_dict)
-    return formats
-
-
-def mimetypes_format_registry_keys():
-    """Returns a dictionary of active mimetypes and their
-    corresponding format registry keys.
-
-    :returns: A dictionary of mimetypes with their format registry keys
-    """
-    file_formats = FileFormatsJson().read_file_formats(
-        path=FILE_FORMATS)
-    mimetypes = {}
-
-    for file_format in file_formats:
-        active = False
-        format_reg_keys = set()
-
-        # Populate format registry keys dict with data from active
-        # versions only
-        for version in file_format.get('versions', []):
-            if version.get('active', False):
-                active = True
-                format_reg_keys.add(version.get('format_registry_key', ''))
-
-        # Add format only if it has active versions
-        if active:
-
-            # If mimetype has been added, just add the new format
-            # registry keys to the previously added mimetyoe
-            mimetype = file_format['mimetype']
-            if mimetype in mimetypes:
-                mimetypes[mimetype].update(format_reg_keys)
-            else:
-                mimetypes[mimetype] = format_reg_keys
 
     return mimetypes
 

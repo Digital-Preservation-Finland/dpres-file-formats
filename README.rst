@@ -57,14 +57,6 @@ level of support in the DPS::
 Using the argument ``text_formats`` with the value "True" will output only text
 based formats that require charset information.
 
-Output MIME types with their format registry keys::
-
-    mimetypes_format_registry_keys()
-
-Find and return information about a MIME type from the registry::
-
-    find_mimetypes(mimetype)
-
 Return AV containers with supported bit streams and the DPS grading for the
 combination::
 
@@ -120,16 +112,6 @@ If the ``version`` is given as None, a value ``(:unap)`` will be set for the fil
 format version. The file format version identifier will be created automatically
 based on the file format ID and the file format version. The arguments ``grade``,
 ``added_in_dps_spec`` and ``removed_in_dps_spec`` require controlled vocabularies.
-
-Adding new sources to file format versions is done using the function::
-
-    add_source_to_format(version_id, format_source_pid, **)
-
-Where ``version_id`` is the ID of the file format version and ``format_source_pid``
-is an identifier for the source. Optional arguments are:
-
-    * URL to the source: ``format_source_url``
-    * Reference to the source: ``format_source_reference``
 
 A file format can replace another file format with the function::
 
