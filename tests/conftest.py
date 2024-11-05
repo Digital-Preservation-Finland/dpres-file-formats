@@ -15,6 +15,7 @@ def av_container_grading_path_fx(tmp_path):
     return tmp_path / "av_container_grading.json"
 
 
+# pylint: disable=redefined-outer-name
 @pytest.fixture(scope='function', autouse=True)
 def file_format_json_mock(file_formats_path_fx, monkeypatch):
     """Fixture to use test data for file formats JSON."""
@@ -128,59 +129,3 @@ def file_format_json_mock(file_formats_path_fx, monkeypatch):
         dpres_file_formats.read_file_formats,
         'FILE_FORMATS',
         file_formats_path_fx)
-
-
-@pytest.fixture(scope='function', autouse=True)
-def av_containers_json_mock(av_container_grading_path_fx, monkeypatch):
-    """Fixture to use test data for av containers JSON."""
-
-    data = {
-        "file_formats": [
-            {
-                "_id": "TEST_MIMETYPE_4_1",
-                "mimetype": "aaa/bbb",
-                "version": "5",
-                "grade": "fi-dpres-recommended-file-format",
-                "audio_streams": [
-                    {
-                        "_id": "TEST_MIMETYPE_1_1",
-                        "mimetype": "aaa/bbb",
-                        "version": "1"
-                    }
-                ],
-                "video_streams": [
-                    {
-                        "_id": "TEST_MIMETYPE_2_1",
-                        "mimetype": "bbb/ccc",
-                        "version": "1"
-                    }
-                ]
-            },
-            {
-                "_id": "TEST_MIMETYPE_2_1",
-                "mimetype": "bbb/ccc",
-                "version": "5",
-                "grade": "fi-dpres-acceptable-file-format",
-                "audio_streams": [
-                    {
-                        "_id": "TEST_MIMETYPE_1_3",
-                        "mimetype": "aaa/bbb",
-                        "version": "1"
-                    }
-                ],
-                "video_streams": []
-            }
-        ]
-    }
-
-    # pylint: disable=import-outside-toplevel
-
-    with open(av_container_grading_path_fx, "w", encoding="UTF-8") as outfile:
-        json.dump(data, outfile)
-
-    # pylint: disable=import-outside-toplevel
-    import dpres_file_formats.read_file_formats
-    monkeypatch.setattr(
-        dpres_file_formats.read_file_formats,
-        'CONTAINERS_STREAMS',
-        av_container_grading_path_fx)

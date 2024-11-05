@@ -1,11 +1,7 @@
 """Unit tests for the read file formats module."""
 
 import pytest
-from dpres_file_formats.read_file_formats import (
-    containers_streams_grading,
-    mimetypes_grading,
-    file_formats,
-)
+from dpres_file_formats.read_file_formats import file_formats
 
 
 @pytest.mark.parametrize(
@@ -53,35 +49,3 @@ def test_file_formats(
         assert dps_formats[0]["versions"][0]["version"]
     else:
         assert dps_formats[0]["version"]
-
-
-@pytest.mark.parametrize(("text_formats", "found_mimetypes"), [
-    (False, 2),
-    (True, 1)
-])
-def test_mimetypes_grading(text_formats, found_mimetypes):
-    """Test mimetypes_grading."""
-    mimetypes = mimetypes_grading(text_formats)
-    assert len(mimetypes) == found_mimetypes
-    assert "bbb/ccc" in mimetypes
-    if not text_formats:
-        assert "aaa/bbb" in mimetypes
-        assert mimetypes["aaa/bbb"]["2"] == (
-                "fi-dpres-recommended-file-format")
-        # Check that two formats with same mimetype have merged and
-        # that inactive versions have been excluded
-        assert len(mimetypes["aaa/bbb"]) == 3
-        assert ["2", "3", "5"] == list(mimetypes["aaa/bbb"].keys())
-        assert "1" not in mimetypes["aaa/bbb"]
-
-
-@pytest.mark.parametrize(("grade", "expected_mimetype", "found_count"), [
-    ("RECOMMENDED", "aaa/bbb", 1),
-    ("ACCEPTABLE", "bbb/ccc", 1),
-    (None, "aaa/bbb", 2)
-])
-def test_containers_streams_grading(grade, expected_mimetype, found_count):
-    """Test containers_streams_grading."""
-    containers = containers_streams_grading(grade=grade)
-    assert len(containers) == found_count
-    assert containers[expected_mimetype]
