@@ -201,7 +201,7 @@ def replace_format(superseded_format,
     :superseded_format: ID of the file format that is deprecated
     :superseding_format: ID of the file format that replaces
         the deprecated format
-    dps_spec_version: The DPS specification version where the change
+    :dps_spec_version: The DPS specification version where the change
         was published, from a controlled vocabulary
     """
 
