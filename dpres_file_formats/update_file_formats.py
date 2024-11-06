@@ -34,7 +34,7 @@ def add_format(
     :typical_extensions: A list of typical file format extensions
     :required_metadata: Required technical metadata, from a
         controlled vocabulary
-    :charsets: A boolean value of whether charset are required
+    :charsets: A Boolean value of whether charsets are required
 
     :returns: The file format ID
     """
@@ -101,18 +101,18 @@ def add_version_to_format(
         format_source_pid='',
         format_source_url='',
         format_source_reference=''):
-    """Adds a new file format version to to an existing file format. The
-    file format must exist and the version cannot be a duplicate of an
+    """Adds a new file format version to an existing file format. The
+    file format must exist, and the version cannot be a duplicate of an
     existing version.
 
     :format_id: The ID of the file format as a string
     :grade: The file format grade in the DPS (e.g. recommended file
         format), from a controlled vocabulary
     :support_in_dps_ingest: The support of the file format version in
-        the DPS ingest, as a boolean value
+        the DPS ingest, as a Boolean value
     :active: The status of the file format in the DPS, i.e. is the
         file format version in the latest version of the specifications,
-        as a boolean value
+        as a Boolean value
     :version: The file format version as a string
     :format_registry_key: The PRONOM format registry key as a string
     :added_in_dps_spec: The DPS specification version, where the file
@@ -195,13 +195,13 @@ def replace_format(superseded_format,
                    dps_spec_version):
     """Replaces a format by adding a relationship between two formats,
     where one format supersedes another format. The superseded format
-    is deprecated and its versions are marked no longer active and
+    is deprecated, and its versions are marked no longer active and
     unacceptable for digital preservation.
 
     :superseded_format: ID of the file format that is deprecated
     :superseding_format: ID of the file format that replaces
         the deprecated format
-    dps_spec_version: The DPS specification version, where the change
+    dps_spec_version: The DPS specification version where the change
         was published, from a controlled vocabulary
     """
 

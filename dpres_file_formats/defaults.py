@@ -66,7 +66,7 @@ class Grades(str, enum.Enum):
 
 
 class DpsSpecVersions(str, enum.Enum):
-    """Controllec vocabulary for DPS File Format specification
+    """Controlled vocabulary for DPS File Format specification
     versions.
     """
     V3 = "1.3.0"

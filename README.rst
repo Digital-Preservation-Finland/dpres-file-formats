@@ -64,7 +64,7 @@ The following arguments exist:
     * MIME type: ``mimetype``
     * The content type (e.g. text, audio): ``content_type``
     * The full file format name: ``format_name_long``
-    * A shorted file format name identifier: ``format_name_short``
+    * A shortened file format name identifier: ``format_name_short``
     * A list of typical file format extensions: ``typical_extensions``
     * Required technical metadata: ``required_metadata``
     * A Boolean of if character sets are mandatory (for text formats): ``charsets``

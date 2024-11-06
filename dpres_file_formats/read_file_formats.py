@@ -11,17 +11,17 @@ def file_formats(deprecated=False,
 
     :deprecated: Include deprecated (not active) formats and versions
         or not, defaults to False
-    :unofficial: Include formats not offically in the DPS spec,
-        such as bit level and unoffically supported file formats,
+    :unofficial: Include formats not officially in the DPS spec,
+        such as bit level and unofficially supported file formats,
         defaults to False
     :versions_separately: If set to True, will output the list of each
-        file format version as an independent flattened dict, defauls to
-        False.
+        file format version as an independent flattened dict, defaults
+        to False.
     :returns: A list of dicts
     """
     def _select_format_and_versions():
         """Selects a file format and its versions based on if deprecated
-        or unoffical file format versions are to be included in the
+        or unofficial file format versions are to be included in the
         output or not. If a format dict is to be included, it is
         appended to the selected_formats list.
         """
@@ -52,7 +52,7 @@ def file_formats(deprecated=False,
         dict is appended to the output_formats list.
         """
         format_dict = file_format.copy()
-        # Exclude some file format keys from the output
+        # Exclude unwanted file format keys from the output
         for key in ['versions', '_id']:
             try:
                 del format_dict[key]

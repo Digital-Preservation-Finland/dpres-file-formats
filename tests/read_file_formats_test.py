@@ -21,14 +21,14 @@ from dpres_file_formats.read_file_formats import file_formats
         (True, True, True, 6, None)
     ],
     ids=[
-        'Active and offical file formats',
+        'Active and official file formats',
         'Include deprecated file formats',
-        'Include unoffical file formats',
-        'Include both deprecated and unoffical file formats',
-        'Active and offical file formats, output versions',
+        'Include unofficial file formats',
+        'Include both deprecated and unofficial file formats',
+        'Active and official file formats, output versions',
         'Include deprecated file formats, output versions',
-        'Include unoffical file formats, output versions',
-        'Include both deprecated and unoffical file formats, output versions'
+        'Include unofficial file formats, output versions',
+        'Include both deprecated and unofficial file formats, output versions'
 
     ]
 )
