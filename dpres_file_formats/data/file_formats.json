@@ -752,8 +752,13 @@
                     "format_sources": [
                         {
                             "pid": "EPUB_3.0.0",
-                            "url": "http://idpf.org/epub/30. In November 2014, EPUB 3.0 was published by the International Standards Organization as ISO/IEC TS 30135 (parts 1-7).",
+                            "url": "http://idpf.org/epub/30",
                             "reference": "EPUB version 3.0.0. International Digital Publishing Forum."
+                        },
+                        {
+                            "pid": "ISO_30135",
+                            "url": "",
+                            "reference": "ISO/IEC TS 30135 (parts 1-7)."
                         }
                     ]
                 },
@@ -769,8 +774,13 @@
                     "format_sources": [
                         {
                             "pid": "EPUB_3.0.1",
-                            "url": "http://idpf.org/epub/301. In January 2020, EPUB 3.0.1 was published by the International Standards Organization as ISO/IEC 23736 (parts 1-6).",
+                            "url": "http://idpf.org/epub/301",
                             "reference": "EPUB version 3.0.1. International Digital Publishing Forum."
+                        },
+                        {
+                            "pid": "ISO_23736",
+                            "url": "",
+                            "reference": "ISO/IEC 23736 (parts 1-6)."
                         }
                     ]
                 },
