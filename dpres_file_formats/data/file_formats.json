@@ -2727,7 +2727,7 @@
                         {
                             "pid": "ISO_19005:2005",
                             "url": "",
-                            "reference": "International Organization for Standardization. Document management —Electronic document file format for long-term preservation — Part 1: Use of PDF 1.4 (PDF/A-1). ISO 19005-1:2005"
+                            "reference": "International Organization for Standardization. Document management — Electronic document file format for long-term preservation — Part 1: Use of PDF 1.4 (PDF/A-1). ISO 19005-1:2005"
                         }
                     ]
                 },
@@ -2744,7 +2744,7 @@
                         {
                             "pid": "ISO_19005:2005",
                             "url": "",
-                            "reference": "International Organization for Standardization. Document management —Electronic document file format for long-term preservation — Part 1: Use of PDF 1.4 (PDF/A-1). ISO 19005-1:2005"
+                            "reference": "International Organization for Standardization. Document management — Electronic document file format for long-term preservation — Part 1: Use of PDF 1.4 (PDF/A-1). ISO 19005-1:2005"
                         }
                     ]
                 },
@@ -3886,7 +3886,7 @@
         },
         {
             "_id": "FI_DPRES_LPCM_2",
-            "mimetype": "audio/l16",
+            "mimetype": "audio/L16",
             "content_type": "audio",
             "format_name_long": "Linear Pulse-Code Modulation",
             "format_name_short": "LPCM",
@@ -3921,7 +3921,7 @@
         },
         {
             "_id": "FI_DPRES_LPCM_3",
-            "mimetype": "audio/l20",
+            "mimetype": "audio/L20",
             "content_type": "audio",
             "format_name_long": "Linear Pulse-Code Modulation",
             "format_name_short": "LPCM",
@@ -3955,7 +3955,7 @@
         },
         {
             "_id": "FI_DPRES_LPCM_4",
-            "mimetype": "audio/l24",
+            "mimetype": "audio/L24",
             "content_type": "audio",
             "format_name_long": "Linear Pulse-Code Modulation",
             "format_name_short": "LPCM",
