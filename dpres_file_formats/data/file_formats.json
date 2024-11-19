@@ -1042,7 +1042,12 @@
                 ".xml"
             ],
             "required_metadata": "",
-            "charsets": [],
+            "charsets": [
+                "ISO-8859-15",
+                "UTF-8",
+                "UTF-16",
+                "UTF-32"
+            ],
             "relations": [],
             "versions": [
                 {
@@ -1490,7 +1495,12 @@
                 ".kmz"
             ],
             "required_metadata": "",
-            "charsets": [],
+            "charsets": [
+                "ISO-8859-15",
+                "UTF-8",
+                "UTF-16",
+                "UTF-32"
+            ],
             "relations": [],
             "versions": [
                 {
@@ -3929,7 +3939,7 @@
                     "version": "(:unap)",
                     "grade": "fi-dpres-recommended-file-format",
                     "format_registry_key": "",
-                    "support_in_dps_ingest": true,
+                    "support_in_dps_ingest": false,
                     "active": true,
                     "added_in_dps_spec": "1.8.0",
                     "removed_in_dps_spec": "",
