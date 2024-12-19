@@ -79,3 +79,4 @@ class DpsSpecVersions(str, enum.Enum):
     V10 = "1.10.0"
     V11 = "1.11.0"
     V12 = "1.12.0"
+    V13 = "1.13.0"
