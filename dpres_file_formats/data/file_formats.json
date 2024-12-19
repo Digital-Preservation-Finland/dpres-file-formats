@@ -1203,12 +1203,12 @@
                 {
                     "_id": "FI_DPRES_HTML_1_5.0",
                     "version": "5.0",
-                    "grade": "fi-dpres-recommended-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/471",
-                    "support_in_dps_ingest": true,
-                    "active": true,
+                    "support_in_dps_ingest": false,
+                    "active": false,
                     "added_in_dps_spec": "1.5.0",
-                    "removed_in_dps_spec": "",
+                    "removed_in_dps_spec": "1.13.0",
                     "format_sources": [
                         {
                             "pid": "HTML5",
@@ -1220,12 +1220,12 @@
                 {
                     "_id": "FI_DPRES_HTML_1_5.1",
                     "version": "5.1",
-                    "grade": "fi-dpres-recommended-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "",
                     "support_in_dps_ingest": false,
-                    "active": true,
+                    "active": false,
                     "added_in_dps_spec": "1.9.0",
-                    "removed_in_dps_spec": "",
+                    "removed_in_dps_spec": "1.13.0",
                     "format_sources": [
                         {
                             "pid": "HTML5.1",
@@ -1237,17 +1237,34 @@
                 {
                     "_id": "FI_DPRES_HTML_1_5.2",
                     "version": "5.2",
-                    "grade": "fi-dpres-recommended-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "",
                     "support_in_dps_ingest": false,
-                    "active": true,
+                    "active": false,
                     "added_in_dps_spec": "1.9.0",
-                    "removed_in_dps_spec": "",
+                    "removed_in_dps_spec": "1.13.0",
                     "format_sources": [
                         {
                             "pid": "HTML5.2",
                             "url": "https://www.w3.org/TR/html52/",
                             "reference": "HTML 5.2. W3C Recommendation, December 2017."
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_HTML_1_5",
+                    "version": "5",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/471",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.13.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "HTML5",
+                            "url": "https://html.spec.whatwg.org",
+                            "reference": "HTML. Living Standard. Web Hypertext Application Technology Working Group (WHATWG)"
                         }
                     ]
                 }
