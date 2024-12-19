@@ -3986,6 +3986,38 @@
                     ]
                 }
             ]
+        },
+        {
+            "_id": "FI_DPRES_WEBP_1",
+            "mimetype": "image/webp",
+            "content_type": "still image",
+            "format_name_long": "WebP Image Format",
+            "format_name_short": "WEBP",
+            "typical_extensions": [
+                ".webp"
+            ],
+            "required_metadata": "MIX",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_WEBP_1_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/566",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.13.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "RFC_9649",
+                            "url": "https://datatracker.ietf.org/doc/rfc9649/",
+                            "reference": "WebP Image Format. Request for Comments: 9559. Internet Engineering Task Force (IETF). November 2024."
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
