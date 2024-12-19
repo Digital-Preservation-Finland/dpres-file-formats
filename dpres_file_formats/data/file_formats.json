@@ -1301,6 +1301,28 @@
                             "reference": "International Organization for Standardization. Industry Foundation Classes (IFC) for data sharing in the construction and facility management industries — Part 1: Data schema. ISO 16739-1:2018."
                         }
                     ]
+                },
+                {
+                    "_id": "FI_DPRES_IFC_1_4.3.2.0",
+                    "version": "4.3.2.0",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/700",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.13.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_16739:2024",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Industry Foundation Classes (IFC) for data sharing in the construction and facility management industries — Part 1: Data schema. ISO 16739-1:2024"
+                        },
+                        {
+                            "pid": "IFC_4.3.2.0",
+                            "url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/",
+                            "reference": "Industry Foundation Classes (IFC) 4.3.2.0. buildingSMART International Limited."
+                        }
+                    ]
                 }
             ]
         },
