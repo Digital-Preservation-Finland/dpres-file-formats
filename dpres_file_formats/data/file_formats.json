@@ -33,7 +33,7 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "ISO_14496-3:2019",
+                            "pid": "ISO_14496-3",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — Coding of audio-visual objects — Part 3: Audio. ISO/IEC 14496-3:2019"
                         }
@@ -74,7 +74,7 @@
                     "removed_in_dps_spec": "1.12.0",
                     "format_sources": [
                         {
-                            "pid": "ISO_14496-3:2019",
+                            "pid": "ISO_14496-3",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — Coding of audio-visual objects — Part 3: Audio. ISO/IEC 14496-3:2019"
                         }
@@ -1305,6 +1305,11 @@
                             "pid": "ISO_16739:2018",
                             "url": "",
                             "reference": "International Organization for Standardization. Industry Foundation Classes (IFC) for data sharing in the construction and facility management industries — Part 1: Data schema. ISO 16739-1:2018."
+                        },
+                        {
+                            "pid": "IFC_4.0.2.1",
+                            "url": "https://standards.buildingsmart.org/IFC/RELEASE/IFC4/ADD2_TC1/HTML/",
+                            "reference": "Industry Foundation Classes (IFC) 4.0.2.1. buildingSMART International Limited."
                         }
                     ]
                 },
@@ -1321,7 +1326,7 @@
                         {
                             "pid": "ISO_16739:2024",
                             "url": "",
-                            "reference": "International Organization for Standardization. Industry Foundation Classes (IFC) for data sharing in the construction and facility management industries — Part 1: Data schema. ISO 16739-1:2024"
+                            "reference": "International Organization for Standardization. Industry Foundation Classes (IFC) for data sharing in the construction and facility management industries — Part 1: Data schema. ISO 16739-1:2024."
                         },
                         {
                             "pid": "IFC_4.3.2.0",
@@ -1394,7 +1399,7 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "ISO_10918-1:1994",
+                            "pid": "ISO_10918-1",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — Digital compression and coding of continuous-tone still images: Requirements and guidelines. ISO/IEC 10918-1:1994"
                         }
@@ -1411,7 +1416,7 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "ISO_10918-1:1994",
+                            "pid": "ISO_10918-1",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — Digital compression and coding of continuous-tone still images: Requirements and guidelines. ISO/IEC 10918-1:1994"
                         }
@@ -1428,7 +1433,7 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "ISO_10918-1:1994",
+                            "pid": "ISO_10918-1",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — Digital compression and coding of continuous-tone still images: Requirements and guidelines. ISO/IEC 10918-1:1994"
                         }
@@ -1610,9 +1615,14 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "LPCM",
-                            "url": "https://www.loc.gov/preservation/digital/formats/fdd/fdd000011.shtml",
-                            "reference": "Linear Pulse Code Modulated Audio (LPCM). Library of Congress. February 19, 2008."
+                            "pid": "RFC_3551",
+                            "url": "https://datatracker.ietf.org/doc/rfc3551/",
+                            "reference": "RTP Profile for Audio and Video Conferences with Minimal Control. Request for Comments: 3551. Network Working Group. July 2003."
+                        },
+                        {
+                            "pid": "RFC_3190",
+                            "url": "https://datatracker.ietf.org/doc/rfc3190/",
+                            "reference": "RTP Payload Format for 12-bit DAT Audio and 20- and 24-bit Linear Sampled Audio. Request for Comments: 3190. Network Working Group. January 2002."
                         }
                     ]
                 }
@@ -1841,7 +1851,13 @@
                     "active": true,
                     "added_in_dps_spec": "1.3.0",
                     "removed_in_dps_spec": "",
-                    "format_sources": []
+                    "format_sources": [
+                        {
+                            "pid": "MS_XLS",
+                            "url": "https://msopenspecs.azureedge.net/files/MS-XLS/%5bMS-XLS%5d.pdf",
+                            "reference": "[MS-XLS]: Excel Binary File Format (.xls) Structure. Microsoft Corporation. August 2024."
+                        }
+                    ]
                 },
                 {
                     "_id": "FI_DPRES_MS_EXCEL_1_8X",
@@ -1852,7 +1868,13 @@
                     "active": true,
                     "added_in_dps_spec": "1.9.0",
                     "removed_in_dps_spec": "",
-                    "format_sources": []
+                    "format_sources": [
+                        {
+                            "pid": "MS_XLS",
+                            "url": "https://msopenspecs.azureedge.net/files/MS-XLS/%5bMS-XLS%5d.pdf",
+                            "reference": "[MS-XLS]: Excel Binary File Format (.xls) Structure. Microsoft Corporation. August 2024."
+                        }
+                    ]
                 },
                 {
                     "_id": "FI_DPRES_MS_EXCEL_1_9.0",
@@ -1957,9 +1979,14 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "ISO_29500-1:2016",
+                            "pid": "ISO_29500-1",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — Document description and processing languages — Office Open XML File Formats — Part 1: Fundamentals and Markup Language Reference. ISO/IEC 29500-1:2016"
+                        },
+                        {
+                            "pid": "ECMA_376",
+                            "url": "https://ecma-international.org/publications-and-standards/standards/ecma-376/",
+                            "reference": "ECMA International. Office Open XML file formats, 5th edition. ECMA-376. December 2021."
                         }
                     ]
                 }
@@ -2031,7 +2058,13 @@
                     "active": true,
                     "added_in_dps_spec": "1.9.0",
                     "removed_in_dps_spec": "",
-                    "format_sources": []
+                    "format_sources": [
+                        {
+                            "pid": "MS_PPT",
+                            "url": "https://msopenspecs.azureedge.net/files/MS-PPT/%5bMS-PPT%5d.pdf",
+                            "reference": "[MS-PPT]: PowerPoint (.ppt) Binary File Format. Microsoft Corporation. November 2024."
+                        }
+                    ]
                 }
             ]
         },
@@ -2103,9 +2136,14 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "ISO_29500-1:2016",
+                            "pid": "ISO_29500-1",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — Document description and processing languages — Office Open XML File Formats — Part 1: Fundamentals and Markup Language Reference. ISO/IEC 29500-1:2016"
+                        },
+                        {
+                            "pid": "ECMA_376",
+                            "url": "https://ecma-international.org/publications-and-standards/standards/ecma-376/",
+                            "reference": "ECMA International. Office Open XML file formats, 5th edition. ECMA-376. December 2021."
                         }
                     ]
                 }
@@ -2188,7 +2226,13 @@
                     "active": true,
                     "added_in_dps_spec": "1.9.0",
                     "removed_in_dps_spec": "",
-                    "format_sources": []
+                    "format_sources": [
+                        {
+                            "pid": "MS_DOC",
+                            "url": "https://msopenspecs.azureedge.net/files/MS-DOC/%5bMS-DOC%5d.pdf",
+                            "reference": "[MS-DOC]: Word (.doc) Binary File Format. Microsoft Corporation. November 2024."
+                        }
+                    ]
                 }
             ]
         },
@@ -2260,9 +2304,14 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "ISO_29500-1:2016",
+                            "pid": "ISO_29500-1",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — Document description and processing languages — Office Open XML File Formats — Part 1: Fundamentals and Markup Language Reference. ISO/IEC 29500-1:2016"
+                        },
+                        {
+                            "pid": "ECMA_376",
+                            "url": "https://ecma-international.org/publications-and-standards/standards/ecma-376/",
+                            "reference": "ECMA International. Office Open XML file formats, 5th edition. ECMA-376. December 2021."
                         }
                     ]
                 }
@@ -2295,6 +2344,11 @@
                             "pid": "ISO_26300:2006",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — Open Document Format for Office Applications (OpenDocument) v1.0. ISO/IEC 26300:2006"
+                        },
+                        {
+                            "pid": "ODF_1.0",
+                            "url": "https://docs.oasis-open.org/office/v1.0/OpenDocument-v1.0-os.pdf",
+                            "reference": "Open Document Format for Office Applications (OpenDocument) v1.0. OASIS Standard. May 2005."
                         }
                     ]
                 },
@@ -2312,6 +2366,11 @@
                             "pid": "ISO_26300:2015",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — Open Document Format for Office Applications (OpenDocument) v1.2. ISO/IEC 26300:2015"
+                        },
+                        {
+                            "pid": "ODF_1.2",
+                            "url": "https://docs.oasis-open.org/office/v1.2/OpenDocument-v1.2.pdf",
+                            "reference": "Open Document Format for Office Applications (OpenDocument) Version 1.2. OASIS Standard. September 2011."
                         }
                     ]
                 },
@@ -2327,8 +2386,8 @@
                     "format_sources": [
                         {
                             "pid": "ODF_1.3",
-                            "url": "https://www.oasis-open.org/news/announcements/open-document-format-for-office-applications-opendocument-v1-3-from-the-opendocum",
-                            "reference": "Open Document Format for Office Applications (OpenDocument) Version 1.3 Committee Specification 01. December 2019."
+                            "url": "https://www.oasis-open.org/2021/06/16/opendocument-v1-3-oasis-standard-published/",
+                            "reference": "Open Document Format for Office Applications (OpenDocument) Version 1.3. OASIS Standard. April 2021."
                         }
                     ]
                 }
@@ -2362,6 +2421,11 @@
                             "pid": "ISO_26300:2006",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — Open Document Format for Office Applications (OpenDocument) v1.0. ISO/IEC 26300:2006"
+                        },
+                        {
+                            "pid": "ODF_1.0",
+                            "url": "https://docs.oasis-open.org/office/v1.0/OpenDocument-v1.0-os.pdf",
+                            "reference": "Open Document Format for Office Applications (OpenDocument) v1.0. OASIS Standard. May 2005."
                         }
                     ]
                 },
@@ -2374,7 +2438,13 @@
                     "active": true,
                     "added_in_dps_spec": "1.6.0",
                     "removed_in_dps_spec": "",
-                    "format_sources": []
+                    "format_sources": [
+                        {
+                            "pid": "ODF_1.1",
+                            "url": "http://docs.oasis-open.org/office/v1.1/OpenDocument-v1.1.html",
+                            "reference": "Open Document Format for Office Applications (OpenDocument) v1.1. OASIS Standard incorporating Approved Errata 01. July 2013."
+                        }
+                    ]
                 },
                 {
                     "_id": "FI_DPRES_ODG_1_1.2",
@@ -2390,6 +2460,11 @@
                             "pid": "ISO_26300:2015",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — Open Document Format for Office Applications (OpenDocument) v1.2. ISO/IEC 26300:2015"
+                        },
+                        {
+                            "pid": "ODF_1.2",
+                            "url": "https://docs.oasis-open.org/office/v1.2/OpenDocument-v1.2.pdf",
+                            "reference": "Open Document Format for Office Applications (OpenDocument) Version 1.2. OASIS Standard. September 2011."
                         }
                     ]
                 },
@@ -2405,8 +2480,8 @@
                     "format_sources": [
                         {
                             "pid": "ODF_1.3",
-                            "url": "https://www.oasis-open.org/news/announcements/open-document-format-for-office-applications-opendocument-v1-3-from-the-opendocum",
-                            "reference": "Open Document Format for Office Applications (OpenDocument) Version 1.3 Committee Specification 01. December 2019."
+                            "url": "https://www.oasis-open.org/2021/06/16/opendocument-v1-3-oasis-standard-published/",
+                            "reference": "Open Document Format for Office Applications (OpenDocument) Version 1.3. OASIS Standard. April 2021."
                         }
                     ]
                 }
@@ -2440,6 +2515,11 @@
                             "pid": "ISO_26300:2006",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — Open Document Format for Office Applications (OpenDocument) v1.0. ISO/IEC 26300:2006"
+                        },
+                        {
+                            "pid": "ODF_1.0",
+                            "url": "https://docs.oasis-open.org/office/v1.0/OpenDocument-v1.0-os.pdf",
+                            "reference": "Open Document Format for Office Applications (OpenDocument) v1.0. OASIS Standard. May 2005."
                         }
                     ]
                 },
@@ -2452,7 +2532,13 @@
                     "active": true,
                     "added_in_dps_spec": "1.6.0",
                     "removed_in_dps_spec": "",
-                    "format_sources": []
+                    "format_sources": [
+                        {
+                            "pid": "ODF_1.1",
+                            "url": "http://docs.oasis-open.org/office/v1.1/OpenDocument-v1.1.html",
+                            "reference": "Open Document Format for Office Applications (OpenDocument) v1.1. OASIS Standard incorporating Approved Errata 01. July 2013."
+                        }
+                    ]
                 },
                 {
                     "_id": "FI_DPRES_ODP_1_1.2",
@@ -2468,6 +2554,11 @@
                             "pid": "ISO_26300:2015",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — Open Document Format for Office Applications (OpenDocument) v1.2. ISO/IEC 26300:2015"
+                        },
+                        {
+                            "pid": "ODF_1.2",
+                            "url": "https://docs.oasis-open.org/office/v1.2/OpenDocument-v1.2.pdf",
+                            "reference": "Open Document Format for Office Applications (OpenDocument) Version 1.2. OASIS Standard. September 2011."
                         }
                     ]
                 },
@@ -2483,8 +2574,8 @@
                     "format_sources": [
                         {
                             "pid": "ODF_1.3",
-                            "url": "https://www.oasis-open.org/news/announcements/open-document-format-for-office-applications-opendocument-v1-3-from-the-opendocum",
-                            "reference": "Open Document Format for Office Applications (OpenDocument) Version 1.3 Committee Specification 01. December 2019."
+                            "url": "https://www.oasis-open.org/2021/06/16/opendocument-v1-3-oasis-standard-published/",
+                            "reference": "Open Document Format for Office Applications (OpenDocument) Version 1.3. OASIS Standard. April 2021."
                         }
                     ]
                 }
@@ -2518,6 +2609,11 @@
                             "pid": "ISO_26300:2006",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — Open Document Format for Office Applications (OpenDocument) v1.0. ISO/IEC 26300:2006"
+                        },
+                        {
+                            "pid": "ODF_1.0",
+                            "url": "https://docs.oasis-open.org/office/v1.0/OpenDocument-v1.0-os.pdf",
+                            "reference": "Open Document Format for Office Applications (OpenDocument) v1.0. OASIS Standard. May 2005."
                         }
                     ]
                 },
@@ -2530,7 +2626,13 @@
                     "active": true,
                     "added_in_dps_spec": "1.6.0",
                     "removed_in_dps_spec": "",
-                    "format_sources": []
+                    "format_sources": [
+                        {
+                            "pid": "ODF_1.1",
+                            "url": "http://docs.oasis-open.org/office/v1.1/OpenDocument-v1.1.html",
+                            "reference": "Open Document Format for Office Applications (OpenDocument) v1.1. OASIS Standard incorporating Approved Errata 01. July 2013."
+                        }
+                    ]
                 },
                 {
                     "_id": "FI_DPRES_ODS_1_1.2",
@@ -2546,6 +2648,11 @@
                             "pid": "ISO_26300:2015",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — Open Document Format for Office Applications (OpenDocument) v1.2. ISO/IEC 26300:2015"
+                        },
+                        {
+                            "pid": "ODF_1.2",
+                            "url": "https://docs.oasis-open.org/office/v1.2/OpenDocument-v1.2.pdf",
+                            "reference": "Open Document Format for Office Applications (OpenDocument) Version 1.2. OASIS Standard. September 2011."
                         }
                     ]
                 },
@@ -2561,8 +2668,8 @@
                     "format_sources": [
                         {
                             "pid": "ODF_1.3",
-                            "url": "https://www.oasis-open.org/news/announcements/open-document-format-for-office-applications-opendocument-v1-3-from-the-opendocum",
-                            "reference": "Open Document Format for Office Applications (OpenDocument) Version 1.3 Committee Specification 01. December 2019."
+                            "url": "https://www.oasis-open.org/2021/06/16/opendocument-v1-3-oasis-standard-published/",
+                            "reference": "Open Document Format for Office Applications (OpenDocument) Version 1.3. OASIS Standard. April 2021."
                         }
                     ]
                 }
@@ -2596,6 +2703,11 @@
                             "pid": "ISO_26300:2006",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — Open Document Format for Office Applications (OpenDocument) v1.0. ISO/IEC 26300:2006"
+                        },
+                        {
+                            "pid": "ODF_1.0",
+                            "url": "https://docs.oasis-open.org/office/v1.0/OpenDocument-v1.0-os.pdf",
+                            "reference": "Open Document Format for Office Applications (OpenDocument) v1.0. OASIS Standard. May 2005."
                         }
                     ]
                 },
@@ -2608,7 +2720,13 @@
                     "active": true,
                     "added_in_dps_spec": "1.6.0",
                     "removed_in_dps_spec": "",
-                    "format_sources": []
+                    "format_sources": [
+                        {
+                            "pid": "ODF_1.1",
+                            "url": "http://docs.oasis-open.org/office/v1.1/OpenDocument-v1.1.html",
+                            "reference": "Open Document Format for Office Applications (OpenDocument) v1.1. OASIS Standard incorporating Approved Errata 01. July 2013."
+                        }
+                    ]
                 },
                 {
                     "_id": "FI_DPRES_ODT_1_1.2",
@@ -2624,6 +2742,11 @@
                             "pid": "ISO_26300:2015",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — Open Document Format for Office Applications (OpenDocument) v1.2. ISO/IEC 26300:2015"
+                        },
+                        {
+                            "pid": "ODF_1.2",
+                            "url": "https://docs.oasis-open.org/office/v1.2/OpenDocument-v1.2.pdf",
+                            "reference": "Open Document Format for Office Applications (OpenDocument) Version 1.2. OASIS Standard. September 2011."
                         }
                     ]
                 },
@@ -2639,8 +2762,8 @@
                     "format_sources": [
                         {
                             "pid": "ODF_1.3",
-                            "url": "https://www.oasis-open.org/news/announcements/open-document-format-for-office-applications-opendocument-v1-3-from-the-opendocum",
-                            "reference": "Open Document Format for Office Applications (OpenDocument) Version 1.3 Committee Specification 01. December 2019."
+                            "url": "https://www.oasis-open.org/2021/06/16/opendocument-v1-3-oasis-standard-published/",
+                            "reference": "Open Document Format for Office Applications (OpenDocument) Version 1.3. OASIS Standard. April 2021."
                         }
                     ]
                 }
@@ -2670,9 +2793,9 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "PDF_1.2",
-                            "url": "https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/pdfreference1.2.pdf",
-                            "reference": "Portable Document Format Reference Manual. Version 1.2. Adobe Systems Incorporated. November 12, 1996."
+                            "pid": "ISO_32000-2",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Document management — Portable document format — Part 2: PDF 2.0. ISO 32000-2:2020"
                         }
                     ]
                 },
@@ -2687,9 +2810,9 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "PDF_1.3",
-                            "url": "https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/pdfreference1.3.pdf",
-                            "reference": "PDF reference, second edition. Adobe Portable Document Format. Version 1.3. Adobe Systems Incorporated. July, 2000."
+                            "pid": "ISO_32000-2",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Document management — Portable document format — Part 2: PDF 2.0. ISO 32000-2:2020"
                         }
                     ]
                 },
@@ -2704,9 +2827,9 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "PDF_1.4",
-                            "url": "https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/pdfreference1.4.pdf",
-                            "reference": "PDF reference, third edition. Adobe Portable Document Format. Version 1.4. Adobe Systems Incorporated. December, 2001."
+                            "pid": "ISO_32000-2",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Document management — Portable document format — Part 2: PDF 2.0. ISO 32000-2:2020"
                         }
                     ]
                 },
@@ -2721,9 +2844,9 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "PDF_1.5",
-                            "url": "https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/pdfreference1.5_v6.pdf",
-                            "reference": "PDF reference, fourth edition. Adobe Portable Document Format. Version 1.5. Adobe Systems Incorporated. Aug, 2003."
+                            "pid": "ISO_32000-2",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Document management — Portable document format — Part 2: PDF 2.0. ISO 32000-2:2020"
                         }
                     ]
                 },
@@ -2738,9 +2861,9 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "PDF_1.6",
-                            "url": "https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/pdfreference1.6.pdf",
-                            "reference": "PDF reference, fifth edition. Adobe Portable Document Format. Version 1.6. Adobe Systems Incorporated. Nov, 2004."
+                            "pid": "ISO_32000-2",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Document management — Portable document format — Part 2: PDF 2.0. ISO 32000-2:2020"
                         }
                     ]
                 },
@@ -2755,9 +2878,9 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "ISO_32000-1:2008",
+                            "pid": "ISO_32000-2",
                             "url": "",
-                            "reference": "International Organization for Standardization. Document management — Portable document format — Part 1: PDF 1.7. ISO 32000-1:2008"
+                            "reference": "International Organization for Standardization. Document management — Portable document format — Part 2: PDF 2.0. ISO 32000-2:2020"
                         }
                     ]
                 }
@@ -2938,9 +3061,14 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "ISO_15948:2004",
+                            "pid": "ISO_15948",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — Computer graphics and image processing — Portable Network Graphics (PNG): Functional specification. ISO/IEC 15948:2004"
+                        },
+                        {
+                            "pid": "PNG",
+                            "url": "https://www.w3.org/TR/png/",
+                            "reference": "Portable Network Graphics (PNG) Specification (Third Edition). W3C Candidate Recommendation Draft. July 2024."
                         }
                     ]
                 }
@@ -2968,7 +3096,13 @@
                     "active": true,
                     "added_in_dps_spec": "1.5.0",
                     "removed_in_dps_spec": "",
-                    "format_sources": []
+                    "format_sources": [
+                        {
+                            "pid": "SPSS",
+                            "url": "https://www.loc.gov/preservation/digital/formats/fdd/fdd000468.shtml",
+                            "reference": "SPSS Portable File, ASCII encoding. Library of Congress."
+                        }
+                    ]
                 }
             ]
         },
@@ -3195,6 +3329,11 @@
                             "pid": "ISO_28500:2009",
                             "url": "",
                             "reference": "International Organization for Standardization. Information and documentation — WARC file format. ISO 28500:2009"
+                        },
+                        {
+                            "pid": "WARC_1.0",
+                            "url": "https://iipc.github.io/warc-specifications/specifications/warc-format/warc-1.0/",
+                            "reference": "The WARC Format 1.0. International Internet Preservation Consortium."
                         }
                     ]
                 },
@@ -3212,6 +3351,11 @@
                             "pid": "ISO_28500:2017",
                             "url": "",
                             "reference": "International Organization for Standardization. Information and documentation — WARC file format. ISO 28500:2017"
+                        },
+                        {
+                            "pid": "WARC_1.1",
+                            "url": "https://iipc.github.io/warc-specifications/specifications/warc-format/warc-1.1/",
+                            "reference": "The WARC Format 1.1. International Internet Preservation Consortium."
                         }
                     ]
                 }
@@ -3241,9 +3385,9 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "WAV_LOC",
-                            "url": "https://www.loc.gov/preservation/digital/formats/fdd/fdd000001.shtml",
-                            "reference": "WAVE Audio File Format. Library of Congress."
+                            "pid": "WAV",
+                            "url": "https://www.aelius.com/njh/wavemetatools/doc/riffmci.pdf",
+                            "reference": "Multimedia Programming Interface and Data Specifications 1.0. Issued as a joint design by IBM Corporation and Microsoft Corporation. August 1991."
                         }
                     ]
                 }
@@ -3516,9 +3660,9 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "MATROSKA",
-                            "url": "https://datatracker.ietf.org/doc/draft-ietf-cellar-matroska/",
-                            "reference": "Matroska Specifications. IETF Draft. October 2023."
+                            "pid": "RFC_9559",
+                            "url": "https://datatracker.ietf.org/doc/rfc9559/",
+                            "reference": "Matroska Media Container Format Specification. Request for Comments: 9559. Internet Engineering Task Force (IETF). October 2024."
                         }
                     ]
                 }
@@ -3648,7 +3792,7 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "ISO_15444-3:2007",
+                            "pid": "ISO_15444-3",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — JPEG 2000 image coding system: Motion JPEG 2000. ISO/IEC 15444-3:2007"
                         }
@@ -3813,7 +3957,7 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "ISO_11172-1:1993",
+                            "pid": "ISO_11172-1",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — Coding of moving pictures and associated audio for digital storage media at up to about 1,5 Mbit/s — Part 1: Systems. ISO/IEC 11172-1:1993"
                         }
@@ -3848,7 +3992,7 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "ISO_11172-1:1993",
+                            "pid": "ISO_11172-1",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — Coding of moving pictures and associated audio for digital storage media at up to about 1,5 Mbit/s — Part 1: Systems. ISO/IEC 11172-1:1993"
                         }
@@ -3990,9 +4134,14 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "LPCM",
-                            "url": "https://www.loc.gov/preservation/digital/formats/fdd/fdd000011.shtml",
-                            "reference": "Linear Pulse Code Modulated Audio (LPCM). Library of Congress. February 19, 2008."
+                            "pid": "RFC_3551",
+                            "url": "https://datatracker.ietf.org/doc/rfc3551/",
+                            "reference": "RTP Profile for Audio and Video Conferences with Minimal Control. Request for Comments: 3551. Network Working Group. July 2003."
+                        },
+                        {
+                            "pid": "RFC_3190",
+                            "url": "https://datatracker.ietf.org/doc/rfc3190/",
+                            "reference": "RTP Payload Format for 12-bit DAT Audio and 20- and 24-bit Linear Sampled Audio. Request for Comments: 3190. Network Working Group. January 2002."
                         }
                     ]
                 }
@@ -4024,9 +4173,14 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "LPCM",
-                            "url": "https://www.loc.gov/preservation/digital/formats/fdd/fdd000011.shtml",
-                            "reference": "Linear Pulse Code Modulated Audio (LPCM). Library of Congress. February 19, 2008."
+                            "pid": "RFC_3551",
+                            "url": "https://datatracker.ietf.org/doc/rfc3551/",
+                            "reference": "RTP Profile for Audio and Video Conferences with Minimal Control. Request for Comments: 3551. Network Working Group. July 2003."
+                        },
+                        {
+                            "pid": "RFC_3190",
+                            "url": "https://datatracker.ietf.org/doc/rfc3190/",
+                            "reference": "RTP Payload Format for 12-bit DAT Audio and 20- and 24-bit Linear Sampled Audio. Request for Comments: 3190. Network Working Group. January 2002."
                         }
                     ]
                 }
@@ -4058,9 +4212,14 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "LPCM",
-                            "url": "https://www.loc.gov/preservation/digital/formats/fdd/fdd000011.shtml",
-                            "reference": "Linear Pulse Code Modulated Audio (LPCM). Library of Congress. February 19, 2008."
+                            "pid": "RFC_3551",
+                            "url": "https://datatracker.ietf.org/doc/rfc3551/",
+                            "reference": "RTP Profile for Audio and Video Conferences with Minimal Control. Request for Comments: 3551. Network Working Group. July 2003."
+                        },
+                        {
+                            "pid": "RFC_3190",
+                            "url": "https://datatracker.ietf.org/doc/rfc3190/",
+                            "reference": "RTP Payload Format for 12-bit DAT Audio and 20- and 24-bit Linear Sampled Audio. Request for Comments: 3190. Network Working Group. January 2002."
                         }
                     ]
                 }
