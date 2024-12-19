@@ -201,9 +201,9 @@
             "grade": "fi-dpres-recommended-file-format",
             "audio_streams": [
                 {
-                    "version_id": "FI_DPRES_FLAC_1_1.2.1",
+                    "version_id": "FI_DPRES_FLAC_1_UNAP",
                     "mimetype": "audio/flac",
-                    "version": "1.2.1"
+                    "version": "(:unap)"
                 },
                 {
                     "version_id": "FI_DPRES_LPCM_1_UNAP",
