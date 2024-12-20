@@ -219,7 +219,7 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "ISO_14496-10:2020",
+                            "pid": "ISO_14496-10",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — Coding of audio-visual objects — Part 10: Advanced Video Coding. ISO/IEC 14496-10:2020"
                         }
@@ -259,7 +259,7 @@
                     "removed_in_dps_spec": "1.12.0",
                     "format_sources": [
                         {
-                            "pid": "ISO_14496-10:2020",
+                            "pid": "ISO_14496-10",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — Coding of audio-visual objects — Part 10: Advanced Video Coding. ISO/IEC 14496-10:2020"
                         }
@@ -615,7 +615,7 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "SMPTE_268:2014",
+                            "pid": "SMPTE_268",
                             "url": "",
                             "reference": "Society of Motion Picture and Television Engineers. For File Format for Digital Moving-Picture Exchange (DPX), Version 2.0. SMPTE ST 268-1:2014"
                         }
@@ -663,12 +663,12 @@
                             "reference": "International Electrotechnical Commission. Helical-scan digital video cassette recording system using 6,35 mm magnetic tape for consumer use (525-60, 625-50, 1125-60 and 1250-50 systems). IEC 61834:1998-2008"
                         },
                         {
-                            "pid": "SMPTE_314:2005",
+                            "pid": "SMPTE_314",
                             "url": "",
                             "reference": "Society of Motion Pictures & Television Engineers. Standard for Television. Data Structure for DV-Based Audio, Data and Compressed Video ó25 and 50 Mb/s. SMPTE ST 314:2005"
                         },
                         {
-                            "pid": "SMPTE_370:2013",
+                            "pid": "SMPTE_370",
                             "url": "",
                             "reference": "Society of Motion Pictures & Television Engineers. Standard for Television. Data Structure for DV-Based Audio, Data and Compressed Video at 100 Mb/s 1080/60i, 1080/50i, 720/60p, 720/50p. SMPTE ST 370:2013"
                         }
@@ -1095,7 +1095,7 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "ISO_19136:2020",
+                            "pid": "ISO_19136",
                             "url": "",
                             "reference": "International Organization for Standardization. Geographic information -- Geography Markup Language (GML). ISO 19136-1:2020"
                         }
@@ -1162,7 +1162,7 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "ISO_23008-2:2023",
+                            "pid": "ISO_23008-2",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — High efficiency coding and media delivery in heterogeneous environments – Part 2: High efficiency video coding. ISO/IEC 23008-2"
                         }
@@ -1200,7 +1200,7 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "ISO_15445:2000",
+                            "pid": "ISO_15445",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — Document description and processing languages — HyperText Markup Language (HTML). ISO/IEC 15445:2000"
                         },
@@ -1367,7 +1367,7 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "ISO_15444-1:2019",
+                            "pid": "ISO_15444-1",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — JPEG 2000 image coding system: Core coding system. ISO/IEC 15444-1:2019"
                         }
@@ -1548,7 +1548,7 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "ISO_15444-1:2019",
+                            "pid": "ISO_15444-1",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — JPEG 2000 image coding system: Core coding system. ISO/IEC 15444-1:2019"
                         }
@@ -1733,7 +1733,7 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "ISO_11172-3:1993",
+                            "pid": "ISO_11172-3",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — Coding of moving pictures and associated audio for digital storage media at up to about 1,5 Mbit/s — Part 3: Audio. ISO/IEC 11172-3:1993"
                         }
@@ -1765,7 +1765,7 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "ISO_13818-3:1998",
+                            "pid": "ISO_13818-3",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — Generic coding of moving pictures and associated audio information — Part 3: Audio. ISO/IEC 13818-3:1998"
                         }
@@ -1798,7 +1798,7 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "ISO_11172-2:1993",
+                            "pid": "ISO_11172-2",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — Coding of moving pictures and associated audio for digital storage media at up to about 1,5 Mbit/s — Part 2: Video. ISO/IEC 11172-2:1993"
                         }
@@ -1815,7 +1815,7 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "ISO_13818-2:2013",
+                            "pid": "ISO_13818-2",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — Generic coding of moving pictures and associated audio information: Video. ISO/IEC 13818-2:2013"
                         }
@@ -2915,7 +2915,7 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "ISO_19005:2005",
+                            "pid": "ISO_19005",
                             "url": "",
                             "reference": "International Organization for Standardization. Document management — Electronic document file format for long-term preservation — Part 1: Use of PDF 1.4 (PDF/A-1). ISO 19005-1:2005"
                         }
@@ -2932,7 +2932,7 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "ISO_19005:2005",
+                            "pid": "ISO_19005",
                             "url": "",
                             "reference": "International Organization for Standardization. Document management — Electronic document file format for long-term preservation — Part 1: Use of PDF 1.4 (PDF/A-1). ISO 19005-1:2005"
                         }
@@ -2949,7 +2949,7 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "ISO_19005-2:2011",
+                            "pid": "ISO_19005-2",
                             "url": "",
                             "reference": "International Organization for Standardization. Document management — Electronic document file format for long-term preservation — Part 2: Use of ISO 32000-1 (PDF/A-2). ISO 19005-2:2011"
                         }
@@ -2966,7 +2966,7 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "ISO_19005-2:2011",
+                            "pid": "ISO_19005-2",
                             "url": "",
                             "reference": "International Organization for Standardization. Document management — Electronic document file format for long-term preservation — Part 2: Use of ISO 32000-1 (PDF/A-2). ISO 19005-2:2011"
                         }
@@ -2983,7 +2983,7 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "ISO_19005-2:2011",
+                            "pid": "ISO_19005-2",
                             "url": "",
                             "reference": "International Organization for Standardization. Document management — Electronic document file format for long-term preservation — Part 2: Use of ISO 32000-1 (PDF/A-2). ISO 19005-2:2011"
                         }
@@ -3000,7 +3000,7 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "ISO_19005-3:2012",
+                            "pid": "ISO_19005-3",
                             "url": "",
                             "reference": "International Organization for Standardization. Document management — Electronic document file format for long-term preservation — Part 3: Use of ISO 32000-1 with support for embedded files (PDF/A-3). ISO 19005-3:2012"
                         }
@@ -3017,7 +3017,7 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "ISO_19005-3:2012",
+                            "pid": "ISO_19005-3",
                             "url": "",
                             "reference": "International Organization for Standardization. Document management — Electronic document file format for long-term preservation — Part 3: Use of ISO 32000-1 with support for embedded files (PDF/A-3). ISO 19005-3:2012"
                         }
@@ -3034,7 +3034,7 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "ISO_19005-3:2012",
+                            "pid": "ISO_19005-3",
                             "url": "",
                             "reference": "International Organization for Standardization. Document management — Electronic document file format for long-term preservation — Part 3: Use of ISO 32000-1 with support for embedded files (PDF/A-3). ISO 19005-3:2012"
                         }
@@ -3450,7 +3450,7 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "SMPTE_421:2013",
+                            "pid": "SMPTE_421",
                             "url": "",
                             "reference": "Society of Motion Pictures & Television Engineers. Standard for Television - VC-1 Compressed Video Bitstream Format and Decoding Process. SMPTE ST 421:2013"
                         }
@@ -3700,7 +3700,7 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "ISO_13818-1:2019",
+                            "pid": "ISO_13818-1",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — Generic coding of moving pictures and associated audio information: Systems. ISO/IEC 13818-1:2019"
                         }
@@ -3732,7 +3732,7 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "ISO_14496-14:2019",
+                            "pid": "ISO_14496-14",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — Coding of audio-visual objects — Part 14: MP4 file format. ISO/IEC 14496-14:2020"
                         }
@@ -3764,7 +3764,7 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "SMPTE_377:2019",
+                            "pid": "SMPTE_377",
                             "url": "",
                             "reference": "Society of Motion Pictures & Television Engineers. Material Exchange Format (MXF) - File Format Specification. SMPTE ST 377-1:2019"
                         }
@@ -3927,7 +3927,7 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "SMPTE_314:2005",
+                            "pid": "SMPTE_314",
                             "url": "",
                             "reference": "Society of Motion Pictures & Television Engineers. Standard for Television - Data Structure for DV-Based Audio, Data and Compressed Video ó25 and 50 Mb/s. SMPTE 314-2005"
                         }
@@ -4104,7 +4104,7 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "ISO_14496-14:2019",
+                            "pid": "ISO_14496-14",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — Coding of audio-visual objects — Part 14: MP4 file format. ISO/IEC 14496-14:2020"
                         }
