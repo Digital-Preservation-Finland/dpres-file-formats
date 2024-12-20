@@ -743,12 +743,12 @@
                 {
                     "_id": "FI_DPRES_EPUB_1_3.0.0",
                     "version": "3.0.0",
-                    "grade": "fi-dpres-recommended-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/483",
                     "support_in_dps_ingest": false,
-                    "active": true,
+                    "active": false,
                     "added_in_dps_spec": "1.4.0",
-                    "removed_in_dps_spec": "",
+                    "removed_in_dps_spec": "1.13.0",
                     "format_sources": [
                         {
                             "pid": "EPUB_3.0.0",
@@ -765,12 +765,12 @@
                 {
                     "_id": "FI_DPRES_EPUB_1_3.0.1",
                     "version": "3.0.1",
-                    "grade": "fi-dpres-recommended-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/483",
                     "support_in_dps_ingest": false,
-                    "active": true,
+                    "active": false,
                     "added_in_dps_spec": "1.4.0",
-                    "removed_in_dps_spec": "",
+                    "removed_in_dps_spec": "1.13.0",
                     "format_sources": [
                         {
                             "pid": "EPUB_3.0.1",
@@ -787,7 +787,7 @@
                 {
                     "_id": "FI_DPRES_EPUB_1_3.1",
                     "version": "3.1",
-                    "grade": "fi-dpres-recommended-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/483",
                     "support_in_dps_ingest": false,
                     "active": false,
@@ -798,12 +798,12 @@
                 {
                     "_id": "FI_DPRES_EPUB_1_3.2",
                     "version": "3.2",
-                    "grade": "fi-dpres-recommended-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/483",
                     "support_in_dps_ingest": false,
-                    "active": true,
+                    "active": false,
                     "added_in_dps_spec": "1.8.0",
-                    "removed_in_dps_spec": "",
+                    "removed_in_dps_spec": "1.13.0",
                     "format_sources": [
                         {
                             "pid": "EPUB_3.2",
@@ -813,15 +813,21 @@
                     ]
                 },
                 {
-                    "_id": "FI_DPRES_EPUB_1_3.3",
-                    "version": "3.3",
+                    "_id": "FI_DPRES_EPUB_1_3",
+                    "version": "3",
                     "grade": "fi-dpres-recommended-file-format",
-                    "format_registry_key": "",
-                    "support_in_dps_ingest": true,
+                    "format_registry_key": "fmt/483",
+                    "support_in_dps_ingest": false,
                     "active": true,
-                    "added_in_dps_spec": "",
+                    "added_in_dps_spec": "1.13.0",
                     "removed_in_dps_spec": "",
-                    "format_sources": []
+                    "format_sources": [
+                        {
+                            "pid": "EPUB_3",
+                            "url": "https://www.w3.org/TR/epub-33/",
+                            "reference": "EPUB 3.3. W3C Recommendation. October 2024."
+                        }
+                    ]
                 }
             ]
         },
