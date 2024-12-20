@@ -142,8 +142,8 @@
                     "format_sources": [
                         {
                             "pid": "AIFF-C",
-                            "url": "https://www.mmsp.ece.mcgill.ca/Documents/AudioFormats/AIFF/ Docs/AIFF-C.9.26.91.pdf",
-                            "reference": "Audio Interchange File Format AIFF-C. A revision to include compressed audio data. Apple Computer, Inc. Draft 26.8.1991."
+                            "url": "https://www.mmsp.ece.mcgill.ca/Documents/AudioFormats/AIFF/Docs/AIFF-C.9.26.91.pdf",
+                            "reference": "Audio Interchange File Format AIFF-C. A revision to include compressed audio data. Apple Computer, Inc. Draft. August 1991."
                         }
                     ]
                 }
@@ -294,7 +294,7 @@
                         {
                             "pid": "BWF",
                             "url": "https://tech.ebu.ch/docs/tech/tech3285.pdf",
-                            "reference": "EBU Tech 3285 - Specification of the Broadcast Wave Format (BWF) - A format for audio data files in broadcasting. Version 2.0. Geneva May 2011."
+                            "reference": "EBU Tech 3285 - Specification of the Broadcast Wave Format (BWF) - A format for audio data files in broadcasting. Version 2.0. European Broadcasting Union (EBU). May 2011."
                         }
                     ]
                 }
@@ -331,7 +331,7 @@
                         {
                             "pid": "RFC_4180",
                             "url": "https://datatracker.ietf.org/doc/rfc4180/",
-                            "reference": "Common Format and MIME Type for Comma-Separated Values (CSV) Files. Request for Comments: 4180. October 2005."
+                            "reference": "Common Format and MIME Type for Comma-Separated Values (CSV) Files. Request for Comments: 4180. Network Working Group. October 2005."
                         }
                     ]
                 }
@@ -617,7 +617,7 @@
                         {
                             "pid": "SMPTE_268:2014",
                             "url": "",
-                            "reference": "Society of Motion Picture and Television Engineers. For File Format for Digital Moving-Picture Exchange (DPX), Version 2.0. SMPTE 268:2014"
+                            "reference": "Society of Motion Picture and Television Engineers. For File Format for Digital Moving-Picture Exchange (DPX), Version 2.0. SMPTE ST 268-1:2014"
                         }
                     ]
                 },
@@ -665,12 +665,12 @@
                         {
                             "pid": "SMPTE_314:2005",
                             "url": "",
-                            "reference": "Society of Motion Pictures & Television Engineers. Standard for Television - Data Structure for DV-Based Audio, Data and Compressed Video ó25 and 50 Mb/s. SMPTE 314-2005"
+                            "reference": "Society of Motion Pictures & Television Engineers. Standard for Television. Data Structure for DV-Based Audio, Data and Compressed Video ó25 and 50 Mb/s. SMPTE ST 314:2005"
                         },
                         {
                             "pid": "SMPTE_370:2013",
                             "url": "",
-                            "reference": "Society of Motion Pictures & Television Engineers. Standard for Television - ata Structure for DV-Based Audio, Data and Compressed Video at 100 Mb/s 1080/60i, 1080/50i, 720/60p, 720/50p. SMPTE 370-2013."
+                            "reference": "Society of Motion Pictures & Television Engineers. Standard for Television. Data Structure for DV-Based Audio, Data and Compressed Video at 100 Mb/s 1080/60i, 1080/50i, 720/60p, 720/50p. SMPTE ST 370:2013"
                         }
                     ]
                 }
@@ -704,7 +704,7 @@
                         {
                             "pid": "EPS",
                             "url": "https://web.archive.org/web/20170818010030/http://wwwimages.adobe.com/content/dam/Adobe/en/devnet/postscript/pdfs/5002.EPSF_Spec.pdf",
-                            "reference": "Encapsulated PostScript File Format Specification. Adobe Developer Support. Version 3.0. Adobe Systems Incorporated. 1.5.1992."
+                            "reference": "Encapsulated PostScript File Format Specification. Adobe Developer Support. Version 3.0. Adobe Systems Incorporated. May 1992."
                         }
                     ]
                 }
@@ -857,7 +857,7 @@
                         {
                             "pid": "RFC_9043",
                             "url": "https://datatracker.ietf.org/doc/rfc9043/",
-                            "reference": "FFV1 Video Coding Format Version 0, 1, and 3. Request for Comments: 9043 August 2021."
+                            "reference": "FFV1 Video Coding Format Version 0, 1, and 3. Request for Comments: 9043. Internet Engineering Task Force (IETF). August 2021."
                         }
                     ]
                 }
@@ -966,7 +966,7 @@
                         {
                             "pid": "OGC_1.3.1",
                             "url": "https://www.geopackage.org/spec131/",
-                            "reference": "Open Geospatial Consortium. OGC GeoPackage Encoding Standard. Version 1.3.1. 2021."
+                            "reference": "Open Geospatial Consortium. OGC GeoPackage Encoding Standard. Version 1.3.1. November 2021."
                         }
                     ]
                 }
@@ -999,7 +999,7 @@
                         {
                             "pid": "GEOTIFF",
                             "url": "http://geotiff.maptools.org/spec/geotiffhome.html",
-                            "reference": "GeoTIFF Format Specification, GeoTIFF Revision 1.0, Specification Version: 1.8.2, November 1995."
+                            "reference": "GeoTIFF Format Specification, GeoTIFF Revision 1.0, Specification Version: 1.8.2. November 1995."
                         }
                     ]
                 }
@@ -1031,7 +1031,7 @@
                         {
                             "pid": "GIF_87a",
                             "url": "https://www.w3.org/Graphics/GIF/spec-gif87.txt",
-                            "reference": "GIF(tm). GRAPHICS INTERCHANGE FORMAT(tm). A standard defining a mechanism for the storage and transmission of raster-based graphics information. CompuServe Incorporated. 15.6.1987."
+                            "reference": "GIF(tm). GRAPHICS INTERCHANGE FORMAT(tm). A standard defining a mechanism for the storage and transmission of raster-based graphics information. CompuServe Incorporated. June 1987."
                         }
                     ]
                 },
@@ -1048,7 +1048,7 @@
                         {
                             "pid": "GIF_89a",
                             "url": "https://www.w3.org/Graphics/GIF/spec-gif89a.txt",
-                            "reference": "GRAPHICS INTERCHANGE FORMAT(tm), Version 89a. CompuServe Incorporated, Columbus, Ohio. 31.7.1990."
+                            "reference": "GRAPHICS INTERCHANGE FORMAT(tm), Version 89a. CompuServe Incorporated. July 1990."
                         }
                     ]
                 }
@@ -1130,8 +1130,8 @@
                     "format_sources": [
                         {
                             "pid": "HDF5",
-                            "url": "https://docs.hdfgroup.org/hdf5/v1_10/",
-                            "reference": "The HDF Group: HDF5 file format home page."
+                            "url": "https://support.hdfgroup.org/documentation/hdf5/latest/_s_p_e_c.html",
+                            "reference": "HDF5 API Reference: Specifications. The HDF Group."
                         }
                     ]
                 }
@@ -1203,6 +1203,11 @@
                             "pid": "ISO_15445:2000",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — Document description and processing languages — HyperText Markup Language (HTML). ISO/IEC 15445:2000"
+                        },
+                        {
+                            "pid": "HTML_4.01",
+                            "url": "https://www.w3.org/TR/html401/",
+                            "reference": "HTML 4.01 Specification. W3C Recommendation. December 1999."
                         }
                     ]
                 },
@@ -1304,7 +1309,7 @@
                         {
                             "pid": "ISO_16739:2018",
                             "url": "",
-                            "reference": "International Organization for Standardization. Industry Foundation Classes (IFC) for data sharing in the construction and facility management industries — Part 1: Data schema. ISO 16739-1:2018."
+                            "reference": "International Organization for Standardization. Industry Foundation Classes (IFC) for data sharing in the construction and facility management industries — Part 1: Data schema. ISO 16739-1:2018"
                         },
                         {
                             "pid": "IFC_4.0.2.1",
@@ -1326,7 +1331,7 @@
                         {
                             "pid": "ISO_16739:2024",
                             "url": "",
-                            "reference": "International Organization for Standardization. Industry Foundation Classes (IFC) for data sharing in the construction and facility management industries — Part 1: Data schema. ISO 16739-1:2024."
+                            "reference": "International Organization for Standardization. Industry Foundation Classes (IFC) for data sharing in the construction and facility management industries — Part 1: Data schema. ISO 16739-1:2024"
                         },
                         {
                             "pid": "IFC_4.3.2.0",
@@ -1583,7 +1588,7 @@
                         {
                             "pid": "KML",
                             "url": "http://www.opengis.net/doc/IS/kml/2.3",
-                            "reference": "Open Geospatial Consortium. OGC KML 2.3."
+                            "reference": "OGC KML 2.3. Open Geospatial Consortium. August 2015."
                         }
                     ]
                 }
@@ -3152,9 +3157,9 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "SIARD2.1.1",
-                            "url": "https://www.bar.admin.ch/dam/bar/en/dokumente/kundeninformation/siard_formatbeschreibung.pdf.download.pdf/siard_format_description.pdf",
-                            "reference": "SIARD Format Specification 2.1.1, 2020."
+                            "pid": "SIARD_2.1.1",
+                            "url": "https://github.com/DILCISBoard/SIARD/tree/master/SIARD%202.1.1/format/2019-05-15",
+                            "reference": "SIARD Format Specification 2.1.1. May 2019."
                         }
                     ]
                 },
@@ -3169,9 +3174,9 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "SIARD2.2",
-                            "url": "https://siard.dilcis.eu/SIARD%202.2/SIARD%202.2.pdf",
-                            "reference": "SIARD Format Specification 2.2. 2021."
+                            "pid": "SIARD_2.2",
+                            "url": "https://siard.dilcis.eu/SIARD_2-2/format/2021-08-31/SIARD_2-2.pdf",
+                            "reference": "SIARD Format Specification 2.2. August 2021."
                         }
                     ]
                 }
@@ -3204,7 +3209,7 @@
                         {
                             "pid": "SVG",
                             "url": "https://www.w3.org/TR/SVG11/",
-                            "reference": "W3C: Scalable Vector Graphics (SVG) 1.1 specification (Second Edition)."
+                            "reference": "Scalable Vector Graphics (SVG) 1.1 specification (Second Edition). W3C Recommendation. August 2011."
                         }
                     ]
                 }
@@ -3241,7 +3246,7 @@
                         {
                             "pid": "RFC_2046",
                             "url": "https://datatracker.ietf.org/doc/rfc2046/",
-                            "reference": "Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types. Request for Comments: 2046. Request for Comments: 2046 November 1996."
+                            "reference": "Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types. Request for Comments: 2046. Network Working Group. November 1996."
                         }
                     ]
                 }
@@ -3273,8 +3278,8 @@
                     "format_sources": [
                         {
                             "pid": "TIFF",
-                            "url": "https://www.adobe.io/content/dam/udp/en/open/standards/tiff/TIFF6.pdf",
-                            "reference": "Adobe Developers Association. TIFF Revision 6.0 Final — June 3, 1992."
+                            "url": "https://www.itu.int/itudoc/itu-t/com16/tiff-fx/docs/tiff6.pdf",
+                            "reference": "TIFF Revision 6.0 Final. Adobe Developers Association. June 1992."
                         }
                     ]
                 }
@@ -3447,7 +3452,7 @@
                         {
                             "pid": "SMPTE_421:2013",
                             "url": "",
-                            "reference": "Society of Motion Pictures & Television Engineers. Standard for Television - VC-1 Compressed Video Bitstream Format and Decoding Process. SMPTE 0421-2013."
+                            "reference": "Society of Motion Pictures & Television Engineers. Standard for Television - VC-1 Compressed Video Bitstream Format and Decoding Process. SMPTE ST 421:2013"
                         }
                     ]
                 }
@@ -3488,7 +3493,7 @@
                         {
                             "pid": "XHTML_1.0",
                             "url": "https://www.w3.org/TR/xhtml1/",
-                            "reference": "XHTML 1.0 — The Extensible HyperText Markup Language (Second Edition). A Reformulation of HTML 4 in XML 1.0. W3C Recommendation, January 2000, revised August 2002."
+                            "reference": "XHTML 1.0 — The Extensible HyperText Markup Language (Second Edition). A Reformulation of HTML 4 in XML 1.0. W3C Recommendation. January 2000, revised August 2002."
                         }
                     ]
                 },
@@ -3505,7 +3510,7 @@
                         {
                             "pid": "XHTML_1.1",
                             "url": "https://www.w3.org/TR/xhtml11/",
-                            "reference": "XHTML 1.1 — Module-based XHTML (Second Edition). W3C Recommendation, November 2010."
+                            "reference": "XHTML 1.1 — Module-based XHTML (Second Edition). W3C Recommendation. November 2010."
                         }
                     ]
                 },
@@ -3610,7 +3615,7 @@
                         {
                             "pid": "XML_1.0",
                             "url": "https://www.w3.org/TR/xml/",
-                            "reference": "Extensible Markup Language (XML) 1.0 (Fifth Edition). W3C Recommendation, November 2008."
+                            "reference": "Extensible Markup Language (XML) 1.0 (Fifth Edition). W3C Recommendation. November 2008."
                         }
                     ]
                 },
@@ -3627,7 +3632,7 @@
                         {
                             "pid": "XML_1.1",
                             "url": "https://www.w3.org/TR/xml11/",
-                            "reference": "Extensible Markup Language (XML) 1.1 (Second Edition). W3C Recommendation, September 2006."
+                            "reference": "Extensible Markup Language (XML) 1.1 (Second Edition). W3C Recommendation. September 2006."
                         }
                     ]
                 }
@@ -3761,7 +3766,7 @@
                         {
                             "pid": "SMPTE_377:2019",
                             "url": "",
-                            "reference": "Society of Motion Pictures & Television Engineers. Material Exchange Format (MXF) - File Format Specification (Revision of SMPTE 377-1-2019)."
+                            "reference": "Society of Motion Pictures & Television Engineers. Material Exchange Format (MXF) - File Format Specification. SMPTE ST 377-1:2019"
                         }
                     ]
                 }
@@ -3826,7 +3831,7 @@
                         {
                             "pid": "MOV",
                             "url": "https://developer.apple.com/standards/qtff-2001.pdf",
-                            "reference": "QuickTime File Format. Classic Version of the QuickTime File Format Specification. Apple Computer, Inc. 1.3.2001."
+                            "reference": "QuickTime File Format. Classic Version of the QuickTime File Format Specification. Apple Computer, Inc. March 2001."
                         }
                     ]
                 }
@@ -3860,7 +3865,7 @@
                         {
                             "pid": "ASF",
                             "url": "https://download.microsoft.com/download/7/9/0/790fecaa-f64a-4a5e-a430-0bccdab3f1b4/ASF_Specification.doc",
-                            "reference": "Advanced Systems Format (ASF) Specification. Revision 01.20.03. Microsoft Corporation, December 2004."
+                            "reference": "Advanced Systems Format (ASF) Specification. Revision 01.20.03. Microsoft Corporation. December 2004."
                         }
                     ]
                 }
@@ -3892,7 +3897,7 @@
                         {
                             "pid": "AVI",
                             "url": "https://docs.microsoft.com/en-us/windows/win32/directshow/avi-riff-file-reference",
-                            "reference": "AVI (Audio Video Interleave). Library of Congress."
+                            "reference": "AVI RIFF File Reference. Microsoft Corporation."
                         }
                     ]
                 }
