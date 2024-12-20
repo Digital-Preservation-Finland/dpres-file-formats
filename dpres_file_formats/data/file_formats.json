@@ -166,7 +166,7 @@
                 {
                     "_id": "FI_DPRES_ARC_1_1.0",
                     "version": "1.0",
-                    "grade": "fi-dpres-recommended-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "x-fmt/219",
                     "support_in_dps_ingest": false,
                     "active": false,
@@ -177,7 +177,7 @@
                 {
                     "_id": "FI_DPRES_ARC_1_1.1",
                     "version": "1.1",
-                    "grade": "fi-dpres-recommended-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/410",
                     "support_in_dps_ingest": false,
                     "active": false,
@@ -1076,7 +1076,7 @@
                 {
                     "_id": "FI_DPRES_GML_1_3.2.1",
                     "version": "3.2.1",
-                    "grade": "fi-dpres-recommended-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "x-fmt/227",
                     "support_in_dps_ingest": false,
                     "active": false,
@@ -1688,7 +1688,7 @@
                 {
                     "_id": "FI_DPRES_MJPEG2000_1_UNAP",
                     "version": "(:unap)",
-                    "grade": "fi-dpres-recommended-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/337",
                     "support_in_dps_ingest": false,
                     "active": false,
@@ -1714,7 +1714,7 @@
                 {
                     "_id": "FI_DPRES_MP3_1_UNAP",
                     "version": "(:unap)",
-                    "grade": "fi-dpres-acceptable-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/134",
                     "support_in_dps_ingest": false,
                     "active": false,
@@ -1824,7 +1824,7 @@
                 {
                     "_id": "FI_DPRES_MPEG_1_4",
                     "version": "4",
-                    "grade": "fi-dpres-acceptable-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/199",
                     "support_in_dps_ingest": false,
                     "active": false,
@@ -1884,7 +1884,7 @@
                 {
                     "_id": "FI_DPRES_MS_EXCEL_1_9.0",
                     "version": "9.0",
-                    "grade": "fi-dpres-acceptable-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/62",
                     "support_in_dps_ingest": false,
                     "active": false,
@@ -1895,7 +1895,7 @@
                 {
                     "_id": "FI_DPRES_MS_EXCEL_1_10.0",
                     "version": "10.0",
-                    "grade": "fi-dpres-acceptable-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/62",
                     "support_in_dps_ingest": false,
                     "active": false,
@@ -1906,7 +1906,7 @@
                 {
                     "_id": "FI_DPRES_MS_EXCEL_1_11.0",
                     "version": "11.0",
-                    "grade": "fi-dpres-acceptable-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/62",
                     "support_in_dps_ingest": false,
                     "active": false,
@@ -1932,7 +1932,7 @@
                 {
                     "_id": "FI_DPRES_MS_EXCEL_2_12.0",
                     "version": "12.0",
-                    "grade": "fi-dpres-acceptable-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/214",
                     "support_in_dps_ingest": false,
                     "active": false,
@@ -1943,7 +1943,7 @@
                 {
                     "_id": "FI_DPRES_MS_EXCEL_2_14.0",
                     "version": "14.0",
-                    "grade": "fi-dpres-acceptable-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/214",
                     "support_in_dps_ingest": false,
                     "active": false,
@@ -1954,7 +1954,7 @@
                 {
                     "_id": "FI_DPRES_MS_EXCEL_2_15.0",
                     "version": "15.0",
-                    "grade": "fi-dpres-acceptable-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/214",
                     "support_in_dps_ingest": false,
                     "active": false,
@@ -1965,7 +1965,7 @@
                 {
                     "_id": "FI_DPRES_MS_EXCEL_2_16.0",
                     "version": "16.0",
-                    "grade": "fi-dpres-acceptable-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/214",
                     "support_in_dps_ingest": false,
                     "active": false,
@@ -2013,7 +2013,7 @@
                 {
                     "_id": "FI_DPRES_MS_POWERPOINT_1_8.0",
                     "version": "8.0",
-                    "grade": "fi-dpres-acceptable-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/126",
                     "support_in_dps_ingest": false,
                     "active": false,
@@ -2024,7 +2024,7 @@
                 {
                     "_id": "FI_DPRES_MS_POWERPOINT_1_9.0",
                     "version": "9.0",
-                    "grade": "fi-dpres-acceptable-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/126",
                     "support_in_dps_ingest": false,
                     "active": false,
@@ -2035,7 +2035,7 @@
                 {
                     "_id": "FI_DPRES_MS_POWERPOINT_1_10.0",
                     "version": "10.0",
-                    "grade": "fi-dpres-acceptable-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/126",
                     "support_in_dps_ingest": false,
                     "active": false,
@@ -2046,7 +2046,7 @@
                 {
                     "_id": "FI_DPRES_MS_POWERPOINT_1_11.0",
                     "version": "11.0",
-                    "grade": "fi-dpres-acceptable-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/126",
                     "support_in_dps_ingest": false,
                     "active": false,
@@ -2089,7 +2089,7 @@
                 {
                     "_id": "FI_DPRES_MS_POWERPOINT_2_12.0",
                     "version": "12.0",
-                    "grade": "fi-dpres-acceptable-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/215",
                     "support_in_dps_ingest": false,
                     "active": false,
@@ -2100,7 +2100,7 @@
                 {
                     "_id": "FI_DPRES_MS_POWERPOINT_2_14.0",
                     "version": "14.0",
-                    "grade": "fi-dpres-acceptable-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/215",
                     "support_in_dps_ingest": false,
                     "active": false,
@@ -2111,7 +2111,7 @@
                 {
                     "_id": "FI_DPRES_MS_POWERPOINT_2_15.0",
                     "version": "15.0",
-                    "grade": "fi-dpres-acceptable-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/215",
                     "support_in_dps_ingest": false,
                     "active": false,
@@ -2122,7 +2122,7 @@
                 {
                     "_id": "FI_DPRES_MS_POWERPOINT_2_16.0",
                     "version": "16.0",
-                    "grade": "fi-dpres-acceptable-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/215",
                     "support_in_dps_ingest": false,
                     "active": false,
@@ -2170,7 +2170,7 @@
                 {
                     "_id": "FI_DPRES_MS_WORD_1_8.0",
                     "version": "8.0",
-                    "grade": "fi-dpres-acceptable-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/40",
                     "support_in_dps_ingest": false,
                     "active": false,
@@ -2181,7 +2181,7 @@
                 {
                     "_id": "FI_DPRES_MS_WORD_1_8.5",
                     "version": "8.5",
-                    "grade": "fi-dpres-acceptable-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/40",
                     "support_in_dps_ingest": false,
                     "active": false,
@@ -2192,7 +2192,7 @@
                 {
                     "_id": "FI_DPRES_MS_WORD_1_9.0",
                     "version": "9.0",
-                    "grade": "fi-dpres-acceptable-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/40",
                     "support_in_dps_ingest": false,
                     "active": false,
@@ -2203,7 +2203,7 @@
                 {
                     "_id": "FI_DPRES_MS_WORD_1_10.0",
                     "version": "10.0",
-                    "grade": "fi-dpres-acceptable-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/40",
                     "support_in_dps_ingest": false,
                     "active": false,
@@ -2214,7 +2214,7 @@
                 {
                     "_id": "FI_DPRES_MS_WORD_1_11.0",
                     "version": "11.0",
-                    "grade": "fi-dpres-acceptable-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/40",
                     "support_in_dps_ingest": false,
                     "active": false,
@@ -2257,7 +2257,7 @@
                 {
                     "_id": "FI_DPRES_MS_WORD_2_12.0",
                     "version": "12.0",
-                    "grade": "fi-dpres-acceptable-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/412",
                     "support_in_dps_ingest": false,
                     "active": false,
@@ -2268,7 +2268,7 @@
                 {
                     "_id": "FI_DPRES_MS_WORD_2_14.0",
                     "version": "14.0",
-                    "grade": "fi-dpres-acceptable-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/412",
                     "support_in_dps_ingest": false,
                     "active": false,
@@ -2279,7 +2279,7 @@
                 {
                     "_id": "FI_DPRES_MS_WORD_2_15.0",
                     "version": "15.0",
-                    "grade": "fi-dpres-acceptable-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/412",
                     "support_in_dps_ingest": false,
                     "active": false,
@@ -2290,7 +2290,7 @@
                 {
                     "_id": "FI_DPRES_MS_WORD_2_16.0",
                     "version": "16.0",
-                    "grade": "fi-dpres-acceptable-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/412",
                     "support_in_dps_ingest": false,
                     "active": false,
@@ -3127,7 +3127,7 @@
                 {
                     "_id": "FI_DPRES_SIARD_1_2.0",
                     "version": "2.0",
-                    "grade": "fi-dpres-recommended-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/995",
                     "support_in_dps_ingest": false,
                     "active": false,
@@ -3138,7 +3138,7 @@
                 {
                     "_id": "FI_DPRES_SIARD_1_2.1",
                     "version": "2.1",
-                    "grade": "fi-dpres-recommended-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/1196",
                     "support_in_dps_ingest": false,
                     "active": false,
@@ -3301,7 +3301,7 @@
                 {
                     "_id": "FI_DPRES_WARC_1_UNAP",
                     "version": "(:unap)",
-                    "grade": "fi-dpres-recommended-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/289",
                     "support_in_dps_ingest": false,
                     "active": false,
@@ -3312,7 +3312,7 @@
                 {
                     "_id": "FI_DPRES_WARC_1_0.17",
                     "version": "0.17",
-                    "grade": "fi-dpres-recommended-file-format",
+                    "grade": "fi-dpres-unacceptable-file-format",
                     "format_registry_key": "fmt/289",
                     "support_in_dps_ingest": false,
                     "active": false,
