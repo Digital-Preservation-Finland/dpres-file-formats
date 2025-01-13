@@ -1222,7 +1222,7 @@
                     "removed_in_dps_spec": "1.13.0",
                     "format_sources": [
                         {
-                            "pid": "HTML5",
+                            "pid": "HTML5.0",
                             "url": "https://www.w3.org/TR/html5/",
                             "reference": "HTML5. A vocabulary and associated APIs for HTML and XHTML. W3C Recommendation 28 October 2014."
                         }
@@ -3525,7 +3525,7 @@
                     "removed_in_dps_spec": "1.13.0",
                     "format_sources": [
                         {
-                            "pid": "HTML5",
+                            "pid": "HTML5.0",
                             "url": "https://www.w3.org/TR/html5/",
                             "reference": "HTML5. A vocabulary and associated APIs for HTML and XHTML. W3C Recommendation 28 October 2014."
                         }
