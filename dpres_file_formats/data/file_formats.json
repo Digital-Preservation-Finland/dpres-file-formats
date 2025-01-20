@@ -926,7 +926,7 @@
         {
             "_id": "FI_DPRES_GEOPACKAGE_1",
             "mimetype": "application/geopackage+sqlite3",
-            "content_type": "geospatial",
+            "content_type": "geospatial data",
             "format_name_long": "Geopackage",
             "format_name_short": "GEOPACKAGE",
             "typical_extensions": [
@@ -975,7 +975,7 @@
         {
             "_id": "FI_DPRES_GEOTIFF_1",
             "mimetype": "image/tiff",
-            "content_type": "geospatial",
+            "content_type": "geospatial data",
             "format_name_long": "Geographic Tagged Image File Format",
             "format_name_short": "GEOTIFF",
             "typical_extensions": [
@@ -1057,7 +1057,7 @@
         {
             "_id": "FI_DPRES_GML_1",
             "mimetype": "application/gml+xml",
-            "content_type": "geospatial",
+            "content_type": "geospatial data",
             "format_name_long": "Geography Markup Language",
             "format_name_short": "GML",
             "typical_extensions": [
@@ -1106,7 +1106,7 @@
         {
             "_id": "FI_DPRES_HDF5_1",
             "mimetype": "application/x-hdf5",
-            "content_type": "scientific",
+            "content_type": "scientific software",
             "format_name_long": "Hierarchical Data Format",
             "format_name_short": "HDF5",
             "typical_extensions": [
@@ -1559,7 +1559,7 @@
         {
             "_id": "FI_DPRES_KML_1",
             "mimetype": "application/vnd.google-earth.kml+xml",
-            "content_type": "geospatial",
+            "content_type": "geospatial data",
             "format_name_long": "Keyhole Markup Language",
             "format_name_short": "KML",
             "typical_extensions": [
@@ -1636,7 +1636,7 @@
         {
             "_id": "FI_DPRES_MATLAB_1",
             "mimetype": "application/matlab",
-            "content_type": "scientific",
+            "content_type": "scientific software",
             "format_name_long": "Matlab",
             "format_name_short": "MATLAB",
             "typical_extensions": [
@@ -3082,7 +3082,7 @@
         {
             "_id": "FI_DPRES_POR_1",
             "mimetype": "application/x-spss-por",
-            "content_type": "research",
+            "content_type": "research data",
             "format_name_long": "SPSS Portable",
             "format_name_short": "POR",
             "typical_extensions": [
@@ -3114,7 +3114,7 @@
         {
             "_id": "FI_DPRES_SIARD_1",
             "mimetype": "application/x-siard",
-            "content_type": "database",
+            "content_type": "databases",
             "format_name_long": "Software Independent Archiving of Relational Databases",
             "format_name_short": "SIARD",
             "typical_extensions": [
