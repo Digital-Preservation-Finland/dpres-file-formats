@@ -1267,7 +1267,7 @@
                     "version": "5",
                     "grade": "fi-dpres-recommended-file-format",
                     "format_registry_key": "fmt/471",
-                    "support_in_dps_ingest": false,
+                    "support_in_dps_ingest": true,
                     "active": true,
                     "added_in_dps_spec": "1.13.0",
                     "removed_in_dps_spec": "",
