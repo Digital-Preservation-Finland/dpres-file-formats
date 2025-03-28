@@ -4261,6 +4261,32 @@
                     ]
                 }
             ]
+        },
+        {
+            "_id": "FI_DPRES_ATLPROJ_1",
+            "mimetype": "application/x.fi-dpres.atlproj",
+            "content_type": "text",
+            "format_name_long": "ATLAS.TI project bundle file",
+            "format_name_short": "ATLPROJ",
+            "typical_extensions": [
+                ".atlproj"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_ATLPROJ_1_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-bit-level-file-format-with-recommended",
+                    "format_registry_key": "",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "",
+                    "removed_in_dps_spec": "",
+                    "format_sources": []
+                }
+            ]
         }
     ]
 }
