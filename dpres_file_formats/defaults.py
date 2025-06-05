@@ -13,8 +13,10 @@ CONTAINERS_STREAMS = pkg_resources.resource_filename(
 ALLOWED_CHARSETS = ["ISO-8859-15", "UTF-8", "UTF-16", "UTF-32"]
 
 # (:unap) = Not applicable, makes no sense
+# (:unkn) = Known to be unknown (e.g., Anonymous, Inconnue)
 # See: https://digitalpreservation.fi/support/vocabularies#Tuntemattomatarvot
 UNAP = "(:unap)"
+UNKN = "(:unkn)"
 
 
 class ContentTypes(str, enum.Enum):
