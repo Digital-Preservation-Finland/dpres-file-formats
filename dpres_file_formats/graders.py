@@ -161,10 +161,24 @@ class ContainerStreamsGrader(BaseGrader):
             )
         )
 
-        matching = [y for y in grading_criteria if
-                    all(map(lambda s: s in y["streams"], contained_formats))]
+        numeric_grades = {
+            Grades.RECOMMENDED: 4,
+            Grades.ACCEPTABLE: 3,
+            Grades.WITH_RECOMMENDED: 2,
+            Grades.BIT_LEVEL: 1,
+            Grades.UNACCEPTABLE: 0
+        }
 
-        if len(matching) == 0:
+        inverse_numeric_grades = [Grades.UNACCEPTABLE, Grades.BIT_LEVEL,
+                                  Grades.WITH_RECOMMENDED, Grades.ACCEPTABLE,
+                                  Grades.RECOMMENDED]
+
+        grades = [y["grade"] for x in contained_formats for y in
+                  grading_criteria if
+                  x in y["streams"]]
+
+        if len(grades) == 0:
             return Grades.UNACCEPTABLE
 
-        return matching[0]["grade"]
+        return inverse_numeric_grades[
+            min(map(lambda x: numeric_grades[x], grades))]
