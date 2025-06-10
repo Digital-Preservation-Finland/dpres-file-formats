@@ -1,6 +1,6 @@
 """Functions that output the file formats list."""
 
-from dpres_file_formats.defaults import FILE_FORMATS
+from dpres_file_formats.defaults import FILE_FORMATS, CONTAINERS_STREAMS
 from dpres_file_formats.json_handler import FileFormatsJson
 
 
@@ -81,3 +81,7 @@ def file_formats(deprecated=False,
             _flatten_format_versions()
 
     return output_formats
+
+
+def av_container_grading():
+    return FileFormatsJson().read_file_formats(path=CONTAINERS_STREAMS)
