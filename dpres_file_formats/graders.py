@@ -56,7 +56,7 @@ class MIMEGrader(BaseGrader):
             grade = list(
                 filter(
                     lambda f: f["mimetype"] == self.mimetype and
-                              f["version"] == self.version,
+                    f["version"] == self.version,
                     self.formats
                 )
             )[0]["grade"]
@@ -86,12 +86,12 @@ class TextGrader(BaseGrader):
             grade = list(
                 filter(
                     lambda f: f["mimetype"] == self.mimetype and
-                              f["version"] == self.version and
-                              any(
-                                  map(lambda s: s["charset"] in f["charsets"],
-                                      self.streams.values()
-                                      )
-                              ),
+                    f["version"] == self.version and
+                    any(
+                        map(lambda s: s["charset"] in f["charsets"],
+                            self.streams.values()
+                            )
+                    ),
                     self.formats
                 )
             )[0]["grade"]
@@ -145,11 +145,12 @@ class ContainerStreamsGrader(BaseGrader):
                 self.av_container_grades)
         )
 
-        transform_streams = lambda obj: list(
-            map(
-                lambda s: (s["mimetype"].lower(), s["version"]),
-                obj["audio_streams"] + obj["video_streams"])
-        )
+        def transform_streams(obj):
+            return list(
+                map(
+                    lambda s: (s["mimetype"].lower(), s["version"]),
+                    obj["audio_streams"] + obj["video_streams"])
+            )
 
         grading_criteria = list(
             map(

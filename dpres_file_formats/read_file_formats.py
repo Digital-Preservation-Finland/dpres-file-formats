@@ -84,4 +84,6 @@ def file_formats(deprecated=False,
 
 
 def av_container_grading():
+    """Return information about supported av containers
+    """
     return FileFormatsJson().read_file_formats(path=CONTAINERS_STREAMS)
