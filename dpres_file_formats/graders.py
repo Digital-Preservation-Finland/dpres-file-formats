@@ -52,18 +52,16 @@ class MIMEGrader(BaseGrader):
 
     def grade(self):
         """Return digital preservation grade."""
-        try:
-            grade = list(
-                filter(
-                    lambda f: f["mimetype"] == self.mimetype and
-                    f["version"] == self.version,
-                    self.formats
-                )
-            )[0]["grade"]
-        except IndexError:
-            grade = Grades.UNACCEPTABLE
+        grades = list(filter(
+            lambda f: f["mimetype"] == self.mimetype and
+                      f["version"] == self.version
+            ,
+            self.formats))
 
-        return grade
+        if len(grades) == 0:
+            return Grades.UNACCEPTABLE
+
+        return grades[0]["grade"]
 
 
 class TextGrader(BaseGrader):
@@ -76,29 +74,32 @@ class TextGrader(BaseGrader):
         """Check whether grader is supported with given mimetype."""
         # TextGrader accepts mimetypes which are in formats and have allowed
         # charsets list non-empty.
-        return bool([file_format for file_format in cls.formats if
-                     file_format["mimetype"] == mimetype and
-                     bool(file_format["charsets"])])
+        return bool(list(filter(
+            lambda file_format: file_format["mimetype"] == mimetype and
+                                file_format["charsets"], cls.formats)))
 
     def grade(self):
         """Return digital preservation grade."""
-        try:
-            grade = list(
-                filter(
-                    lambda f: f["mimetype"] == self.mimetype and
-                    f["version"] == self.version and
-                    any(
-                        map(lambda s: s["charset"] in f["charsets"],
-                            self.streams.values()
-                            )
-                    ),
-                    self.formats
-                )
-            )[0]["grade"]
-        except IndexError:
-            grade = Grades.UNACCEPTABLE
 
-        return grade
+        def does_match(file_format):
+            # Given a file format object, checks if it has a relevant mime
+            def in_file_format_charsets(stream_info):
+                # Given a stream object, checks if it has acceptable charset
+                return stream_info["charset"] in file_format["charsets"]
+
+            return (
+                    file_format["mimetype"] == self.mimetype and
+                    file_format["version"] == self.version and
+                    any(map(in_file_format_charsets, self.streams.values()))
+            )
+
+        # Find the matching grades (assumed to have only 1 element) from the
+        # formats
+        grades = list(filter(does_match, self.formats))
+
+        if len(grades) == 0:
+            return Grades.UNACCEPTABLE
+        return grades[0]["grade"]
 
 
 class ContainerStreamsGrader(BaseGrader):
@@ -136,6 +137,7 @@ class ContainerStreamsGrader(BaseGrader):
             if index != 0
         }
 
+        # We only care about the entries which have the correct mimetype and version.
         relevant_grades = list(
             filter(
                 lambda x: (
@@ -152,6 +154,7 @@ class ContainerStreamsGrader(BaseGrader):
                     obj["audio_streams"] + obj["video_streams"])
             )
 
+        # Transform grades to a format which is easier to work with
         grading_criteria = list(
             map(
                 lambda old: {
@@ -162,6 +165,7 @@ class ContainerStreamsGrader(BaseGrader):
             )
         )
 
+        # Tables for easy number-Grade conversion, which is used in checking the weakest grade.
         numeric_grades = {
             Grades.RECOMMENDED: 4,
             Grades.ACCEPTABLE: 3,
@@ -174,12 +178,15 @@ class ContainerStreamsGrader(BaseGrader):
                                   Grades.WITH_RECOMMENDED, Grades.ACCEPTABLE,
                                   Grades.RECOMMENDED]
 
+        # Find the correct grade for each stream
         grades = [y["grade"] for x in contained_formats for y in
                   grading_criteria if
                   x in y["streams"]]
 
-        if len(grades) == 0:
+        # Return UNACCEPTABLE if some grade was not found.
+        if len(grades) != len(contained_formats):
             return Grades.UNACCEPTABLE
 
+        # Select the weakest grade using the earlier tables
         return inverse_numeric_grades[
             min(map(lambda x: numeric_grades[x], grades))]
