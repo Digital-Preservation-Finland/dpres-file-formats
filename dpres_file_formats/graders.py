@@ -53,10 +53,11 @@ class MIMEGrader(BaseGrader):
     def grade(self):
         """Return digital preservation grade."""
         grades = list(filter(
-            lambda f: f["mimetype"] == self.mimetype and
-                      f["version"] == self.version
-            ,
-            self.formats))
+            lambda f:
+            f["mimetype"] == self.mimetype and
+            f["version"] == self.version,
+            self.formats
+        ))
 
         if len(grades) == 0:
             return Grades.UNACCEPTABLE
@@ -75,8 +76,9 @@ class TextGrader(BaseGrader):
         # TextGrader accepts mimetypes which are in formats and have allowed
         # charsets list non-empty.
         return bool(list(filter(
-            lambda file_format: file_format["mimetype"] == mimetype and
-                                file_format["charsets"], cls.formats)))
+            lambda file_format:
+            file_format["mimetype"] == mimetype and
+            file_format["charsets"], cls.formats)))
 
     def grade(self):
         """Return digital preservation grade."""
@@ -137,7 +139,8 @@ class ContainerStreamsGrader(BaseGrader):
             if index != 0
         }
 
-        # We only care about the entries which have the correct mimetype and version.
+        # We only care about the entries which have the correct mimetype and
+        # version.
         relevant_grades = list(
             filter(
                 lambda x: (
@@ -165,7 +168,8 @@ class ContainerStreamsGrader(BaseGrader):
             )
         )
 
-        # Tables for easy number-Grade conversion, which is used in checking the weakest grade.
+        # Tables for easy number-Grade conversion, which is used in checking
+        # the weakest grade.
         numeric_grades = {
             Grades.RECOMMENDED: 4,
             Grades.ACCEPTABLE: 3,
