@@ -43,7 +43,7 @@ class BaseGrader:
 class MIMEGrader(BaseGrader):
     """Grade file based on mimetype and version."""
 
-    formats = file_formats()
+    formats = file_formats(unofficial=True)
 
     @classmethod
     def is_supported(cls, mimetype):
@@ -69,7 +69,7 @@ class MIMEGrader(BaseGrader):
 class TextGrader(BaseGrader):
     """Grade file based on mimetype, version and charset."""
 
-    formats = file_formats()
+    formats = file_formats(unofficial=True)
 
     @classmethod
     def is_supported(cls, mimetype):
