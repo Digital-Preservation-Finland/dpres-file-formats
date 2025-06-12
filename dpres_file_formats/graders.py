@@ -48,13 +48,14 @@ class MIMEGrader(BaseGrader):
     @classmethod
     def is_supported(cls, mimetype):
         """Check whether grader is supported with given mimetype."""
-        return mimetype in map(lambda f: f["mimetype"], cls.formats)
+        return mimetype.lower() in map(lambda f: f["mimetype"].lower(),
+                                       cls.formats)
 
     def grade(self):
         """Return digital preservation grade."""
         grades = list(filter(
             lambda f:
-            f["mimetype"] == self.mimetype and
+            f["mimetype"].lower() == self.mimetype.lower() and
             f["version"] == self.version,
             self.formats
         ))
@@ -77,7 +78,7 @@ class TextGrader(BaseGrader):
         # charsets list non-empty.
         return bool(list(filter(
             lambda file_format:
-            file_format["mimetype"] == mimetype and
+            file_format["mimetype"].lower() == mimetype.lower() and
             file_format["charsets"], cls.formats)))
 
     def grade(self):
@@ -90,7 +91,7 @@ class TextGrader(BaseGrader):
                 return stream_info["charset"] in file_format["charsets"]
 
             return (
-                    file_format["mimetype"] == self.mimetype and
+                    file_format["mimetype"].lower() == self.mimetype.lower() and
                     file_format["version"] == self.version and
                     any(map(in_file_format_charsets, self.streams.values()))
             )
@@ -119,15 +120,14 @@ class ContainerStreamsGrader(BaseGrader):
     @classmethod
     def is_supported(cls, mimetype):
         """Check whether grader is supported with given mimetype."""
-        return mimetype in map(
-            lambda container: container["mimetype"] and container["version"],
-            cls.av_container_grades)
+        return mimetype.lower() in map(lambda container: container["mimetype"].lower(),
+                               cls.av_container_grades)
 
     def grade(self):
         """Return digital preservation grade."""
         # First stream should be the container
         container = self.streams[0]
-        container_mimetype = container["mimetype"]
+        container_mimetype = container["mimetype"].lower()
         container_version = container["version"]
 
         # Create a set of (mime_type, version) tuples
@@ -138,6 +138,10 @@ class ContainerStreamsGrader(BaseGrader):
             for index, stream in self.streams.items()
             if index != 0
         }
+
+        # When the container has no streams, return RECOMMENDED.
+        if len(contained_formats) == 0:
+            return Grades.RECOMMENDED
 
         # We only care about the entries which have the correct mimetype and
         # version.
