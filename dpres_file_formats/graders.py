@@ -91,10 +91,10 @@ class TextGrader(BaseGrader):
                 return stream_info["charset"] in file_format["charsets"]
 
             return (
-                    file_format["mimetype"].lower() == self.mimetype.lower() and
+                    file_format["mimetype"].lower() ==
+                    self.mimetype.lower() and
                     file_format["version"] == self.version and
-                    any(map(in_file_format_charsets, self.streams.values()))
-            )
+                    any(map(in_file_format_charsets, self.streams.values())))
 
         # Find the matching grades (assumed to have only 1 element) from the
         # formats
@@ -120,8 +120,9 @@ class ContainerStreamsGrader(BaseGrader):
     @classmethod
     def is_supported(cls, mimetype):
         """Check whether grader is supported with given mimetype."""
-        return mimetype.lower() in map(lambda container: container["mimetype"].lower(),
-                               cls.av_container_grades)
+        return mimetype.lower() in map(
+            lambda container: container["mimetype"].lower(),
+            cls.av_container_grades)
 
     def grade(self):
         """Return digital preservation grade."""
