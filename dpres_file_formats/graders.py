@@ -1,7 +1,7 @@
 """Digital preservation grading."""
 from typing import Any
 
-from dpres_file_formats.defaults import Grades
+from dpres_file_formats.defaults import Grades, UNAV
 from dpres_file_formats.read_file_formats import file_formats, \
     av_container_grading
 
@@ -199,3 +199,44 @@ class ContainerStreamsGrader(BaseGrader):
         # Select the weakest grade using the earlier tables
         return inverse_numeric_grades[
             min(map(lambda x: numeric_grades[x], grades))]
+
+
+def iter_graders():
+    """Iterate graders.
+
+    :returns: grader class
+    """
+    yield from [MIMEGrader, TextGrader, ContainerStreamsGrader]
+
+
+def grade(mimetype: str, version: str, streams):
+    """Return digital preservation grade."""
+    if not mimetype or mimetype == UNAV:
+        grade = UNAV
+    else:
+        grades = [grader(mimetype, version, streams).grade()
+                  for grader in iter_graders()
+                  if grader.is_supported(mimetype)]
+        # If no graders support the MIME type, we don't know anything
+        # about the MIME type and therefore can not accept it
+        if not grades:
+            return Grades.UNACCEPTABLE
+        # Multiple grades might be returned. For example, Grader (which
+        # only performs a quick MIME type check) might grade the main file
+        # format as RECOMMENDED, while ContainerStreamsGrader might give it
+        # a lower grade because the contained streams do not fulfill the
+        # additional requirements.
+        #
+        # In such cases, pick the lowest assigned grade.
+        grade = next(
+            grade for grade in
+            (
+                Grades.UNACCEPTABLE,
+                Grades.BIT_LEVEL,
+                Grades.WITH_RECOMMENDED,
+                Grades.ACCEPTABLE,
+                Grades.RECOMMENDED
+            )
+            if grade in grades
+        )
+    return grade
