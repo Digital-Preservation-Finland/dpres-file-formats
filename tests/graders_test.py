@@ -5,7 +5,7 @@ import pytest
 
 from dpres_file_formats.defaults import Grades
 from dpres_file_formats.graders import MIMEGrader, TextGrader, \
-    ContainerStreamsGrader
+    ContainerStreamsGrader, grade
 
 FakeScraper = namedtuple("FakeScraper", ["mimetype", "version", "streams"])
 
@@ -106,3 +106,25 @@ def test_container_streams_grader(scraper, expected_grade):
     grader = ContainerStreamsGrader(scraper.mimetype, scraper.version,
                                     scraper.streams)
     assert grader.grade() == expected_grade
+
+
+@pytest.mark.parametrize("mimetype, version, streams, expected", [
+    ("non/existent", "1.0", {}, Grades.UNACCEPTABLE),
+    ("text/csv", "(:unap)", {"0": {"charset": "UTF-8"}}, Grades.RECOMMENDED),
+    ("audio/mpeg", "2", {}, Grades.ACCEPTABLE),
+    ("video/H264", "(:unap)",
+     {
+         0: {"mimetype": "video/H264", "version": "(:unap)"},
+         1: {"mimetype": "video/h264", "version": "(:unap)"},
+         2: {"mimetype": "audio/L24", "version": "(:unap)"}
+     },
+     Grades.RECOMMENDED),
+    ("video/quicktime", "(:unap)",
+     {
+         0: {"mimetype": "video/quicktime", "version": "(:unap)"},
+         1: {"mimetype": "video/x.fi-dpres.prores", "version": "(:unap)"}
+     },
+     Grades.WITH_RECOMMENDED)
+])
+def test_grade_function(mimetype, version, streams, expected):
+    assert grade(mimetype, version, streams) == expected
