@@ -107,3 +107,21 @@ Where ``superseded_format`` is the ID of the replaced format and ``superseding_f
 is the ID of the format that replaces the previous format. The argument
 ``dps_spec_version`` denotes the DPS file format specification version where
 the change occurred.
+
+
+Grading file formats
+--------------------
+
+Retrieving a grade for a file can be done in the following way::
+
+    from dpres_file_formats.graders import grade
+    grade(mimetype, version , streams)
+
+Where ``mimetype`` is the mimetype of the graded file, ``version``, is the
+version of the file format and ``streams`` is a dictionary from integers to more
+dictionaries, which can have the keys ``"mimetype"``, ``"version"``  and ``"charset"``.
+If a grade of an av file is getting retrieved, you need to specify the
+container's information as the 0th stream and the other streams' mimetypes and
+versions as the rest of the streams.
+If a grade of a text file is getting retrieved, a charset in a stream must exist.
+
