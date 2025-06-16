@@ -110,7 +110,7 @@ def test_container_streams_grader(scraper, expected_grade):
 
 @pytest.mark.parametrize("mimetype, version, streams, expected", [
     ("non/existent", "1.0", {}, Grades.UNACCEPTABLE),
-    ("text/csv", "(:unap)", {"0": {"charset": "UTF-8"}}, Grades.RECOMMENDED),
+    ("text/csv", "(:unap)", {0: {"charset": "UTF-8"}}, Grades.RECOMMENDED),
     ("audio/mpeg", "2", {}, Grades.ACCEPTABLE),
     ("video/H264", "(:unap)",
      {
@@ -124,7 +124,16 @@ def test_container_streams_grader(scraper, expected_grade):
          0: {"mimetype": "video/quicktime", "version": "(:unap)"},
          1: {"mimetype": "video/x.fi-dpres.prores", "version": "(:unap)"}
      },
-     Grades.WITH_RECOMMENDED)
+     Grades.WITH_RECOMMENDED),
+    ("image/jpeg", "1.00", {}, Grades.RECOMMENDED),
+    ("application/pdf", "A-3a", {}, Grades.RECOMMENDED),
+    ("application/warc", "1.1", {}, Grades.RECOMMENDED),
+    ("image/gif", "1987a", {}, Grades.ACCEPTABLE),
+    ("application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+     "2007 onwards", {},
+     Grades.ACCEPTABLE),
+    ("audio/mp4", "(:unap)",
+     {0: {"mimetype": "audio/mp4", "version": "(:unap)"}}, Grades.RECOMMENDED)
 ])
 def test_grade_function(mimetype, version, streams, expected):
     assert grade(mimetype, version, streams) == expected
