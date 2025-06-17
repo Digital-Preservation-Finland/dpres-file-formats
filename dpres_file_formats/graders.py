@@ -1,6 +1,4 @@
 """Digital preservation grading."""
-from typing import Any
-
 from dpres_file_formats.defaults import Grades, UNAV
 from dpres_file_formats.read_file_formats import file_formats, \
     av_container_grading
@@ -9,7 +7,7 @@ from dpres_file_formats.read_file_formats import file_formats, \
 class BaseGrader:
     """Base class for graders."""
 
-    def __init__(self, mimetype: str, version: str, streams: iter(Any)):
+    def __init__(self, mimetype: str, version: str, streams: dict[int, dict]):
         """Initialize grader."""
         self._mimetype = mimetype
         self._version = version
@@ -209,7 +207,7 @@ def iter_graders():
     yield from [MIMEGrader, TextGrader, ContainerStreamsGrader]
 
 
-def grade(mimetype: str, version: str, streams):
+def grade(mimetype: str, version: str, streams: dict[int, dict]):
     """Return digital preservation grade."""
     if not mimetype or mimetype == UNAV:
         grade = UNAV
