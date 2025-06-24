@@ -171,8 +171,9 @@ class ContainerStreamsGrader(BaseGrader):
         return NUMERIC_QUALITY_TO_GRADE[
             min(map(lambda x: GRADE_TO_NUMERIC_QUALITY[x], grades))]
 
+    @classmethod
     @functools.cache
-    def _grading_criteria(self, container_mimetype: str, container_version: str) \
+    def _grading_criteria(cls, container_mimetype: str, container_version: str) \
             -> list[dict[str, Union[list[tuple[str, str]], str]]]:
 
         """
@@ -190,7 +191,7 @@ class ContainerStreamsGrader(BaseGrader):
                         x["mimetype"].lower() == container_mimetype and
                         x["version"] == container_version
                 ),
-                self.av_container_grades)
+                cls.av_container_grades)
         )
 
         def transform_streams(obj) -> list[tuple[str, str]]:
