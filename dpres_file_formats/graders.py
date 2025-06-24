@@ -160,9 +160,12 @@ class ContainerStreamsGrader(BaseGrader):
                                                   container_version)
 
         # Find the correct grade for each stream
-        grades: list[str] = [y["grade"] for x in contained_formats for y in
-                             grading_criteria if
-                             x in y["streams"]]
+        grades: list[str] = [
+            criterion["grade"]
+            for contained_format in contained_formats
+            for criterion in grading_criteria if
+            contained_format in criterion["streams"]
+        ]
 
         # Return UNACCEPTABLE if some grade was not found.
         if len(grades) != len(contained_formats):
@@ -191,26 +194,29 @@ class ContainerStreamsGrader(BaseGrader):
         # version.
         relevant_grades = list(
             filter(
-                lambda x: (
-                        x["mimetype"].lower() == container_mimetype and
-                        x["version"] == container_version
+                lambda av_container_grade: (
+                        av_container_grade["mimetype"].lower()
+                        == container_mimetype and
+                        av_container_grade["version"] == container_version
                 ),
                 cls.av_container_grades)
         )
 
-        def transform_streams(obj) -> list[tuple[str, str]]:
+        def transform_streams(format_object) -> list[tuple[str, str]]:
             return list(
                 map(
-                    lambda s: (s["mimetype"].lower(), s["version"]),
-                    obj["audio_streams"] + obj["video_streams"])
+                    lambda stream: (stream["mimetype"].lower(),
+                                    stream["version"]),
+                    format_object["audio_streams"] +
+                    format_object["video_streams"])
             )
 
         # Transform grades to a format which is easier to work with
         grading_criteria = list(
             map(
-                lambda old: {
-                    "grade": old["grade"],
-                    "streams": transform_streams(old)
+                lambda format_object: {
+                    "grade": format_object["grade"],
+                    "streams": transform_streams(format_object)
                 },
                 relevant_grades
             )
