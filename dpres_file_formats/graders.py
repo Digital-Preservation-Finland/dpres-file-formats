@@ -130,8 +130,7 @@ class ContainerStreamsGrader(BaseGrader):
         container_version = container["version"]
 
         # Create a set of (mime_type, version) tuples
-        # This makes it trivial to check which grade should be assigned
-        # using set operations.
+        # This makes it trivial to check which grade should be assigned.
         contained_formats = {
             (stream["mimetype"].lower(), stream["version"])
             for index, stream in self.streams.items()
