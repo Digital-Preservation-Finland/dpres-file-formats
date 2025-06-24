@@ -1,7 +1,22 @@
 """Digital preservation grading."""
+import functools
+from typing import Union
+
 from dpres_file_formats.defaults import Grades, UNAV
 from dpres_file_formats.read_file_formats import file_formats, \
     av_container_grading
+
+NUMERIC_QUALITY_TO_GRADE = [Grades.UNACCEPTABLE, Grades.BIT_LEVEL,
+                            Grades.WITH_RECOMMENDED, Grades.ACCEPTABLE,
+                            Grades.RECOMMENDED]
+
+GRADE_TO_NUMERIC_QUALITY = {
+    Grades.RECOMMENDED: 4,
+    Grades.ACCEPTABLE: 3,
+    Grades.WITH_RECOMMENDED: 2,
+    Grades.BIT_LEVEL: 1,
+    Grades.UNACCEPTABLE: 0
+}
 
 
 class BaseGrader:
@@ -141,18 +156,44 @@ class ContainerStreamsGrader(BaseGrader):
         if len(contained_formats) == 0:
             return Grades.RECOMMENDED
 
+        grading_criteria = self._grading_criteria(container_mimetype.lower(), container_version)
+
+        # Find the correct grade for each stream
+        grades: list[str] = [y["grade"] for x in contained_formats for y in
+                             grading_criteria if
+                             x in y["streams"]]
+
+        # Return UNACCEPTABLE if some grade was not found.
+        if len(grades) != len(contained_formats):
+            return Grades.UNACCEPTABLE
+
+        # Select the weakest grade using tables
+        return NUMERIC_QUALITY_TO_GRADE[
+            min(map(lambda x: GRADE_TO_NUMERIC_QUALITY[x], grades))]
+
+    @functools.cache
+    def _grading_criteria(self, container_mimetype: str, container_version: str) \
+            -> list[dict[str, Union[list[tuple[str, str]], str]]]:
+
+        """
+        Given container mimetype and version, returns a list in a useful form based on av_container_grades.
+        :return: List of grades, where each grade is a dict with keys ``grade`` and ``streams``.
+            Streams are tuples in the form of ``(mimetype, version)`` and grade is the name of the grade.
+        :rtype: list[dict[str, Union[list[tuple[str, str]], str]]]
+
+        """
         # We only care about the entries which have the correct mimetype and
         # version.
         relevant_grades = list(
             filter(
                 lambda x: (
-                        x["mimetype"].lower() == container_mimetype.lower() and
+                        x["mimetype"].lower() == container_mimetype and
                         x["version"] == container_version
                 ),
                 self.av_container_grades)
         )
 
-        def transform_streams(obj):
+        def transform_streams(obj) -> list[tuple[str, str]]:
             return list(
                 map(
                     lambda s: (s["mimetype"].lower(), s["version"]),
@@ -169,33 +210,7 @@ class ContainerStreamsGrader(BaseGrader):
                 relevant_grades
             )
         )
-
-        # Tables for easy number-Grade conversion, which is used in checking
-        # the weakest grade.
-        numeric_grades = {
-            Grades.RECOMMENDED: 4,
-            Grades.ACCEPTABLE: 3,
-            Grades.WITH_RECOMMENDED: 2,
-            Grades.BIT_LEVEL: 1,
-            Grades.UNACCEPTABLE: 0
-        }
-
-        inverse_numeric_grades = [Grades.UNACCEPTABLE, Grades.BIT_LEVEL,
-                                  Grades.WITH_RECOMMENDED, Grades.ACCEPTABLE,
-                                  Grades.RECOMMENDED]
-
-        # Find the correct grade for each stream
-        grades = [y["grade"] for x in contained_formats for y in
-                  grading_criteria if
-                  x in y["streams"]]
-
-        # Return UNACCEPTABLE if some grade was not found.
-        if len(grades) != len(contained_formats):
-            return Grades.UNACCEPTABLE
-
-        # Select the weakest grade using the earlier tables
-        return inverse_numeric_grades[
-            min(map(lambda x: numeric_grades[x], grades))]
+        return grading_criteria
 
 
 def iter_graders():
