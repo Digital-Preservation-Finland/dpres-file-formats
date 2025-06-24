@@ -156,7 +156,8 @@ class ContainerStreamsGrader(BaseGrader):
         if len(contained_formats) == 0:
             return Grades.RECOMMENDED
 
-        grading_criteria = self._grading_criteria(container_mimetype.lower(), container_version)
+        grading_criteria = self._grading_criteria(container_mimetype.lower(),
+                                                  container_version)
 
         # Find the correct grade for each stream
         grades: list[str] = [y["grade"] for x in contained_formats for y in
@@ -173,13 +174,16 @@ class ContainerStreamsGrader(BaseGrader):
 
     @classmethod
     @functools.cache
-    def _grading_criteria(cls, container_mimetype: str, container_version: str) \
+    def _grading_criteria(cls, container_mimetype: str,
+                          container_version: str) \
             -> list[dict[str, Union[list[tuple[str, str]], str]]]:
-
         """
-        Given container mimetype and version, returns a list in a useful form based on av_container_grades.
-        :return: List of grades, where each grade is a dict with keys ``grade`` and ``streams``.
-            Streams are tuples in the form of ``(mimetype, version)`` and grade is the name of the grade.
+        Given container mimetype and version, returns a list in a useful
+        form based on av_container_grades.
+        :return: List of grades, where each grade is a dict with keys
+            ``grade`` and ``streams``.
+            Streams are tuples in the form of ``(mimetype, version)``
+            and grade is the name of the grade.
         :rtype: list[dict[str, Union[list[tuple[str, str]], str]]]
 
         """
