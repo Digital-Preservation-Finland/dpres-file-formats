@@ -118,6 +118,11 @@ class TextGrader(BaseGrader):
         return grades[0]["grade"]
 
 
+def weakest_grade(grades: list[Union[Grades, str]]):
+    return NUMERIC_QUALITY_TO_GRADE[
+        min(map(lambda x: GRADE_TO_NUMERIC_QUALITY[x], grades))]
+
+
 class ContainerStreamsGrader(BaseGrader):
     """
     Grade file based on what certain containers are allowed to contain.
@@ -172,8 +177,7 @@ class ContainerStreamsGrader(BaseGrader):
             return Grades.UNACCEPTABLE
 
         # Select the weakest grade using tables
-        return NUMERIC_QUALITY_TO_GRADE[
-            min(map(lambda x: GRADE_TO_NUMERIC_QUALITY[x], grades))]
+        return weakest_grade(grades)
 
     @classmethod
     @functools.cache
@@ -246,15 +250,5 @@ def grade(mimetype: str, version: str, streams: dict[int, dict]):
         # additional requirements.
         #
         # In such cases, pick the lowest assigned grade.
-        grade = next(
-            grade for grade in
-            (
-                Grades.UNACCEPTABLE,
-                Grades.BIT_LEVEL,
-                Grades.WITH_RECOMMENDED,
-                Grades.ACCEPTABLE,
-                Grades.RECOMMENDED
-            )
-            if grade in grades
-        )
+        grade = weakest_grade(grades)
     return grade
