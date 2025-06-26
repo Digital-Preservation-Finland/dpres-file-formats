@@ -1,7 +1,7 @@
 """Unit tests for the read file formats module."""
 
 import pytest
-from dpres_file_formats.read_file_formats import file_formats
+from dpres_file_formats import file_formats
 
 
 @pytest.mark.parametrize(

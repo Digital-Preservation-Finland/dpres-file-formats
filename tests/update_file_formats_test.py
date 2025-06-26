@@ -2,7 +2,7 @@
 
 import json
 import pytest
-from dpres_file_formats.update_file_formats import (
+from dpres_file_formats import (
     add_format,
     add_version_to_format,
     replace_format

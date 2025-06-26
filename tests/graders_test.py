@@ -5,7 +5,8 @@ import pytest
 
 from dpres_file_formats.defaults import Grades
 from dpres_file_formats.graders import MIMEGrader, TextGrader, \
-    ContainerStreamsGrader, grade
+    ContainerStreamsGrader
+from dpres_file_formats import grade
 
 FakeScraper = namedtuple("FakeScraper", ["mimetype", "version", "streams"])
 

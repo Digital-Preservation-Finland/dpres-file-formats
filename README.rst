@@ -32,7 +32,7 @@ Read the file formats
 
 Read and output the format registry in the following way::
 
-    from dpres_file_formats.read_file_formats import file_formats
+    from dpres_file_formats import file_formats
     file_formats(deprecated=False, unofficial=False, versions_separately=True)
 
 The following arguments exist:
@@ -56,7 +56,7 @@ version to a format.
 
 Adding a new format to the JSON registry::
 
-    from dpres_file_formats.update_file_formats import add_format
+    from dpres_file_formats import add_format
     format_id = add_format(mimetype, content_type, format_name_long, format_name_short, **)
 
 The following arguments exist:
@@ -76,7 +76,7 @@ a ``format_id`` for the added file format.
 
 Adding a new file format version to a file format in the registry::
 
-    from dpres_file_formats.update_file_formats import add_version_to_format
+    from dpres_file_formats import add_version_to_format
     add_version_to_format(format_id, grade, support_in_dps_ingest, active, added_in_dps_spec, **)
 
 The following arguments exist:
@@ -100,7 +100,7 @@ based on the file format ID and the file format version. The arguments ``grade``
 
 A file format can replace another file format with the function::
 
-    from dpres_file_formats.update_file_formats import replace_format
+    from dpres_file_formats import replace_format
     replace_format(superseded_format, superseding_format, dps_spec_version)
 
 Where ``superseded_format`` is the ID of the replaced format and ``superseding_format``
@@ -114,7 +114,7 @@ Grading file formats
 
 Retrieving a grade for a file can be done in the following way::
 
-    from dpres_file_formats.graders import grade
+    from dpres_file_formats import grade
     grade(mimetype, version , streams)
 
 Where ``mimetype`` is the mimetype of the graded file, ``version``, is the
