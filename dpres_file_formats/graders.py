@@ -224,12 +224,7 @@ class ContainerStreamsGrader(BaseGrader):
         return grading_criteria
 
 
-def iter_graders():
-    """Iterate graders.
-
-    :returns: grader class
-    """
-    yield from [MIMEGrader, TextGrader, ContainerStreamsGrader]
+GRADERS = [MIMEGrader, TextGrader, ContainerStreamsGrader]
 
 
 def grade(mimetype: str, version: str, streams: dict[int, dict]):
@@ -238,7 +233,7 @@ def grade(mimetype: str, version: str, streams: dict[int, dict]):
         grade = UNAV
     else:
         grades = [grader(mimetype, version, streams).grade()
-                  for grader in iter_graders()
+                  for grader in GRADERS
                   if grader.is_supported(mimetype)]
         # If no graders support the MIME type, we don't know anything
         # about the MIME type and therefore can not accept it
