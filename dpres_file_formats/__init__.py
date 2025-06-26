@@ -11,4 +11,9 @@ from dpres_file_formats.update_file_formats import (
     replace_format)
 from dpres_file_formats.graders import grade
 
-__all__ = ["file_formats", "av_container_grading", "add_format", "add_version_to_format", "replace_format", "grade"]
+__all__ = ["file_formats",
+           "av_container_grading",
+           "add_format",
+           "add_version_to_format",
+           "replace_format",
+           "grade"]
