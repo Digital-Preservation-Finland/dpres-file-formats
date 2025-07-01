@@ -113,9 +113,9 @@ def test_container_streams_grader(scraper, expected_grade):
     ("non/existent", "1.0", {}, Grades.UNACCEPTABLE),
     ("text/csv", "(:unap)", {0: {"charset": "UTF-8"}}, Grades.RECOMMENDED),
     ("audio/mpeg", "2", {}, Grades.ACCEPTABLE),
-    ("video/H264", "(:unap)",
+    ("video/quicktime", "(:unap)",
      {
-         0: {"mimetype": "video/H264", "version": "(:unap)"},
+         0: {"mimetype": "video/quicktime", "version": "(:unap)"},
          1: {"mimetype": "video/h264", "version": "(:unap)"},
          2: {"mimetype": "audio/L24", "version": "(:unap)"}
      },
@@ -134,7 +134,13 @@ def test_container_streams_grader(scraper, expected_grade):
      "2007 onwards", {},
      Grades.ACCEPTABLE),
     ("audio/mp4", "(:unap)",
-     {0: {"mimetype": "audio/mp4", "version": "(:unap)"}}, Grades.RECOMMENDED)
+     {0: {"mimetype": "audio/mp4", "version": "(:unap)"}}, Grades.RECOMMENDED),
+    ("audio/mpeg", "(:unap)",
+     {
+         0: {"mimetype": "audio/mpeg", "version": "(:unap)"},
+         1: {"mimetype": "audio/mpeg", "version": "(:unap)"},
+         2: {"mimetype": "image/jpeg", "version": "(:unap)"}
+     }, Grades.UNACCEPTABLE)
 ])
 def test_grade_function(mimetype, version, streams, expected):
     assert grade(mimetype, version, streams) == expected

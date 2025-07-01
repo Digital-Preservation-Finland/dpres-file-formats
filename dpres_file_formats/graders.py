@@ -228,7 +228,38 @@ class ContainerStreamsGrader(BaseGrader):
         return grading_criteria
 
 
-GRADERS = [MIMEGrader, TextGrader, ContainerStreamsGrader]
+class NotContainerStreamsGrader(BaseGrader):
+    """
+    Gives grades to non-container files based on the amount of their streams.
+    """
+
+    # File formats, which contain only a single metadata stream. Excludes AV
+    # file formats and gif/tiff formats, because they can contain multiple
+    # metadata streams.
+    non_container_grades = ((set(map(lambda f: f["mimetype"].lower(),
+                                     file_formats(unofficial=True))) -
+                             set(map(lambda f: f["mimetype"].lower(),
+                                     av_container_grading()))) -
+                            {"image/gif", "image/tiff"})
+
+    @classmethod
+    def is_supported(cls, mimetype):
+        """Check whether grader is supported with given mimetype."""
+        return mimetype.lower() in cls.non_container_grades
+
+    def grade(self):
+        """Return digital preservation grade."""
+
+        if (len(self.streams)) > 1:
+            return Grades.UNACCEPTABLE
+
+        # This grader is only considering the amount of streams. Some other
+        # grader might give worse grade, which overrides this.
+        return Grades.RECOMMENDED
+
+
+GRADERS = [MIMEGrader, TextGrader, ContainerStreamsGrader,
+           NotContainerStreamsGrader]
 
 
 def grade(mimetype: str, version: str, streams: dict[int, dict]):
