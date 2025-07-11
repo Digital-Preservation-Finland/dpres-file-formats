@@ -236,16 +236,16 @@ class NotContainerStreamsGrader(BaseGrader):
     # File formats, which contain only a single metadata stream. Excludes AV
     # file formats and gif/tiff formats, because they can contain multiple
     # metadata streams.
-    non_container_grades = ((set(map(lambda f: f["mimetype"].lower(),
-                                     file_formats(unofficial=True))) -
-                             set(map(lambda f: f["mimetype"].lower(),
-                                     av_container_grading()))) -
-                            {"image/gif", "image/tiff"})
+    non_container_mime_types = ((set(map(lambda f: f["mimetype"].lower(),
+                                         file_formats(unofficial=True))) -
+                                 set(map(lambda f: f["mimetype"].lower(),
+                                         av_container_grading()))) -
+                                {"image/gif", "image/tiff"})
 
     @classmethod
     def is_supported(cls, mimetype):
         """Check whether grader is supported with given mimetype."""
-        return mimetype.lower() in cls.non_container_grades
+        return mimetype.lower() in cls.non_container_mime_types
 
     def grade(self):
         """Return digital preservation grade."""
