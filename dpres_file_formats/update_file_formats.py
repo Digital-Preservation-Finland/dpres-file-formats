@@ -1,16 +1,18 @@
 """Functions that add and modify the file formats list."""
 
+from dpres_file_formats.json_handler import (
+    read_file_formats_json,
+    update_file_formats_json,
+)
 from dpres_file_formats.defaults import (
     ALLOWED_CHARSETS,
     ContentTypes,
-    FILE_FORMATS,
     DpsSpecVersions,
     Grades,
     RelationshipTypes,
     TechMetadata,
     UNAP
 )
-from dpres_file_formats.json_handler import FileFormatsJson
 
 FORMAT_ID = 'FI_DPRES_{format_name_short}_{name_count}'
 VERSION_ID = '{format_id}_{version_name}'
@@ -50,9 +52,7 @@ def add_format(
     if not typical_extensions:
         typical_extensions = []
 
-    file_formats_json = FileFormatsJson()
-    file_formats = FileFormatsJson().read_file_formats(
-        path=FILE_FORMATS)
+    file_formats = read_file_formats_json()
 
     # Count format_name_short for the format_id
     name_count = 1
@@ -79,9 +79,7 @@ def add_format(
     }
     file_formats.append(format_dict)
 
-    file_formats_json.update_file_formats(
-        path=FILE_FORMATS,
-        file_formats=file_formats)
+    update_file_formats_json(file_formats=file_formats)
 
     return format_id
 
@@ -149,9 +147,7 @@ def add_version_to_format(
         }
         format_sources.append(format_source)
 
-    file_formats_json = FileFormatsJson()
-    file_formats = FileFormatsJson().read_file_formats(
-        path=FILE_FORMATS)
+    file_formats = read_file_formats_json()
     format_dict = None
     for file_format in file_formats:
         if file_format['_id'] == format_id:
@@ -185,9 +181,7 @@ def add_version_to_format(
     except KeyError:
         format_dict['versions'] = [version_dict]
 
-    file_formats_json.update_file_formats(
-        path=FILE_FORMATS,
-        file_formats=file_formats)
+    update_file_formats_json(file_formats=file_formats)
 
 
 def replace_format(superseded_format,
@@ -205,9 +199,7 @@ def replace_format(superseded_format,
         was published, from a controlled vocabulary
     """
 
-    file_formats_json = FileFormatsJson()
-    file_formats = FileFormatsJson().read_file_formats(
-        path=FILE_FORMATS)
+    file_formats = read_file_formats_json()
 
     superseded_format_id = ''
     superseded_format_mimetype = ''
@@ -259,6 +251,4 @@ def replace_format(superseded_format,
             except KeyError:
                 format_dict['relations'] = [superseding_relation]
 
-    file_formats_json.update_file_formats(
-        path=FILE_FORMATS,
-        file_formats=file_formats)
+    update_file_formats_json(file_formats=file_formats)

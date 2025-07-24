@@ -119,13 +119,8 @@ def file_format_json_mock(file_formats_path_fx, monkeypatch):
         json.dump(data, outfile)
 
     # pylint: disable=import-outside-toplevel
-    import dpres_file_formats.update_file_formats
+    import dpres_file_formats.json_handler
     monkeypatch.setattr(
-        dpres_file_formats.update_file_formats,
-        'FILE_FORMATS',
-        file_formats_path_fx)
-    import dpres_file_formats.read_file_formats
-    monkeypatch.setattr(
-        dpres_file_formats.read_file_formats,
+        dpres_file_formats.json_handler,
         'FILE_FORMATS',
         file_formats_path_fx)

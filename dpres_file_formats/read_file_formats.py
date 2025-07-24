@@ -1,7 +1,10 @@
 """Functions that output the file formats list."""
 
-from dpres_file_formats.defaults import FILE_FORMATS, CONTAINERS_STREAMS
-from dpres_file_formats.json_handler import FileFormatsJson
+
+from dpres_file_formats.json_handler import (
+    read_container_streams_json,
+    read_file_formats_json,
+)
 
 
 def file_formats(deprecated=False,
@@ -65,8 +68,7 @@ def file_formats(deprecated=False,
             format_dict.update(version_dict)
             output_formats.append(format_dict.copy())
 
-    file_formats_raw = FileFormatsJson().read_file_formats(
-        path=FILE_FORMATS)
+    file_formats_raw = read_file_formats_json()
 
     selected_formats = []
     output_formats = []
@@ -86,4 +88,4 @@ def file_formats(deprecated=False,
 def av_container_grading():
     """Return information about supported av containers
     """
-    return FileFormatsJson().read_file_formats(path=CONTAINERS_STREAMS)
+    return read_container_streams_json()
