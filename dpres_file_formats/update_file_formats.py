@@ -184,71 +184,108 @@ def add_version_to_format(
     update_file_formats_json(file_formats=file_formats)
 
 
-def replace_format(superseded_format,
-                   superseding_format,
-                   dps_spec_version):
+def replace_format(
+    superseded_format: str, superseding_format: str, dps_spec_version: str
+) -> None:
     """Replaces a format by adding a relationship between two formats,
     where one format supersedes another format. The superseded format
     is deprecated, and its versions are marked no longer active and
     unacceptable for digital preservation.
 
-    :superseded_format: ID of the file format that is deprecated
-    :superseding_format: ID of the file format that replaces
+    :param superseded_format: ID of the file format that is deprecated
+    :param superseding_format: ID of the file format that replaces
         the deprecated format
-    :dps_spec_version: The DPS specification version where the change
+    :param dps_spec_version: The DPS specification version where the change
         was published, from a controlled vocabulary
     """
 
     file_formats = read_file_formats_json()
-
-    superseded_format_id = ''
-    superseded_format_mimetype = ''
-    superseding_format_id = ''
-    superseding_format_mimetype = ''
-
     dps_spec = DpsSpecVersions[dps_spec_version].value
 
-    for format_dict in file_formats:
-        if format_dict['_id'] == superseded_format:
-            superseded_format_id = format_dict['_id']
-            superseded_format_mimetype = format_dict['mimetype']
-        if format_dict['_id'] == superseding_format:
-            superseding_format_id = format_dict['_id']
-            superseding_format_mimetype = format_dict['mimetype']
+    (
+        superseded_format_id,
+        superseded_format_mimetype,
+        superseding_format_id,
+        superseding_format_mimetype,
+    ) = _get_supersession_format_info(
+        superseded_format,
+        superseding_format,
+        file_formats,
+    )
 
     relation = {
-        '_id': '',
-        'type': '',
-        'dps_spec_version': dps_spec,
-        'description': (f"MIME type changed from {superseded_format_mimetype} "
-                        f"to {superseding_format_mimetype}")
+        "_id": "",
+        "type": "",
+        "dps_spec_version": dps_spec,
+        "description": (
+            f"MIME type changed from {superseded_format_mimetype} "
+            f"to {superseding_format_mimetype}"
+        ),
     }
 
     for format_dict in file_formats:
-        if format_dict['_id'] == superseded_format:
+        if format_dict["_id"] == superseded_format:
             superseded_relation = relation.copy()
-            superseded_relation['_id'] = superseding_format_id
-            superseded_relation['type'] = RelationshipTypes.SUPERSEDED
+            superseded_relation["_id"] = superseding_format_id
+            superseded_relation["type"] = RelationshipTypes.SUPERSEDED
             try:
-                format_dict['relations'].append(superseded_relation)
+                format_dict["relations"].append(superseded_relation)
             except KeyError:
-                format_dict['relations'] = [superseded_relation]
+                format_dict["relations"] = [superseded_relation]
 
             # Set all versions as inactive and unacceptable for digital
             # preservation for the deprecated format
-            for version in format_dict['versions']:
-                version['active'] = False
-                version['support_in_dps_ingest'] = False
-                version['grade'] = Grades['UNACCEPTABLE'].value
-                version['removed_in_dps_spec'] = dps_spec
+            for version in format_dict["versions"]:
+                version["active"] = False
+                version["support_in_dps_ingest"] = False
+                version["grade"] = Grades["UNACCEPTABLE"].value
+                version["removed_in_dps_spec"] = dps_spec
 
-        if format_dict['_id'] == superseding_format:
+        if format_dict["_id"] == superseding_format:
             superseding_relation = relation.copy()
-            superseding_relation['_id'] = superseded_format_id
-            superseding_relation['type'] = RelationshipTypes.SUPERSEDES
+            superseding_relation["_id"] = superseded_format_id
+            superseding_relation["type"] = RelationshipTypes.SUPERSEDES
             try:
-                format_dict['relations'].append(superseding_relation)
+                format_dict["relations"].append(superseding_relation)
             except KeyError:
-                format_dict['relations'] = [superseding_relation]
+                format_dict["relations"] = [superseding_relation]
 
     update_file_formats_json(file_formats=file_formats)
+
+
+def _get_supersession_format_info(
+    superseded_format: str,
+    superseding_format: str,
+    file_formats: list[dict],
+) -> tuple[str, str, str, str]:
+    """Get the IDs and MIME types for the superseded and superseding formats.
+
+    :param superseded_format: ID of the deprecated format.
+    :param superseding_format: ID of the superseding format.
+    :param file_formats: List of format dicts.
+    :returns: Tuple containing:
+
+        - Superseded format ID.
+        - Superseded format MIME type.
+        - Superseeding format ID.
+        - Superseeding format MIME type.
+    """
+    superseded_format_id = ""
+    superseded_format_mimetype = ""
+    superseding_format_id = ""
+    superseding_format_mimetype = ""
+
+    for format_dict in file_formats:
+        if format_dict["_id"] == superseded_format:
+            superseded_format_id = format_dict["_id"]
+            superseded_format_mimetype = format_dict["mimetype"]
+        if format_dict["_id"] == superseding_format:
+            superseding_format_id = format_dict["_id"]
+            superseding_format_mimetype = format_dict["mimetype"]
+
+    return (
+        superseded_format_id,
+        superseded_format_mimetype,
+        superseding_format_id,
+        superseding_format_mimetype,
+    )
