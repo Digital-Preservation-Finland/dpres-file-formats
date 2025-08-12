@@ -1,4 +1,5 @@
 """Functions that add and modify the file formats list."""
+from __future__ import annotations
 
 from dpres_file_formats.json_handler import (
     read_file_formats_json,
@@ -20,23 +21,24 @@ VERSION_ID = '{format_id}_{version_name}'
 
 # pylint: disable=too-many-arguments, too-many-positional-arguments
 def add_format(
-        mimetype,
-        content_type,
-        format_name_long,
-        format_name_short,
-        typical_extensions=None,
-        required_metadata='',
-        charsets=False):
+    mimetype: str,
+    content_type: ContentTypes,
+    format_name_long: str,
+    format_name_short: str,
+    typical_extensions: list[str] | None = None,
+    required_metadata: str = "",
+    charsets: bool = False,
+) -> str:
     """Adds a new file format.
 
-    :mimetype: The MIME type of the file format
-    :content_type: The content type, from a controlled vocabulary
-    :format_name_long: The full human readable file format name
-    :format_name_short: A short file format name (e.g. AAC, MP3)
-    :typical_extensions: A list of typical file format extensions
-    :required_metadata: Required technical metadata, from a
+    :param mimetype: The MIME type of the file format
+    :param content_type: The content type, from a controlled vocabulary
+    :param format_name_long: The full human readable file format name
+    :param format_name_short: A short file format name (e.g. AAC, MP3)
+    :param typical_extensions: A list of typical file format extensions
+    :param required_metadata: Required technical metadata, from a
         controlled vocabulary
-    :charsets: A Boolean value of whether charsets are required
+    :param charsets: A Boolean value of whether charsets are required
 
     :returns: The file format ID
     """
@@ -45,9 +47,9 @@ def add_format(
         required_metadata = TechMetadata[required_metadata].value
 
     if charsets:
-        charsets = ALLOWED_CHARSETS
+        allowed_charsets = ALLOWED_CHARSETS
     else:
-        charsets = []
+        allowed_charsets = []
 
     if not typical_extensions:
         typical_extensions = []
@@ -73,7 +75,7 @@ def add_format(
         'format_name_short': format_name_short,
         'typical_extensions': typical_extensions,
         'required_metadata': required_metadata,
-        'charsets': charsets,
+        'charsets': allowed_charsets,
         'relations': [],
         'versions': []
     }
@@ -88,39 +90,40 @@ def add_format(
 # pylint: disable=too-many-positional-arguments
 # pylint: disable=too-many-locals
 def add_version_to_format(
-        format_id,
-        grade,
-        support_in_dps_ingest,
-        active,
-        version=None,
-        format_registry_key='',
-        added_in_dps_spec='',
-        removed_in_dps_spec='',
-        format_source_pid='',
-        format_source_url='',
-        format_source_reference=''):
+    format_id: str,
+    grade: str,
+    support_in_dps_ingest: str,
+    active: bool,
+    version: str | None = None,
+    format_registry_key: str = "",
+    added_in_dps_spec: str = "",
+    removed_in_dps_spec: str = "",
+    format_source_pid: str = "",
+    format_source_url: str = "",
+    format_source_reference: str = "",
+) -> None:
     """Adds a new file format version to an existing file format. The
     file format must exist, and the version cannot be a duplicate of an
     existing version.
 
-    :format_id: The ID of the file format as a string
-    :grade: The file format grade in the DPS (e.g. recommended file
+    :param format_id: The ID of the file format as a string
+    :param grade: The file format grade in the DPS (e.g. recommended file
         format), from a controlled vocabulary
-    :support_in_dps_ingest: The support of the file format version in
+    :param support_in_dps_ingest: The support of the file format version in
         the DPS ingest, as a Boolean value
-    :active: The status of the file format in the DPS, i.e. is the
+    :param active: The status of the file format in the DPS, i.e. is the
         file format version in the latest version of the specifications,
         as a Boolean value
-    :version: The file format version as a string
-    :format_registry_key: The PRONOM format registry key as a string
-    :added_in_dps_spec: The DPS specification version, where the file
+    :param version: The file format version as a string
+    :param format_registry_key: The PRONOM format registry key as a string
+    :param added_in_dps_spec: The DPS specification version, where the file
         format version was added, from a controlled vocabulary
-    :removed_in_dps_spec: The DPS specification version, where the file
+    :param removed_in_dps_spec: The DPS specification version, where the file
         format version was removed, from a controlled vocabulary
-    :format_source_pid: The file format source ID
-    :format_source_url: The file format source URL, requires
+    :param format_source_pid: The file format source ID
+    :param format_source_url: The file format source URL, requires
         format_source_pid
-    :format_source_reference: Bibliographic reference to the file format
+    :param format_source_reference: Bibliographic reference to the file format
         source, requires format_source_pid
 
     :raises ValueError: if file format is missing, or an existing
