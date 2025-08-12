@@ -2,9 +2,12 @@
 import functools
 from typing import Union
 
+from abc import ABCMeta, abstractmethod
 from dpres_file_formats.defaults import Grades, UNAV
-from dpres_file_formats.read_file_formats import file_formats, \
-    av_container_grading
+from dpres_file_formats.read_file_formats import (
+    file_formats,
+    av_container_grading,
+)
 
 NUMERIC_QUALITY_TO_GRADE = [Grades.UNACCEPTABLE, Grades.BIT_LEVEL,
                             Grades.WITH_RECOMMENDED, Grades.ACCEPTABLE,
@@ -19,7 +22,7 @@ GRADE_TO_NUMERIC_QUALITY = {
 }
 
 
-class BaseGrader:
+class BaseGrader(metaclass=ABCMeta):
     """Base class for graders."""
 
     def __init__(self, mimetype: str, version: str, streams: dict[int, dict]):
@@ -29,28 +32,28 @@ class BaseGrader:
         self._streams = streams
 
     @property
-    def mimetype(self):
+    def mimetype(self) -> str:
         """MIME type of the file to grade"""
         return self._mimetype
 
     @property
-    def version(self):
+    def version(self) -> str:
         """MIME version of the file to grade"""
         return self._version
 
     @property
-    def streams(self):
+    def streams(self) -> dict[int, dict]:
         """List of streams of the file to grade"""
         return self._streams
 
     @classmethod
-    def is_supported(cls, mimetype):
+    @abstractmethod
+    def is_supported(cls, mimetype) -> bool:
         """Check whether grader is supported with given mimetype."""
-        raise NotImplementedError
 
-    def grade(self):
+    @abstractmethod
+    def grade(self) -> str:
         """Determine and return digital preservation grade for the file."""
-        raise NotImplementedError
 
 
 class MIMEGrader(BaseGrader):
