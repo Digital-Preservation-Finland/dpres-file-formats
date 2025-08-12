@@ -1,8 +1,10 @@
 """Digital preservation grading."""
+from __future__ import annotations
+
 import functools
-from typing import Union
 
 from abc import ABCMeta, abstractmethod
+from typing import TypedDict
 from dpres_file_formats.defaults import Grades, UNAV
 from dpres_file_formats.read_file_formats import (
     file_formats,
@@ -25,7 +27,9 @@ GRADE_TO_NUMERIC_QUALITY = {
 class BaseGrader(metaclass=ABCMeta):
     """Base class for graders."""
 
-    def __init__(self, mimetype: str, version: str, streams: dict[int, dict]):
+    def __init__(
+        self, mimetype: str, version: str, streams: dict[int, dict[str, str]]
+    ) -> None:
         """Initialize grader."""
         self._mimetype = mimetype
         self._version = version
@@ -42,7 +46,7 @@ class BaseGrader(metaclass=ABCMeta):
         return self._version
 
     @property
-    def streams(self) -> dict[int, dict]:
+    def streams(self) -> dict[int, dict[str, str]]:
         """List of streams of the file to grade"""
         return self._streams
 
@@ -52,7 +56,7 @@ class BaseGrader(metaclass=ABCMeta):
         """Check whether grader is supported with given mimetype."""
 
     @abstractmethod
-    def grade(self) -> str:
+    def grade(self) -> Grades:
         """Determine and return digital preservation grade for the file."""
 
 
@@ -62,12 +66,13 @@ class MIMEGrader(BaseGrader):
     formats = file_formats(unofficial=True)
 
     @classmethod
-    def is_supported(cls, mimetype):
+    def is_supported(cls, mimetype) -> bool:
         """Check whether grader is supported with given mimetype."""
-        return mimetype.lower() in map(lambda f: f["mimetype"].lower(),
-                                       cls.formats)
+        return mimetype.lower() in map(
+            lambda f: f["mimetype"].lower(), cls.formats
+        )
 
-    def grade(self):
+    def grade(self) -> Grades:
         """Return digital preservation grade."""
         grades = list(filter(
             lambda f:
@@ -88,7 +93,7 @@ class TextGrader(BaseGrader):
     formats = file_formats(unofficial=True)
 
     @classmethod
-    def is_supported(cls, mimetype):
+    def is_supported(cls, mimetype) -> bool:
         """Check whether grader is supported with given mimetype."""
         # TextGrader accepts mimetypes which are in formats and have allowed
         # charsets list non-empty.
@@ -97,10 +102,10 @@ class TextGrader(BaseGrader):
             file_format["mimetype"].lower() == mimetype.lower() and
             file_format["charsets"], cls.formats)))
 
-    def grade(self):
+    def grade(self) -> Grades:
         """Return digital preservation grade."""
 
-        def does_match(file_format):
+        def does_match(file_format) -> bool:
             # Given a file format object, checks if it has a relevant mime
             def in_file_format_charsets(stream_info):
                 # Given a stream object, checks if it has acceptable charset
@@ -121,9 +126,9 @@ class TextGrader(BaseGrader):
         return grades[0]["grade"]
 
 
-def weakest_grade(grades: list[Union[Grades, str]]):
-    return NUMERIC_QUALITY_TO_GRADE[
-        min(map(lambda x: GRADE_TO_NUMERIC_QUALITY[x], grades))]
+class _GradingCriteria(TypedDict):
+    grade: Grades
+    streams: list[tuple[str, str]]
 
 
 class ContainerStreamsGrader(BaseGrader):
@@ -139,13 +144,13 @@ class ContainerStreamsGrader(BaseGrader):
     av_container_grades = av_container_grading()
 
     @classmethod
-    def is_supported(cls, mimetype):
+    def is_supported(cls, mimetype) -> bool:
         """Check whether grader is supported with given mimetype."""
         return mimetype.lower() in map(
             lambda container: container["mimetype"].lower(),
             cls.av_container_grades)
 
-    def grade(self):
+    def grade(self) -> Grades:
         """Return digital preservation grade."""
         # First stream should be the container
         container = self.streams[0]
@@ -168,11 +173,11 @@ class ContainerStreamsGrader(BaseGrader):
                                                   container_version)
 
         # Find the correct grade for each stream
-        grades: list[str] = [
+        grades = [
             criterion["grade"]
             for contained_format in contained_formats
-            for criterion in grading_criteria if
-            contained_format in criterion["streams"]
+            for criterion in grading_criteria
+            if contained_format in criterion["streams"]
         ]
 
         # Return UNACCEPTABLE if some grade was not found.
@@ -184,9 +189,9 @@ class ContainerStreamsGrader(BaseGrader):
 
     @classmethod
     @functools.cache
-    def _grading_criteria(cls, container_mimetype: str,
-                          container_version: str) \
-            -> list[dict[str, Union[list[tuple[str, str]], str]]]:
+    def _grading_criteria(
+        cls, container_mimetype: str, container_version: str
+    ) -> list[_GradingCriteria]:
         """
         Given container mimetype and version, returns a list in a useful
         form based on av_container_grades.
@@ -194,7 +199,6 @@ class ContainerStreamsGrader(BaseGrader):
             ``grade`` and ``streams``.
             Streams are tuples in the form of ``(mimetype, version)``
             and grade is the name of the grade.
-        :rtype: list[dict[str, Union[list[tuple[str, str]], str]]]
 
         """
         # We only care about the entries which have the correct mimetype and
@@ -202,30 +206,34 @@ class ContainerStreamsGrader(BaseGrader):
         relevant_grades = list(
             filter(
                 lambda av_container_grade: (
-                        av_container_grade["mimetype"].lower()
-                        == container_mimetype and
-                        av_container_grade["version"] == container_version
+                    av_container_grade["mimetype"].lower()
+                    == container_mimetype
+                    and av_container_grade["version"] == container_version
                 ),
-                cls.av_container_grades)
+                cls.av_container_grades,
+            )
         )
 
         def transform_streams(format_object) -> list[tuple[str, str]]:
             return list(
                 map(
-                    lambda stream: (stream["mimetype"].lower(),
-                                    stream["version"]),
-                    format_object["audio_streams"] +
-                    format_object["video_streams"])
+                    lambda stream: (
+                        stream["mimetype"].lower(),
+                        stream["version"],
+                    ),
+                    format_object["audio_streams"]
+                    + format_object["video_streams"],
+                )
             )
 
         # Transform grades to a format which is easier to work with
-        grading_criteria = list(
+        grading_criteria: list[_GradingCriteria] = list(
             map(
                 lambda format_object: {
                     "grade": format_object["grade"],
-                    "streams": transform_streams(format_object)
+                    "streams": transform_streams(format_object),
                 },
-                relevant_grades
+                relevant_grades,
             )
         )
         return grading_criteria
@@ -246,11 +254,11 @@ class NotContainerStreamsGrader(BaseGrader):
                                 {"image/gif", "image/tiff"})
 
     @classmethod
-    def is_supported(cls, mimetype):
+    def is_supported(cls, mimetype) -> bool:
         """Check whether grader is supported with given mimetype."""
         return mimetype.lower() in cls.non_container_mime_types
 
-    def grade(self):
+    def grade(self) -> Grades:
         """Return digital preservation grade."""
 
         if (len(self.streams)) > 1:
@@ -261,14 +269,20 @@ class NotContainerStreamsGrader(BaseGrader):
         return Grades.RECOMMENDED
 
 
-GRADERS = [MIMEGrader, TextGrader, ContainerStreamsGrader,
-           NotContainerStreamsGrader]
+GRADERS: list[type[BaseGrader]] = [
+    MIMEGrader,
+    TextGrader,
+    ContainerStreamsGrader,
+    NotContainerStreamsGrader,
+]
 
 
-def grade(mimetype: str, version: str, streams: dict[int, dict]):
+def grade(
+    mimetype: str, version: str, streams: dict[int, dict[str, str]]
+) -> str:
     """Return digital preservation grade."""
     if not mimetype or mimetype == UNAV:
-        grade = UNAV
+        grade_ = UNAV
     else:
         grades = [grader(mimetype, version, streams).grade()
                   for grader in GRADERS
@@ -284,5 +298,12 @@ def grade(mimetype: str, version: str, streams: dict[int, dict]):
         # additional requirements.
         #
         # In such cases, pick the lowest assigned grade.
-        grade = weakest_grade(grades)
-    return grade
+        grade_ = weakest_grade(grades)
+    return grade_
+
+
+def weakest_grade(grades: list[Grades]) -> Grades:
+    """Return weakest grade from provided list."""
+    return NUMERIC_QUALITY_TO_GRADE[
+        min(map(lambda x: GRADE_TO_NUMERIC_QUALITY[x], grades))
+    ]
