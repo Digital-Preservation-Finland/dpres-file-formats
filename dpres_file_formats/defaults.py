@@ -1,13 +1,13 @@
 """Default values and controlled vocabularies."""
 import enum
-import pkg_resources
 
-# Path to the file formats json file
-FILE_FORMATS = pkg_resources.resource_filename(
-    "dpres_file_formats", "data/file_formats.json")
-# Path to the file formats json file
-CONTAINERS_STREAMS = pkg_resources.resource_filename(
-    "dpres_file_formats", "data/av_container_grading.json")
+# Python module containing data files
+DATA_MODULE_NAME = "dpres_file_formats.data"
+
+# Name of the file formats json file
+FILE_FORMATS_NAME = "file_formats.json"
+# Name of the file formats json file
+CONTAINERS_STREAMS_NAME = "av_container_grading.json"
 
 # Allowed charsets
 ALLOWED_CHARSETS = ["ISO-8859-15", "UTF-8", "UTF-16", "UTF-32"]

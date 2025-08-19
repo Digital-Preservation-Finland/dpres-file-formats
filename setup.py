@@ -16,8 +16,7 @@ setup(
     packages=find_packages(exclude=['tests', 'tests.*']),
     include_package_data=True,
     package_data={'': ['*.json']},
-    install_requires=['setuptools'],
-    python_requires='>=3.6',
+    python_requires='>=3.9',
     tests_require=['pytest'],
     test_suite='tests'
 )

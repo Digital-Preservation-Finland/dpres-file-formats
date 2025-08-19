@@ -1,5 +1,7 @@
 """Configure py.test default values and functionality"""
+import contextlib
 import json
+
 import pytest
 
 
@@ -118,9 +120,24 @@ def file_format_json_mock(file_formats_path_fx, monkeypatch):
     with open(file_formats_path_fx, "w", encoding="UTF-8") as outfile:
         json.dump(data, outfile)
 
+    @contextlib.contextmanager
+    def mock_resource_path(module, resource_name):
+        if module == "dpres_file_formats.data":
+            if resource_name == "file_formats.json":
+                yield file_formats_path_fx
+                return
+            elif resource_name == "av_container_grading.json":
+                yield av_container_grading_path_fx
+                return
+
+        raise ValueError(
+            f"Module {module} resource {resource_name} not detected"
+        )
+
+
     # pylint: disable=import-outside-toplevel
     import dpres_file_formats.json_handler
     monkeypatch.setattr(
         dpres_file_formats.json_handler,
-        'FILE_FORMATS',
-        file_formats_path_fx)
+        'resource_path',
+        mock_resource_path)
