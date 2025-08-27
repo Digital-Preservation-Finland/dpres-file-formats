@@ -1,6 +1,6 @@
 """Dpres file formats."""
 
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 
 from dpres_file_formats.read_file_formats import (
     file_formats,
