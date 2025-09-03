@@ -4319,6 +4319,48 @@
                     ]
                 }
             ]
+        },
+        {
+            "_id": "FI_DPRES_JSON_1",
+            "mimetype": "application/json",
+            "content_type": "text",
+            "format_name_long": "JavaScript Object Notation",
+            "format_name_short": "JSON",
+            "typical_extensions": [
+                ".json"
+            ],
+            "required_metadata": "",
+            "charsets": [
+                "ISO-8859-15",
+                "UTF-8",
+                "UTF-16",
+                "UTF-32"
+            ],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_JSON_1_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/817",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.14.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ISO_21778",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — The JSON data interchange syntax. ISO/IEC 21778:2017"
+                        },
+                        {
+                            "pid": "RFC_8259",
+                            "url": "https://datatracker.ietf.org/doc/rfc8259/",
+                            "reference": "The JavaScript Object Notation (JSON) Data Interchange Format. Request for Comments: 8259. Network Working Group. December 2017."
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
