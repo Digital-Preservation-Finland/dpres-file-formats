@@ -12,13 +12,28 @@ CONTAINERS_STREAMS_NAME = "av_container_grading.json"
 # Allowed charsets
 ALLOWED_CHARSETS = ["ISO-8859-15", "UTF-8", "UTF-16", "UTF-32"]
 
-# (:unap) = Not applicable, makes no sense
-# (:unkn) = Known to be unknown (e.g., Anonymous, Inconnue)
-# (:unav) = Value unavailable, possibly unknown
-# See: https://digitalpreservation.fi/support/vocabularies#Tuntemattomatarvot
-UNAP = "(:unap)"
-UNKN = "(:unkn)"
-UNAV = "(:unav)"
+
+class UnknownValues(str, enum.Enum):
+    """
+    Controlled vocabulary for unknown values
+
+    Enums UVNONE and UVNULL have a prefix UV (UnknownValues) to avoid confusion
+    with other truly None or Null values which are Falsy values unlike UVNONE
+    and UVNULL string literals.
+
+    Values available on the digital preservation website:
+    https://digitalpreservation.fi/support/vocabularies#Tuntemattomatarvot
+    """
+    UNAC = "(:unac)"  # Temporarily inaccessible
+    UNAL = "(:unal)"  # Unallowed, suppressed intentionally
+    UNAP = "(:unap)"  # Not applicable, makes no sense
+    UNAS = "(:unas)"  # Value unassigned (e.g., Untitled)
+    UNAV = "(:unav)"  # Value unavailable, possibly unknown
+    UNKN = "(:unkn)"  # Known to be unknown (e.g., Anonymous, Inconnue)
+    UVNONE = "(:none)"  # Never had a value, never will
+    UVNULL = "(:null)"  # Explicitly and meaningfully empty
+    TBA = "(:tba)"    # To be assigned or announced later
+    ETAL = "(:etal)"  # Too numerous to list (et alia)
 
 
 class ContentTypes(str, enum.Enum):

@@ -12,7 +12,7 @@ from dpres_file_formats.defaults import (
     Grades,
     RelationshipTypes,
     TechMetadata,
-    UNAP
+    UnknownValues
 )
 
 FORMAT_ID = 'FI_DPRES_{format_name_short}_{name_count}'
@@ -132,8 +132,8 @@ def add_version_to_format(
 
     version_name = version
     if not version:
-        version = UNAP
-        version_name = 'UNAP'
+        version = UnknownValues.UNAP
+        version_name = UnknownValues.UNAP
 
     if added_in_dps_spec:
         added_in_dps_spec = DpsSpecVersions[added_in_dps_spec].value
