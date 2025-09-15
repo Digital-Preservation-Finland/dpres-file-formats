@@ -13,11 +13,11 @@ CONTAINERS_STREAMS_NAME = "av_container_grading.json"
 ALLOWED_CHARSETS = ["ISO-8859-15", "UTF-8", "UTF-16", "UTF-32"]
 
 
-class UnknownValues(str, enum.Enum):
+class UnknownValue(str, enum.Enum):
     """
     Controlled vocabulary for unknown values
 
-    Enums UVNONE and UVNULL have a prefix UV (UnknownValues) to avoid confusion
+    Enums UVNONE and UVNULL have a prefix UV (UnknownValue) to avoid confusion
     with other truly None or Null values which are Falsy values unlike UVNONE
     and UVNULL string literals.
 
@@ -34,6 +34,8 @@ class UnknownValues(str, enum.Enum):
     UVNULL = "(:null)"  # Explicitly and meaningfully empty
     TBA = "(:tba)"    # To be assigned or announced later
     ETAL = "(:etal)"  # Too numerous to list (et alia)
+
+# TODO Enum names shouldn't be plural, change names to a singular form
 
 
 class ContentTypes(str, enum.Enum):

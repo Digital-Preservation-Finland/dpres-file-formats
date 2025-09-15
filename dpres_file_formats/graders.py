@@ -5,7 +5,7 @@ import functools
 
 from abc import ABCMeta, abstractmethod
 from typing import TypedDict
-from dpres_file_formats.defaults import Grades, UnknownValues
+from dpres_file_formats.defaults import Grades, UnknownValue
 from dpres_file_formats.read_file_formats import (
     file_formats,
     av_container_grading,
@@ -281,8 +281,8 @@ def grade(
     mimetype: str, version: str, streams: dict[int, dict[str, str]]
 ) -> str:
     """Return digital preservation grade."""
-    if not mimetype or mimetype == UnknownValues.UNAV:
-        grade_ = UnknownValues.UNAV
+    if not mimetype or mimetype == UnknownValue.UNAV:
+        grade_ = UnknownValue.UNAV
     else:
         grades = [grader(mimetype, version, streams).grade()
                   for grader in GRADERS
