@@ -4287,6 +4287,38 @@
                     "format_sources": []
                 }
             ]
+        },
+        {
+            "_id": "FI_DPRES_AC3_1",
+            "mimetype": "audio/ac3",
+            "content_type": "audio",
+            "format_name_long": "Dolby Digital AC-3",
+            "format_name_short": "AC3",
+            "typical_extensions": [
+                ".ac3"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_AC3_1_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-bit-level-file-format-with-recommended",
+                    "format_registry_key": "fmt/735",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "ATSC_A/52",
+                            "url": "https://www.atsc.org/atsc-documents/type/1-0-standards/",
+                            "reference": "Digital Audio Compression (AC-3, E-AC-3)"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
