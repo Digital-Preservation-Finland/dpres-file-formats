@@ -364,7 +364,7 @@ def add_av_container(version_id: str,
 def _parse_format_mimetype_version(
         file_format: dict,
         version_id: str,
-        content_types: list[str]) -> tuple[str, str]:
+        content_types: list[str]) -> tuple[str, str] | tuple[None, None]:
     """Parses mimetype and version for a given ID. The format must be
     of a given content type.
 
