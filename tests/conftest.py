@@ -19,7 +19,8 @@ def av_container_grading_path_fx(tmp_path):
 
 # pylint: disable=redefined-outer-name
 @pytest.fixture(scope='function', autouse=True)
-def file_format_json_mock(file_formats_path_fx, monkeypatch):
+def file_format_json_mock(
+        file_formats_path_fx, av_container_grading_path_fx, monkeypatch):
     """Fixture to use test data for file formats JSON."""
 
     data = {
@@ -27,6 +28,7 @@ def file_format_json_mock(file_formats_path_fx, monkeypatch):
             {
                 "_id": "TEST_MIMETYPE_1",
                 "mimetype": "aaa/bbb",
+                "content_type": "audio",
                 "format_name_short": "ABC",
                 "relations": [],
                 "charsets": [],
@@ -63,6 +65,7 @@ def file_format_json_mock(file_formats_path_fx, monkeypatch):
             {
                 "_id": "TEST_MIMETYPE_2",
                 "mimetype": "bbb/ccc",
+                "content_type": "image",
                 "format_name_short": "ABC",
                 "charsets": ["ISO-8859-15", "UTF-8", "UTF-16", "UTF-32"],
                 "relations": [],
@@ -81,6 +84,7 @@ def file_format_json_mock(file_formats_path_fx, monkeypatch):
             {
                 "_id": "TEST_MIMETYPE_3",
                 "mimetype": "fff/ggg",
+                "content_type": "videocontainer",
                 "format_name_short": "GHI",
                 "charsets": [],
                 "relations": [],
@@ -99,6 +103,7 @@ def file_format_json_mock(file_formats_path_fx, monkeypatch):
             {
                 "_id": "TEST_MIMETYPE_4",
                 "mimetype": "aaa/bbb",
+                "content_type": "video",
                 "format_name_short": "ABC-D",
                 "charsets": [],
                 "relations": [],
@@ -119,6 +124,8 @@ def file_format_json_mock(file_formats_path_fx, monkeypatch):
 
     with open(file_formats_path_fx, "w", encoding="UTF-8") as outfile:
         json.dump(data, outfile)
+    with open(av_container_grading_path_fx, "w", encoding="UTF-8") as outfile:
+        json.dump({"file_formats": []}, outfile)
 
     @contextlib.contextmanager
     def mock_resource_path(module, resource_name):
@@ -126,14 +133,13 @@ def file_format_json_mock(file_formats_path_fx, monkeypatch):
             if resource_name == "file_formats.json":
                 yield file_formats_path_fx
                 return
-            elif resource_name == "av_container_grading.json":
+            if resource_name == "av_container_grading.json":
                 yield av_container_grading_path_fx
                 return
 
         raise ValueError(
             f"Module {module} resource {resource_name} not detected"
         )
-
 
     # pylint: disable=import-outside-toplevel
     import dpres_file_formats.json_handler

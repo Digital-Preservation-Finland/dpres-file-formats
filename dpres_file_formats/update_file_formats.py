@@ -2,8 +2,10 @@
 from __future__ import annotations
 
 from dpres_file_formats.json_handler import (
+    read_container_streams_json,
     read_file_formats_json,
     update_file_formats_json,
+    write_container_streams_json
 )
 from dpres_file_formats.defaults import (
     ALLOWED_CHARSETS,
@@ -292,3 +294,135 @@ def _get_supersession_format_info(
         superseding_format_id,
         superseding_format_mimetype,
     )
+
+
+def add_av_container(version_id: str,
+                     grade: str,
+                     video_streams: list[str] | None = None,
+                     audio_streams: list[str] | None = None) -> None:
+    """Adds a new entry to the AV container grading JSON. The given
+    version_id for the container must exist, as must all given stream
+    identifiers. All IDs must be of a supported content type.
+
+    :param version_id: The ID of the container format version
+    :param grade: The file format grade in the DPS (e.g. recommended
+        file format), from a controlled vocabulary
+    :param video_streams: A list of video stream IDs (existing file
+        format versions)
+    :param audio_streams: A list of audio stream IDs (existing file
+        format versions)
+
+    :raises ValueError: if stream ID is missing, or it is of a wrong
+        content type
+    """
+
+    av_containers = read_container_streams_json()
+    file_formats = read_file_formats_json()
+
+    if not video_streams:
+        video_streams = []
+
+    if not audio_streams:
+        audio_streams = []
+
+    container_types = [ContentTypes["AUDIOCONTAINER"].value,
+                       ContentTypes["VIDEOCONTAINER"].value]
+
+    mimetype = None
+    version = None
+    for file_format in file_formats:
+        if not mimetype:
+            (mimetype, version) = _parse_format_mimetype_version(
+                file_format, version_id, container_types)
+
+    if not mimetype:
+        raise ValueError(f"File format version {version_id} doesn't exist or "
+                         "is not an AV container type.")
+
+    av_video_streams = _parse_streams(file_formats=file_formats,
+                                      content_type=ContentTypes["VIDEO"].value,
+                                      streams=video_streams)
+
+    av_audio_streams = _parse_streams(file_formats=file_formats,
+                                      content_type=ContentTypes["AUDIO"].value,
+                                      streams=audio_streams)
+
+    container_dict = {
+        'version_id': version_id,
+        'mimetype': mimetype,
+        'version': version,
+        'grade': Grades[grade].value,
+        'audio_streams': av_audio_streams,
+        'video_streams': av_video_streams
+    }
+
+    av_containers.append(container_dict)
+
+    write_container_streams_json(container_streams=av_containers)
+
+
+def _parse_format_mimetype_version(
+        file_format: dict,
+        version_id: str,
+        content_types: list[str]) -> tuple[str, str]:
+    """Parses mimetype and version for a given ID. The format must be
+    of a given content type.
+
+    :param file_format: A doctionary of file format and version data
+    :param version_id: The file format version ID
+    :param content_types: A list content types the format must be in
+
+    :returns: A tuple of (mimetype, version)
+    """
+    mimetype = None
+    version = None
+
+    for version in file_format.get('versions', []):
+        if version_id == version['_id']:
+            if file_format['content_type'] not in content_types:
+                continue
+            mimetype = file_format['mimetype']
+            version = version['version']
+            break
+
+    return (mimetype, version)
+
+
+def _parse_streams(file_formats: list[dict],
+                   content_type: str,
+                   streams: list[str]) -> list[dict]:
+    """Evaluates and parses a list of stream IDs to a list of stream
+    dicts if the IDs are valid. The IDs must exist as file format
+    versions and adhere to the correct content type.
+
+    :param file_formats: List of format dicts
+    :param content_type: The content type a stream must belong to
+    :param streams: List of stream IDs
+
+    :returns: A list of stream dicts
+    :raises ValueError: if stream ID is missing, or it is of a wrong
+        content type
+    """
+    av_streams = []
+    for stream_id in streams:
+        stream_dict = {
+            'version_id': stream_id,
+            'mimetype': '',
+            'version': ''
+        }
+        stream_found = False
+        for file_format in file_formats:
+            (mimetype, version) = _parse_format_mimetype_version(
+                file_format, stream_id, [content_type])
+            if mimetype:
+                stream_found = True
+                stream_dict["mimetype"] = mimetype
+                stream_dict["version"] = version
+                av_streams.append(stream_dict)
+                break
+        if not stream_found:
+            raise ValueError(
+                f"Stream version {stream_id} doesn't exist or is not a "
+                f"{content_type} stream")
+
+    return av_streams

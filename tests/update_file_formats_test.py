@@ -3,6 +3,7 @@
 import json
 import pytest
 from dpres_file_formats import (
+    add_av_container,
     add_format,
     add_version_to_format,
     replace_format
@@ -91,3 +92,39 @@ def test_replace_format(file_formats_path_fx):
     assert relation["dps_spec_version"] == "1.11.0"
     assert relation["description"] == ("MIME type changed from aaa/bbb to "
                                        "bbb/ccc")
+
+
+def test_add_av_container(av_container_grading_path_fx):
+    """Test add_av_container."""
+    add_av_container(version_id="TEST_MIMETYPE_3_1",
+                     grade="RECOMMENDED",
+                     video_streams=["TEST_MIMETYPE_4_1"],
+                     audio_streams=["TEST_MIMETYPE_1_2"])
+
+    found_container = _find_format(av_container_grading_path_fx, "fff/ggg")
+    assert found_container["grade"] == "fi-dpres-recommended-file-format"
+
+
+@pytest.mark.parametrize(
+    ['version_id', 'video_streams', 'audio_streams'],
+    [
+        ('TEST_MIMETYPE_1_1', [], []),
+        ('TEST_MIMETYPE_3_1', ['TEST_MIMETYPE_2_1'], []),
+        ('TEST_MIMETYPE_3_1', [], ['TEST_MIMETYPE_2_2']),
+        ('unknown', [], []),
+        ('TEST_MIMETYPE_3_1', ['unknown'], [])
+    ], ids=('Given container is not a container type',
+            'Given video stream is not a video stream',
+            'Given audio stream is not a audio stream',
+            'Container does not exist',
+            'Video stream does not exist')
+)
+def test_add_av_container_file(version_id,
+                               video_streams,
+                               audio_streams):
+    """Test add_av_container with invalid input versions.."""
+    with pytest.raises(ValueError):
+        add_av_container(version_id=version_id,
+                         grade="RECOMMENDED",
+                         video_streams=video_streams,
+                         audio_streams=audio_streams)
