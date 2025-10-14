@@ -3321,6 +3321,17 @@
                     "format_sources": []
                 },
                 {
+                    "_id": "FI_DPRES_WARC_1_0.18",
+                    "version": "0.18",
+                    "grade": "fi-dpres-unacceptable-file-format",
+                    "format_registry_key": "fmt/289",
+                    "support_in_dps_ingest": false,
+                    "active": false,
+                    "added_in_dps_spec": "",
+                    "removed_in_dps_spec": "",
+                    "format_sources": []
+                },
+                {
                     "_id": "FI_DPRES_WARC_1_1.0",
                     "version": "1.0",
                     "grade": "fi-dpres-recommended-file-format",
