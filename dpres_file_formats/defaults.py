@@ -13,9 +13,15 @@ CONTAINERS_STREAMS_NAME = "av_container_grading.json"
 ALLOWED_CHARSETS = ["ISO-8859-15", "UTF-8", "UTF-16", "UTF-32"]
 
 
-class UnknownValue(str, enum.Enum):
-    """
-    Controlled vocabulary for unknown values
+class StrEnum(str, enum.Enum):
+    """Enum that inherits and behaves like a string."""
+
+    def __str__(self) -> str:
+        return str(self.value)
+
+
+class UnknownValue(StrEnum):
+    """Controlled vocabulary for unknown values
 
     Enums UVNONE and UVNULL have a prefix UV (UnknownValue) to avoid confusion
     with other truly None or Null values which are Falsy values unlike UVNONE
@@ -24,6 +30,7 @@ class UnknownValue(str, enum.Enum):
     Values available on the digital preservation website:
     https://digitalpreservation.fi/support/vocabularies#Tuntemattomatarvot
     """
+
     UNAC = "(:unac)"  # Temporarily inaccessible
     UNAL = "(:unal)"  # Unallowed, suppressed intentionally
     UNAP = "(:unap)"  # Not applicable, makes no sense
@@ -35,15 +42,17 @@ class UnknownValue(str, enum.Enum):
     TBA = "(:tba)"    # To be assigned or announced later
     ETAL = "(:etal)"  # Too numerous to list (et alia)
 
+
 # TODO Enum names shouldn't be plural, change names to a singular form
 
 
-class ContentTypes(str, enum.Enum):
+class ContentTypes(StrEnum):
     """Controlled vocabulary for content types.
 
     Values taken from the DPS specification content types:
     https://urn.fi/urn:nbn:fi-fe2020100578096
     """
+
     TEXT = "text"
     AUDIO = "audio"
     VIDEO = "video"
@@ -57,28 +66,31 @@ class ContentTypes(str, enum.Enum):
     VIDEOCONTAINER = "videocontainer"
 
 
-class TechMetadata(str, enum.Enum):
+class TechMetadata(StrEnum):
     """Controlled vocabulary for required technical metadata
     schema.
     """
+
     IMAGE = "MIX"
     AUDIO = "audioMD"
     VIDEO = "videoMD"
     CSV = "ADDML"
 
 
-class RelationshipTypes(str, enum.Enum):
+class RelationshipTypes(StrEnum):
     """Controlled vocabulary for relationship types.
 
     Taken from PREMIS relationships:
     https://id.loc.gov/vocabulary/preservation/relationshipSubType.html
     """
+
     SUPERSEDED = "is superseded by"
     SUPERSEDES = "supersedes"
 
 
-class Grades(str, enum.Enum):
+class Grades(StrEnum):
     """Controlled vocabulary for digital preservation grading."""
+
     RECOMMENDED = "fi-dpres-recommended-file-format"
     ACCEPTABLE = "fi-dpres-acceptable-file-format"
     WITH_RECOMMENDED = "fi-dpres-bit-level-file-format-with-recommended"
@@ -86,10 +98,11 @@ class Grades(str, enum.Enum):
     UNACCEPTABLE = "fi-dpres-unacceptable-file-format"
 
 
-class DpsSpecVersions(str, enum.Enum):
+class DpsSpecVersions(StrEnum):
     """Controlled vocabulary for DPS File Format specification
     versions.
     """
+
     V3 = "1.3.0"
     V4 = "1.4.0"
     V5 = "1.5.0"
