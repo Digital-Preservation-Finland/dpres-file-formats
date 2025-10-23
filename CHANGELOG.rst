@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on `Keep a Changelog <https://keepachangelog.com/en/1.1.0/>`__,
 and this project adheres to `Semantic Versioning <(https://semver.org/spec/v2.0.0.html>`__.
 
+1.1.1 - 2025-10-23
+------------------
+
+Added
+^^^^^
+
+- WARC 0.18
+- StrEnum to controlled vocabularies
+
 1.1.0 - 2025-09-25
 ------------------
 
