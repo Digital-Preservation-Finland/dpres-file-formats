@@ -4354,7 +4354,7 @@
                     "version": "(:unap)",
                     "grade": "fi-dpres-recommended-file-format",
                     "format_registry_key": "fmt/817",
-                    "support_in_dps_ingest": false,
+                    "support_in_dps_ingest": true,
                     "active": true,
                     "added_in_dps_spec": "1.14.0",
                     "removed_in_dps_spec": "",
