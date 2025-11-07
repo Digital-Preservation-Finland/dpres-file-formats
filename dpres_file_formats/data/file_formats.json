@@ -4342,10 +4342,7 @@
             ],
             "required_metadata": "",
             "charsets": [
-                "ISO-8859-15",
-                "UTF-8",
-                "UTF-16",
-                "UTF-32"
+                "UTF-8"
             ],
             "relations": [],
             "versions": [
