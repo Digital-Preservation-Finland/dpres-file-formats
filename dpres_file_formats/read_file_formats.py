@@ -1,4 +1,5 @@
 """Functions that output the file formats list."""
+from __future__ import annotations
 
 from dpres_file_formats.json_handler import (
     read_container_streams_json,
@@ -76,6 +77,7 @@ def file_formats(
     deprecated: bool = False,
     unofficial: bool = False,
     versions_separately: bool = True,
+    data: dict | None = None
 ) -> list[dict]:
     """Return file formats as a list of dicts with optional filtering and
         flattening.
@@ -88,10 +90,19 @@ def file_formats(
     :param versions_separately: If set to True, will output the list of each
         file format version as an independent flattened dict, defaults
         to False.
+    :param data: Optional file format data dictionary. If not provided, the
+        package's built-in file format data will be used instead.
+
     :returns: List of file format dicts.
     """
+    if data:
+        # Valid file format data has 'file_formats' as the root key
+        data = data["file_formats"]
+    else:
+        data = read_file_formats_json()
+
     selected_formats = _select_format_and_versions(
-        read_file_formats_json(), deprecated, unofficial
+        data, deprecated, unofficial
     )
 
     if not versions_separately:

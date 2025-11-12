@@ -1,7 +1,11 @@
 """Unit tests for the read file formats module."""
 
+import json
+
 import pytest
+
 from dpres_file_formats import file_formats
+from dpres_file_formats.json_handler import read_file_formats_json
 
 
 @pytest.mark.parametrize(
@@ -49,3 +53,25 @@ def test_file_formats(
         assert dps_formats[0]["versions"][0]["version"]
     else:
         assert dps_formats[0]["version"]
+
+
+def test_file_formats_custom_data():
+    """Test reading file formats using custom data"""
+    file_format_data = read_file_formats_json()
+
+    # Rename 'aaa/bbb' -> 'aaa/bbb_modified'
+    for file_format in file_format_data:
+        if file_format["mimetype"] == "aaa/bbb":
+            file_format["mimetype"] = "aaa/bbb_modified"
+
+    dps_formats = file_formats(data={"file_formats": file_format_data})
+
+    # 'aaa/bbb_modified' found in retrieved data. 'aaa/bbb' is no longer found.
+    assert any(
+        file_format["mimetype"] == "aaa/bbb_modified" for file_format
+        in dps_formats
+    )
+    assert sum([
+        file_format["mimetype"] == "aaa/bbb" for file_format
+        in dps_formats
+    ]) == 0
