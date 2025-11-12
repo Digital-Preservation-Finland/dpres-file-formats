@@ -11,3 +11,7 @@ venv*/
 .venv*/
 rpmbuild
 .cache
+dist/
+
+# Automatically generated version module
+dpres_file_formats/_version.py

@@ -24,6 +24,7 @@ BuildRequires:  %{py3_dist pip}
 BuildRequires:  %{py3_dist setuptools}
 BuildRequires:  %{py3_dist wheel}
 BuildRequires:  %{py3_dist pytest}
+BuildRequires:  %{py3_dist setuptools-scm}
 
 %global _description %{expand:
 Machine-readable file formats supported in the DPS and python functions to export the data
@@ -39,6 +40,7 @@ Summary: %{summary}
 %autosetup -n %{file_prefix}-v%{file_version}%{?file_release_tag}-%{file_build_number}-g%{file_commit_ref}
 
 %build
+export SETUPTOOLS_SCM_PRETEND_VERSION=%{file_version}
 %pyproject_wheel
 
 %install

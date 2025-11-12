@@ -1,6 +1,11 @@
 """Dpres file formats."""
 
-__version__ = '1.1.1'
+try:
+    from ._version import version as __version__
+except ImportError:
+    # Package not installed
+    __version__ = "unknown"
+
 
 from dpres_file_formats.read_file_formats import (
     file_formats,
