@@ -13,6 +13,14 @@ Added
 
 - SIARD 2.2
 
+Unreleased
+----------
+
+Changed
+^^^^^^^
+
+- Update JSON file format source reference
+
 1.2.0 - 2025-11-14
 ------------------
 
