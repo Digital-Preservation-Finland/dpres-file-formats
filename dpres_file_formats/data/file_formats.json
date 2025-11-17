@@ -3168,7 +3168,7 @@
                     "version": "2.2",
                     "grade": "fi-dpres-recommended-file-format",
                     "format_registry_key": "fmt/1777",
-                    "support_in_dps_ingest": false,
+                    "support_in_dps_ingest": true,
                     "active": true,
                     "added_in_dps_spec": "1.10.0",
                     "removed_in_dps_spec": "",
