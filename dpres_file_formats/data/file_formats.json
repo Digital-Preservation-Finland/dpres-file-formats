@@ -3278,7 +3278,12 @@
                 ".svgz"
             ],
             "required_metadata": "",
-            "charsets": [],
+            "charsets": [
+                "ISO-8859-15",
+                "UTF-8",
+                "UTF-16",
+                "UTF-32"
+            ],
             "relations": [],
             "versions": [
                 {
