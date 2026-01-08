@@ -915,9 +915,9 @@
                     "removed_in_dps_spec": "",
                     "format_sources": [
                         {
-                            "pid": "RFC_tb_9639",
-                            "url": "https://datatracker.ietf.org/doc/draft-ietf-cellar-flac/",
-                            "reference": "Free Lossless Audio Codec. Draft. January 2024. Internet Engineering Task Force (IETF)."
+                            "pid": "RFC_9639",
+                            "url": "https://datatracker.ietf.org/doc/rfc9639/",
+                            "reference": "Free Lossless Audio Codec. Request for Comments: 9639. December 2024. Internet Engineering Task Force (IETF)."
                         }
                     ]
                 }
