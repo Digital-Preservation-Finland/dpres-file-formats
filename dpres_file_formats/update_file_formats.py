@@ -135,7 +135,8 @@ def add_version_to_format(
     version_name = version
     if not version:
         version = UnknownValue.UNAP
-        version_name = UnknownValue.UNAP
+        # We'll use "UNAP" as part of the version name
+        version_name = 'UNAP'
 
     if added_in_dps_spec:
         added_in_dps_spec = DpsSpecVersions[added_in_dps_spec].value

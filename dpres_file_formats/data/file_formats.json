@@ -4454,6 +4454,141 @@
                     ]
                 }
             ]
+        },
+        {
+            "_id": "FI_DPRES_EML_1",
+            "mimetype": "message/rfc822",
+            "content_type": "email",
+            "format_name_long": "Electronic Mail Format",
+            "format_name_short": "EML",
+            "typical_extensions": [
+                ".eml"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_EML_1_UNAP",
+                    "version": "(:unap)",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/278",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.14.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "RFC_5322",
+                            "url": "https://datatracker.ietf.org/doc/rfc5322/",
+                            "reference": "Internet Message Format. Request for Comments: 5322. Network Working Group. October 2008."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "FI_DPRES_MBOX_1",
+            "mimetype": "application/mbox",
+            "content_type": "email",
+            "format_name_long": "Mbox",
+            "format_name_short": "MBOX",
+            "typical_extensions": [
+                ".mbox"
+            ],
+            "required_metadata": "",
+            "charsets": [],
+            "relations": [],
+            "versions": [
+                {
+                    "_id": "FI_DPRES_MBOX_1_MBOXO",
+                    "version": "MBOXO",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/720",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.14.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "RFC_4155",
+                            "url": "https://datatracker.ietf.org/doc/rfc4155/",
+                            "reference": "The application/mbox Media Type. Request for Comments: 4155. Network Working Group. September 2005."
+                        },
+                        {
+                            "pid": "MBOX",
+                            "url": "https://web.archive.org/web/20160303175227/http://qmail.org/qmail-manual-html/man5/mbox.html",
+                            "reference": "mbox - file containing mail messages."
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_MBOX_1_MBOXRD",
+                    "version": "MBOXRD",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/720",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.14.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "RFC_4155",
+                            "url": "https://datatracker.ietf.org/doc/rfc4155/",
+                            "reference": "The application/mbox Media Type. Request for Comments: 4155. Network Working Group. September 2005."
+                        },
+                        {
+                            "pid": "MBOX",
+                            "url": "https://web.archive.org/web/20160303175227/http://qmail.org/qmail-manual-html/man5/mbox.html",
+                            "reference": "mbox - file containing mail messages."
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_MBOX_1_MBOXCL",
+                    "version": "MBOXCL",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/720",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.14.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "RFC_4155",
+                            "url": "https://datatracker.ietf.org/doc/rfc4155/",
+                            "reference": "The application/mbox Media Type. Request for Comments: 4155. Network Working Group. September 2005."
+                        },
+                        {
+                            "pid": "MBOX",
+                            "url": "https://web.archive.org/web/20160303175227/http://qmail.org/qmail-manual-html/man5/mbox.html",
+                            "reference": "mbox - file containing mail messages."
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_MBOX_1_MBOXCL2",
+                    "version": "MBOXCL2",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/720",
+                    "support_in_dps_ingest": false,
+                    "active": true,
+                    "added_in_dps_spec": "1.14.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "RFC_4155",
+                            "url": "https://datatracker.ietf.org/doc/rfc4155/",
+                            "reference": "The application/mbox Media Type. Request for Comments: 4155. Network Working Group. September 2005."
+                        },
+                        {
+                            "pid": "MBOX",
+                            "url": "https://web.archive.org/web/20160303175227/http://qmail.org/qmail-manual-html/man5/mbox.html",
+                            "reference": "mbox - file containing mail messages."
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

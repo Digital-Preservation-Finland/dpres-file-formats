@@ -53,17 +53,18 @@ class ContentTypes(StrEnum):
     https://urn.fi/urn:nbn:fi-fe2020100578096
     """
 
-    TEXT = "text"
     AUDIO = "audio"
-    VIDEO = "video"
-    IMAGE = "still image"
-    WARC = "web archive"
-    GEOSPATIAL = "geospatial data"
+    AUDIOCONTAINER = "audiocontainer"
     DATABASE = "databases"
+    EMAIL = "email"
+    GEOSPATIAL = "geospatial data"
+    IMAGE = "still image"
     RESEARCH = "research data"
     SCIENTIFIC = "scientific software"
-    AUDIOCONTAINER = "audiocontainer"
+    TEXT = "text"
+    VIDEO = "video"
     VIDEOCONTAINER = "videocontainer"
+    WARC = "web archive"
 
 
 class TechMetadata(StrEnum):
