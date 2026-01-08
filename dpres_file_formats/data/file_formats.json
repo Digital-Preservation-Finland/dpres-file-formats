@@ -1441,6 +1441,16 @@
                             "pid": "ISO_10918-1",
                             "url": "",
                             "reference": "International Organization for Standardization. Information technology — Digital compression and coding of continuous-tone still images: Requirements and guidelines. ISO/IEC 10918-1:1994"
+                        },
+                        {
+                            "pid": "ISO_10918-5",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Digital compression and coding of continuous-tone still images: JPEG File Interchange Format (JFIF). ISO/IEC 10918-5:2013"
+                        },
+                        {
+                            "pid": "JPEG_JFIF",
+                            "url": "https://www.w3.org/Graphics/JPEG/jfif3.pdf",
+                            "reference": "JPEG File Interchange Format Version 1.02. C-Cube Microsystems. September 1992."
                         }
                     ]
                 },
@@ -1453,7 +1463,13 @@
                     "active": true,
                     "added_in_dps_spec": "1.6.0",
                     "removed_in_dps_spec": "",
-                    "format_sources": []
+                    "format_sources": [
+                        {
+                            "pid": "ISO_10918-1",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Digital compression and coding of continuous-tone still images: Requirements and guidelines. ISO/IEC 10918-1:1994"
+                        }
+                    ]
                 },
                 {
                     "_id": "FI_DPRES_JPEG_1_2.1",
@@ -1464,7 +1480,18 @@
                     "active": true,
                     "added_in_dps_spec": "1.6.0",
                     "removed_in_dps_spec": "",
-                    "format_sources": []
+                    "format_sources": [
+                        {
+                            "pid": "ISO_10918-1",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Digital compression and coding of continuous-tone still images: Requirements and guidelines. ISO/IEC 10918-1:1994"
+                        },
+                        {
+                            "pid": "EXIF_21",
+                            "url": "https://web.archive.org/web/20131111073619/http://www.exif.org/Exif2-1.PDF",
+                            "reference": "JEITA — Japan Electronics and Information Technology Industries Association. Digital Still Camera Image File Format Standard (Exchangeable image file format for Digital Still Camera:Exif), Version 2.1, JEIDA-49-1998."
+                        }
+                    ]
                 },
                 {
                     "_id": "FI_DPRES_JPEG_1_2.2",
@@ -1475,7 +1502,18 @@
                     "active": true,
                     "added_in_dps_spec": "1.6.0",
                     "removed_in_dps_spec": "",
-                    "format_sources": []
+                    "format_sources": [
+                        {
+                            "pid": "ISO_10918-1",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Digital compression and coding of continuous-tone still images: Requirements and guidelines. ISO/IEC 10918-1:1994"
+                        },
+                        {
+                            "pid": "EXIF_22",
+                            "url": "https://web.archive.org/web/20131018091152/http://exif.org/Exif2-2.PDF",
+                            "reference": "JEITA — Japan Electronics and Information Technology Industries Association. Exchangeable image file format for digital still cameras: Exif Version 2.2. JEITA CP-3451, 2002."
+                        }
+                    ]
                 },
                 {
                     "_id": "FI_DPRES_JPEG_1_2.2.1",
@@ -1486,7 +1524,13 @@
                     "active": true,
                     "added_in_dps_spec": "1.6.0",
                     "removed_in_dps_spec": "",
-                    "format_sources": []
+                    "format_sources": [
+                        {
+                            "pid": "ISO_10918-1",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Digital compression and coding of continuous-tone still images: Requirements and guidelines. ISO/IEC 10918-1:1994"
+                        }
+                    ]
                 },
                 {
                     "_id": "FI_DPRES_JPEG_1_2.3",
@@ -1497,7 +1541,18 @@
                     "active": true,
                     "added_in_dps_spec": "1.10.0",
                     "removed_in_dps_spec": "",
-                    "format_sources": []
+                    "format_sources": [
+                        {
+                            "pid": "ISO_10918-1",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Digital compression and coding of continuous-tone still images: Requirements and guidelines. ISO/IEC 10918-1:1994"
+                        },
+                        {
+                            "pid": "EXIF_23",
+                            "url": "https://www.cipa.jp/std/documents/e/DC-008-2012_E.pdf",
+                            "reference": "JEITA — Japan Electronics and Information Technology Industries Association. Exchangeable image file format for digital still cameras: Exif Version 2.3. JEITA CP-3451C, CIPA-DC-008, 2012."
+                        }
+                    ]
                 },
                 {
                     "_id": "FI_DPRES_JPEG_1_2.3.1",
@@ -1508,7 +1563,13 @@
                     "active": true,
                     "added_in_dps_spec": "1.10.0",
                     "removed_in_dps_spec": "",
-                    "format_sources": []
+                    "format_sources": [
+                        {
+                            "pid": "ISO_10918-1",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Digital compression and coding of continuous-tone still images: Requirements and guidelines. ISO/IEC 10918-1:1994"
+                        }
+                    ]
                 },
                 {
                     "_id": "FI_DPRES_JPEG_1_2.3.2",
@@ -1519,7 +1580,18 @@
                     "active": true,
                     "added_in_dps_spec": "1.10.0",
                     "removed_in_dps_spec": "",
-                    "format_sources": []
+                    "format_sources": [
+                        {
+                            "pid": "ISO_10918-1",
+                            "url": "",
+                            "reference": "International Organization for Standardization. Information technology — Digital compression and coding of continuous-tone still images: Requirements and guidelines. ISO/IEC 10918-1:1994"
+                        },
+                        {
+                            "pid": "EXIF_232",
+                            "url": "https://www.cipa.jp/std/documents/e/DC-X008-Translation-2019-E.pdf",
+                            "reference": "JEITA — Japan Electronics and Information Technology Industries Association. Exchangeable image file format for digital still cameras: Exif Version 2.3. JEITA CP-3451X, CIPA-DC-X008, 2019."
+                        }
+                    ]
                 }
             ]
         },
