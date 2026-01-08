@@ -19,7 +19,7 @@ DPS Specifications Version
 This file format list conforms to the following version of the DPS file
 format specifications::
 
-    1.13.0
+    1.14.0
 
 See:
 

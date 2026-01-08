@@ -5,6 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on `Keep a Changelog <https://keepachangelog.com/en/1.1.0/>`__,
 and this project adheres to `Semantic Versioning <https://semver.org/spec/v2.0.0.html>`__.
 
+Unreleased
+----------
+
+Added
+^^^^^
+
+- Support for dpres file format specifications version 1.14.0
+- Add email content type and email file formats EML and MBOX
+- Add ODF 1.4
+- Add LPCM audio tp MPEG-2 (TS) container as recommended streams
+- Add charset to SVG
+- Add new JPEG file format sources
+
+Changed
+^^^^^^^
+
+- Update JSON file format source reference
+- Update FLAC file format source reference
+
 1.3.0 - 2025-11-25
 ------------------
 
@@ -12,14 +31,6 @@ Added
 ^^^^^
 
 - SIARD 2.2
-
-Unreleased
-----------
-
-Changed
-^^^^^^^
-
-- Update JSON file format source reference
 
 1.2.0 - 2025-11-14
 ------------------
