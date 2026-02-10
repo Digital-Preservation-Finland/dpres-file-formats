@@ -15,6 +15,7 @@ Added
 - Add email content type and email file formats EML and MBOX
 - Add ODF 1.4
 - Add LPCM audio tp MPEG-2 (TS) container as recommended streams
+- Add LPCM audio tp MPEG-2 (PS) container as acceptable streams
 - Add charset to SVG
 - Add new JPEG file format sources
 

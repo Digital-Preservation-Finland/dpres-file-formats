@@ -414,6 +414,26 @@
                     "version_id": "FI_DPRES_MP3_2_2",
                     "mimetype": "audio/mpeg",
                     "version": "2"
+                },
+                {
+                    "version_id": "FI_DPRES_LPCM_1_UNAP",
+                    "mimetype": "audio/L8",
+                    "version": "(:unap)"
+                },
+                {
+                    "version_id": "FI_DPRES_LPCM_2_UNAP",
+                    "mimetype": "audio/L16",
+                    "version": "(:unap)"
+                },
+                {
+                    "version_id": "FI_DPRES_LPCM_3_UNAP",
+                    "mimetype": "audio/L20",
+                    "version": "(:unap)"
+                },
+                {
+                    "version_id": "FI_DPRES_LPCM_4_UNAP",
+                    "mimetype": "audio/L24",
+                    "version": "(:unap)"
                 }
             ],
             "video_streams": [
