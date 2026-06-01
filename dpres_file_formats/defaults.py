@@ -116,3 +116,4 @@ class DpsSpecVersions(StrEnum):
     V12 = "1.12.0"
     V13 = "1.13.0"
     V14 = "1.14.0"
+    V15 = "1.15.0"
