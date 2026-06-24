@@ -20,6 +20,7 @@ def _write(path: str | PathLike, file_formats: list[dict]) -> None:
     data = {"file_formats": file_formats}
     with open(path, "w", encoding="UTF-8") as json_file:
         json.dump(data, json_file, indent=4, ensure_ascii=False)
+        json_file.write("\n")
 
 
 def read_file_formats_json() -> list[dict]:

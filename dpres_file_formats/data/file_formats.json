@@ -992,14 +992,31 @@
                     "grade": "fi-dpres-recommended-file-format",
                     "format_registry_key": "fmt/155",
                     "support_in_dps_ingest": false,
-                    "active": true,
+                    "active": false,
                     "added_in_dps_spec": "1.5.0",
-                    "removed_in_dps_spec": "",
+                    "removed_in_dps_spec": "1.15.0",
                     "format_sources": [
                         {
                             "pid": "GEOTIFF",
                             "url": "http://geotiff.maptools.org/spec/geotiffhome.html",
                             "reference": "GeoTIFF Format Specification, GeoTIFF Revision 1.0, Specification Version: 1.8.2. November 1995."
+                        }
+                    ]
+                },
+                {
+                    "_id": "FI_DPRES_GEOTIFF_1_1.1",
+                    "version": "1.1",
+                    "grade": "fi-dpres-recommended-file-format",
+                    "format_registry_key": "fmt/155",
+                    "support_in_dps_ingest": true,
+                    "active": true,
+                    "added_in_dps_spec": "1.15.0",
+                    "removed_in_dps_spec": "",
+                    "format_sources": [
+                        {
+                            "pid": "GEOTIFF_1.1",
+                            "url": "https://www.ogc.org/standards/geotiff/",
+                            "reference": "OGC GeoTIFF standard, Version: 1.1, Open Geospatial Consortium. Publication Date: 2019-09-14"
                         }
                     ]
                 }
