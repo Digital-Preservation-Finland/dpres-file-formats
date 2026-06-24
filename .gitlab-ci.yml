@@ -1,7 +1,6 @@
 ---
 variables:
   CI_EL9: "yes"
-  CI_SKIP_EL7: "yes"
   CI_SONAR: "yes"
 
 include:
@@ -9,3 +8,6 @@ include:
     ref: master
     file:
       - '/pipeline/common.yml'
+      - '/pipeline/fddps.yml'
+      - '/pipeline/kppas.yml'
+      - '/pipeline/sapa.yml'
